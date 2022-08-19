@@ -910,3 +910,118 @@ export default function App() {
 ```
 
 </CH.Slideshow>
+
+---
+
+## Your turn
+
+import { Sandpack } from "@codesandbox/sandpack-react";
+
+### HTML & CSS
+
+export const htmlCode = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box-one">1</div>
+      <div class="box box-two">2</div>
+      <div class="box box-three">3</div>
+      <div class="box box-four">4</div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>`
+
+export const cssCode = `:root {
+  box-sizing: border-box;
+}
+
+\*,
+::before,
+::after {
+box-sizing: inherit;
+}
+
+body {
+text-align: center;
+font-family: Roboto, sans-serif;
+font-size: 2em;
+color: white;
+padding: 0 10vw;
+}
+
+.container {
+background-color: #ecf0f1;
+height: 240px;
+overflow-y: scroll;
+}
+
+.box {
+margin: 2px;
+}
+
+.box-one {
+background-color: #f1c40f;
+height: 50px;
+width: 45px;
+}
+
+.box-two {
+background-color: #2ecc71;
+height: 40px;
+width: 50px;
+}
+
+.box-three {
+background-color: #e74c3c;
+height: 50px;
+width: 50px;
+}
+
+.box-four {
+background-color: #3498db;
+height: 50px;
+width: 75px;
+}`
+
+<Sandpack
+  template="vanilla"
+  theme="dark"
+  options={{
+    showNavigator: true,
+    showTabs: true,
+    editorWidthPercentage: 60,
+    autorun: true,
+  }}
+  files={{
+    "/index.html": htmlCode,
+    "/src/styles.css": cssCode,
+    "/src/index.js": `import "./styles.css"`,
+  }}
+/>
+
+---
+
+### React
+
+export const reactCode = `export default function App() { 
+  return <h1>Counter</h1> 
+}`;
+
+<Sandpack
+  template="react"
+  theme="dark"
+  files={{
+    "/App.js": reactCode,
+  }}
+  options={{
+    showNavigator: true,
+    editorWidthPercentage: 60,
+    autorun: false,
+  }}
+/>
