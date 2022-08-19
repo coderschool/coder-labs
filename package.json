@@ -1,0 +1,25 @@
+{
+  "name": "coder-labs",
+  "version": "1.0.0",
+  "description": "A tool to build tutorials for CoderSchool's lab",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "dhminh1024@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@code-hike/mdx": "^0.7.3",
+    "@mdx-js/loader": "^2.1.3",
+    "@next/mdx": "^12.2.5",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rehype-katex": "^6.0.2",
+    "remark-math": "^5.1.1"
+  }
+}
