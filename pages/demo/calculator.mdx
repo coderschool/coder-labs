@@ -1,0 +1,618 @@
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "20px", float: "right" }}
+/>
+
+# The Calculator 🧮
+
+<br />
+<br />
+<br />
+## 🎩 Userflow
+
+<img style={{ width: "500px" }} src="https://i.imgur.com/vC7NOfl.gif" />
+
+<br />
+<br />
+<br />
+
+## 🎩 Code Walkthrough
+
+### 1️⃣ Listen to the user's clicks on the Number buttons.
+
+<CH.Spotlight start={0}>
+
+To help users interact with the calculator, we - firstly - have to listen to their actions.
+
+```html index.html
+<div class="row">
+  <button>4</button>
+  <button>5</button>
+  <button>6</button>
+  <button>+</button>
+</div>
+```
+
+---
+
+- We could do this with either **[`onclick`](https://www.w3schools.com/jsref/event_onclick.asp)** or the **[`addEventListener`](https://www.w3schools.com/jsref/met_element_addeventlistener.asp)** method.
+
+- In this case, as we have so many buttons let's use the attribute `onclick`.
+
+```html index.html focus=2[10:20],3[10:20],4[10:20]
+<div class="row">
+  <button onclick="">4</button>
+  <button onclick="">5</button>
+  <button onclick="">6</button>
+  <button>+</button>
+</div>
+```
+
+---
+
+- As the user expects something to happen after buttons are clicked, we could pass in a function (eventHandler). So that this function would be executed after a click.
+
+- To be more specific, we want to set the operands and display them after Number buttons are clicked - as a result, the function will take an arguement - `num`.
+
+- Let's name this function (eventHandler) - `setOperands(num)`
+
+```html index.html focus=2[10:36],3[10:36],4[10:36]
+<div class="row">
+  <button onclick="setOperands(num)">4</button>
+  <button onclick="setOperands(num)">5</button>
+  <button onclick="setOperands(num)">6</button>
+  <button>+</button>
+</div>
+```
+
+---
+
+- We want to pass in a `num` value coressponds to the Number button. Let's replace `num` with that specific value.
+
+```html index.html focus=2[10:35],3[10:35],4[10:35]
+<div class="row">
+  <button onclick="setOperands(4)">4</button>
+  <button onclick="setOperands(5)">5</button>
+  <button onclick="setOperands(6)">6</button>
+  <button>+</button>
+</div>
+```
+
+</CH.Spotlight>
+
+### 2️⃣ Declare variables and DOM nodes.
+
+<CH.Spotlight>
+
+As mentioned in the simplifed steps, we will need to know **the first operand**, **the operator**, and **the second operand** in order to perform **an operation**.
+Accordingly, we need to define these variables and save values to them before we can display the result to the user.
+
+```js scripts.js
+let num1 = "";
+let num2 = "";
+let operator = null;
+```
+
+---
+
+- These variables will change later, so that's why we declare with `let`.
+
+```js scripts.js focus=1[1:9],2[1:9],3[1:13]
+let num1 = "";
+let num2 = "";
+let operator = null;
+```
+
+---
+
+- Also, let's "grab" the Display before we can make it to show result.
+
+```js scripts.js
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const display = document.querySelector("#display");
+```
+
+---
+
+- Don't forget to register the `id ="display"` before we can grab it with `querySelector()`
+
+```html index.html focus=1
+<div id="display"></div>
+<div class="row">
+  <button onclick="setOperands(1)">1</button>
+  <button onclick="setOperands(2)">2</button>
+  <button onclick="setOperands(3)">3</button>
+  <button>+</button>
+</div>
+```
+
+</CH.Spotlight>
+
+### 3️⃣ Set and display the operands
+
+<CH.Spotlight>
+Recalling the user's flow, we will notice the second operand only exist after the operator. That's the ultimate condition to set up our operands.
+
+Let's walk through the `setOperands()` function.
+
+```javascript scripts.js
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  //your code here
+};
+```
+
+---
+
+- Takes in a `num` argument.
+
+```javascript scripts.js focus=5[20:25]
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  //your code here
+};
+```
+
+---
+
+- If there are no operators, then set the first operands, otherwise, set the second.
+
+```javascript scripts.js focus=5:11
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    //set the first operand
+  } else {
+    // set the second operand
+  }
+};
+```
+
+---
+
+- Set the first operand by concating and saving it to `num1`
+
+```javascript scripts.js focus=7
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+  } else {
+  }
+};
+```
+
+---
+
+- Set the second operand by concating and saving it to `num2`
+
+```javascript scripts.js focus=7,9
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+  } else {
+    num2 += num;
+  }
+};
+```
+
+---
+
+- Display the first and second operand with DOM `display`.
+
+```javascript scripts.js focus=8,11
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+    display.innerHTML = num1;
+  } else {
+    num2 += num;
+    display.innerHTML = num2;
+  }
+};
+```
+
+</CH.Spotlight>
+
+### 4️⃣ Listen to user's clicks on the Operator buttons
+
+<CH.Spotlight>
+
+While Number buttons are used to set the operands, Operator buttons are used to set the operators and calculate the result.
+
+```html index.html focus=5
+<div class="row">
+  <button onclick="setOperands(1)">1</button>
+  <button onclick="setOperands(2)">2</button>
+  <button onclick="setOperands(3)">3</button>
+  <button>+</button>
+</div>
+```
+
+---
+
+- Everytime an operator is clicked, let `setOperator(newOperator)`
+
+```html index.html focus=5[10:44]
+<div class="row">
+  <button onclick="setOperands(1)">1</button>
+  <button onclick="setOperands(2)">2</button>
+  <button onclick="setOperands(3)">3</button>
+  <button onclick="setOperator(newOperator)">+</button>
+</div>
+```
+
+---
+
+- `setOperator(newOperator)` takes in a new operator which is a `string` that corresponds to the Operator button clicked.
+
+- For example: `add` for `+`, `minus` for `-`
+
+```html index.html focus=5[31:35]
+<div class="row">
+  <button onclick="setOperands(1)">1</button>
+  <button onclick="setOperands(2)">2</button>
+  <button onclick="setOperands(3)">3</button>
+  <button onclick="setOperator(add)">+</button>
+</div>
+```
+
+</CH.Spotlight>
+
+### 5️⃣ Set the operators
+
+With `setOperator()`, we want to either execute an operation or assign new value for the `operator` variable.
+
+<CH.Spotlight>
+
+```javascript scripts.js focus=15:18
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+    display.innerHTML = num1;
+  } else {
+    num2 += num;
+    display.innerHTML = num2;
+  }
+};
+
+const setOperator = (newOperator) => {
+  //your code here
+};
+```
+
+---
+
+- To choose which action to perform, we runs an `if statement`.
+
+```javascript scripts.js focus=15:21
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+    display.innerHTML = num1;
+  } else {
+    num2 += num;
+    display.innerHTML = num2;
+  }
+};
+
+const setOperator = (newOperator) => {
+  if (operator) {
+    //Calculate the result
+  } else {
+    //Assign new value for the operator variable
+  }
+};
+```
+
+---
+
+- If there is an operator, let's start calculating.
+
+```javascript scripts.js focus=15:21
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+    display.innerHTML = num1;
+  } else {
+    num2 += num;
+    display.innerHTML = num2;
+  }
+};
+
+const setOperator = (newOperator) => {
+  if (operator) {
+    calculate();
+  } else {
+    //Assign new value for the operator variable
+  }
+};
+```
+
+---
+
+- Otherwise, let's assign `operator` with a new value which is stored inside the argument `newOperator`.
+
+```javascript scripts.js focus=15:21
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+    display.innerHTML = num1;
+  } else {
+    num2 += num;
+    display.innerHTML = num2;
+  }
+};
+
+const setOperator = (newOperator) => {
+  if (operator) {
+    calculate();
+  } else {
+    operator = newOperator;
+  }
+};
+```
+
+</CH.Spotlight>
+
+### 6️⃣ Calculate the result
+
+<CH.Spotlight>
+
+Finally, let's write a function to calculate and show the result. Keep in mind that we also want our calculator to do chaining calculation ⭐️.
+
+```javascript scripts.js
+const calculate = () => {
+  // your code here
+};
+```
+
+---
+
+Displaying the new result after every calculation.
+
+`result` is kept locally inside `caculate()`.
+
+```javascript scripts.js focus=24,25
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+    display.innerHTML = num1;
+  } else {
+    num2 += num;
+    display.innerHTML = num2;
+  }
+};
+
+const setOperator = (newOperator) => {
+  if (operator) {
+    calculate();
+  } else {
+    operator = newOperator;
+  }
+};
+
+const calculate = () => {
+  let result;
+  display.innerHTML = result;
+};
+```
+
+---
+
+- For the chaining effect, we assigns the result to `num1` and keep `num2` empty.
+
+```javascript scripts.js focus=26,27
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+    display.innerHTML = num1;
+  } else {
+    num2 += num;
+    display.innerHTML = num2;
+  }
+};
+
+const setOperator = (newOperator) => {
+  if (operator) {
+    calculate();
+  } else {
+    operator = newOperator;
+  }
+};
+
+const calculate = () => {
+  let result;
+  display.innerHTML = result;
+  num1 = result;
+  num2 = "";
+};
+```
+
+---
+
+- Now it's time for calculation. As each operator would do a different operation, let's put them in an `if statement`.
+
+```javascript scripts.js focus=26,27,28
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+    display.innerHTML = num1;
+  } else {
+    num2 += num;
+    display.innerHTML = num2;
+  }
+};
+
+const setOperator = (newOperator) => {
+  if (operator) {
+    calculate();
+  } else {
+    operator = newOperator;
+  }
+};
+
+const calculate = () => {
+  let result;
+
+  if (operator === "add") {
+    result = num1 + num2;
+  }
+
+  display.innerHTML = result;
+  num1 = result;
+  num2 = "";
+};
+```
+
+---
+
+- Making sure the output is a floating point number with [`parseFloat()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)
+
+```javascript scripts.js focus=27[14:50]
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+    display.innerHTML = num1;
+  } else {
+    num2 += num;
+    display.innerHTML = num2;
+  }
+};
+
+const setOperator = (newOperator) => {
+  if (operator) {
+    calculate();
+  } else {
+    operator = newOperator;
+  }
+};
+
+const calculate = () => {
+  let result;
+
+  if (operator === "add") {
+    result = parseFloat(num1) + parseFloat(num2);
+  }
+
+  display.innerHTML = result;
+  num1 = result;
+  num2 = "";
+};
+```
+
+---
+
+- Continuing to add other cases of other operators.
+
+```javascript scripts.js focus=25:36
+let num1 = "";
+let num2 = "";
+let operator = null;
+
+const setOperands = (num) => {
+  if (!operator) {
+    num1 += num;
+    display.innerHTML = num1;
+  } else {
+    num2 += num;
+    display.innerHTML = num2;
+  }
+};
+
+const setOperator = (newOperator) => {
+  if (operator) {
+    calculate();
+  } else {
+    operator = newOperator;
+  }
+};
+
+const calculate = () => {
+  let result;
+  if (operator === "add") {
+    result = parseFloat(num1) + parseFloat(num2);
+  }
+  if (operator === "minus") {
+    result = parseFloat(num1) - parseFloat(num2);
+  }
+  if (operator === "divide") {
+    result = parseFloat(num1) / parseFloat(num2);
+  }
+  if (operator === "multiply") {
+    result = parseFloat(num1) * parseFloat(num2);
+  }
+  display.innerHTML = result;
+  num1 = result;
+  num2 = "";
+};
+```
+
+---
+
+</CH.Spotlight>
+
+<br />
+
+<h1>You did it, amazing good job!</h1>
+
+<br />
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "20px", float: "right" }}
+/>
