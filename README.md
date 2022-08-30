@@ -1,6 +1,6 @@
 # README
 
-Welcome to CS content 2.0
+Welcome to CS content 2.0.
 
 ## File Struture
 
@@ -8,12 +8,17 @@ Welcome to CS content 2.0
 |- docs
 |- pages/
 |- |- demo/
-|- |- |- fileName.mdx
+|- |- |- file-name.mdx
+|- |- program-name/
+|- |- |- module-name/
+|- |- |- |- mini-course-name/
+|- |- |- |- |-content-name.mdx/
 |- styles/
 |- |- global.css
 ```
 
-Add your work in `pages/<folderName>/<fileName>.mdx`
+- For general purposes add your work in `pages/<purpose-folder>/<purpose>.mdx`
+- For program specific contents add your work in `pages/<program-name>/<module>/<mini-course>/<content>.mdx`
 
 READ ONLY files:
 
@@ -21,6 +26,12 @@ READ ONLY files:
 - `./next.config.js` : configuration for Next app.
 
 ## How to contribute
+
+### Naming convention
+
+```md
+- Full-Stack Web Node Js : wv-node-js
+```
 
 ### Git flow
 
