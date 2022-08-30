@@ -1,0 +1,269 @@
+# <img src="https://i.imgur.com/dpd20EG.png" style={{width:"20px"}}/> Praticing CoderLabs
+
+## Focus
+
+<CH.Code>
+  
+```python main.py focus=1[4:12],2[3:7],5:7
+def greeting(name):
+  print(f"Hello {name}")
+
+print(1)
+print(2)
+print(3)
+print(4)
+
+````
+
+```python preproces.py
+print(1)
+print(2)
+print(3)
+print(4)
+````
+
+</CH.Code>
+
+## Mark
+
+```javascript
+console.log("Hello");
+// mark[1:7] mark-highlight
+console.log("Hello");
+console.log("Hello");
+// mark
+console.log("Hello");
+```
+
+---
+
+## Code Reference
+
+<CH.Section>
+
+```python
+def isOdd(n):
+  return True if n % 2 == 1 else False
+```
+
+Explanation:
+
+- Create a function called [isOdd](focus://1[5:9])
+- Return [True](focus://2[10:14]) [if n is odd](focus://2[15:27]) otherwise False
+
+</CH.Section>
+
+---
+
+## Scrollycoding
+
+<CH.Scrollycoding>
+
+```python main.py
+
+```
+
+---
+
+**Define the function**
+
+```python main.py
+def greeting():
+```
+
+---
+
+**Define param `name`**
+
+```python main.py
+def greeting(name):
+```
+
+---
+
+**Print hello name**
+
+```python main.py focus=2
+def greeting(name):
+  print(f'Hello {name}')
+```
+
+</CH.Scrollycoding>
+
+---
+
+## Spotlight
+
+<CH.Spotlight>
+
+```python main.py
+
+```
+
+---
+
+**Define the function**
+
+```python main.py
+def greeting():
+```
+
+---
+
+**Define param `name`**
+
+```python main.py
+def greeting(name):
+```
+
+---
+
+**Print hello name**
+
+```python main.py focus=2
+def greeting(name):
+  print(f'Hello {name}')
+```
+
+</CH.Spotlight>
+
+---
+
+## Slideshow
+
+<CH.Slideshow>
+
+**Define a function called printPrime**
+
+```python main.py
+def printPrime():
+  return
+```
+
+---
+
+**Create a for loop from 2 to 100**
+
+```python main.py
+def printPrime():
+  for i in range(2, 100):
+  return
+```
+
+---
+
+**Check if the number i is a prime number**
+
+```python main.py
+def printPrime():
+  for i in range(2, 100):
+    if isPrime(i):
+  return
+```
+
+---
+
+**If true, print i**
+
+```python main.py
+def printPrime():
+  for i in range(2, 100):
+    if isPrime(i):
+      print(i)
+  return
+```
+
+---
+
+```javascript App.js
+const count = () => console.log(1);
+```
+
+</CH.Slideshow>
+
+---
+
+## Sandpack
+
+import { Sandpack } from "@codesandbox/sandpack-react";
+
+export const htmlCode = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    <script src="src/index.js"></script>
+  </body>
+</html>`;
+
+<Sandpack
+  template="vanilla"
+  theme="dark"
+  options={{
+    showNavigator: true,
+    showTabs: true,
+    editorWidthPercentage: 60,
+    autorun: true,
+  }}
+  files={{
+    "/index.html": htmlCode,
+    "/src/styles.css": "",
+    "/src/index.js": `import "./styles.css"`,
+  }}
+/>
+
+export const reactCode = `export default function App() { 
+  return <h1>Counter</h1> 
+}`;
+
+---
+
+<Sandpack
+  template="react"
+  theme="dark"
+  files={{
+    "/App.js": reactCode,
+  }}
+  options={{
+    showNavigator: true,
+    editorWidthPercentage: 60,
+    autorun: false,
+  }}
+/>
+
+---
+
+## Git & Github
+
+<CH.Spotlight>
+
+```bash
+git status
+```
+
+---
+
+expectation
+
+<img src="https://i.imgur.com/dMpJjB0.png" style={{ width: "500px" }} />
+
+---
+
+After commit you should see
+
+<img src="https://i.imgur.com/dMpJjB0.png" style={{ width: "500px" }} />
+
+```bash
+git commit -m "init"
+```
+
+---
+
+</CH.Spotlight>
+
+
+This is the end of the world - Chinh
