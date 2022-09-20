@@ -1,0 +1,133 @@
+# Automate boring task with NodeJs
+
+## Overview
+
+### The important of content
+
+In web development, the logics are just one part of making a good web app. A social platform will have no value with out users; A game store is just blank canvas with out game information, images ...
+
+### Making data
+
+To make a prototype to demontrate for audience, we must add content into our web. For examples, to demontrate our pagination we might have to have 100 items with their infos like title, description, ... Meaning someone have to come up with `100\*x` items content and enter into the database. Imagine a bigger application where we want to make a dashboard with sale report. Someone need to make `x` user account , each of them have to make `n` carts which includes `z` products.
+Inshort, a time consuming task that could be automate by writing a script.
+
+### Automate the data generating process
+
+Automation is the use of technology to accomplish a task with as little human interaction as possible. In computing, automation is usually accomplished by a program, a script, or batch processing. For example, a web srapper program to get websites data, a tool to transform .mp3 to .mp4, a tool to mock up data for testing, automation test ....
+
+There are many way to make data, such as:
+
+- Manually entry each piece of information
+- Write a script to randomize info and save to database
+- Write a script to collect data from a website
+- Write a script to call to an API then save the data in our database
+- Collect dataset from others then write a script to process any given data format into our own.
+
+We will focus on the Randomize and Collect-Process methods
+
+## Random data with Faker Js
+
+```md
+[FakerJs](https://fakerjs.dev/) is a popular library that generates fake (but reasonable) data that can be used for things such as:
+```
+
+- Unit Testing
+- Performance Testing
+- Building Demos
+- Working without a completed backend
+
+### Set up
+
+Install it as a Dev Dependency using your favorite package manager.
+
+```cmd
+npm install @faker-js/faker --save-dev
+```
+
+### Basic usage
+
+```js
+import { faker } from "@faker-js/faker";
+
+const randomName = faker.name.findName(); // Rowan Nikolaus
+const randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
+```
+
+## Lab: Random mock user data
+
+Checkout the tutorial video for a complete walkthrough.
+Let's write a script to generate mock user for our database
+
+### We will be using :
+
+- [json server](https://www.npmjs.com/package/json-server) for simple api endpoints
+- [faker js](https://fakerjs.dev/) for randomize data
+
+### API Endpoints :
+
+- GET : list of all user with pagination
+- GET : search user by ...
+
+### Script feature :
+
+- Create n users on command
+- Save users info to `db.json`
+
+```cmd
+node create-users 40
+```
+
+## Collect and process dataset from others (Kaggle)
+
+The other way to have content for our project database is collecting datasets from different sources.
+There are many awesome platform that serve datasets for us to choose from. [Kaggle](https://www.kaggle.com/datasets) is one example. Simply go to the website and browse many different categories of data for your upcoming projects.
+
+### Kaggle dataset collection
+
+![kaggle](./assets/kaggle.png)
+
+## CSV to JSON
+
+Most of the time, there will be a dataset to help you create your next projects. It is easy to find datasets , but it is harder to use one. Sometimes the dataset you found could be in a format that are not familiar. For examples, spreadsheet files from Google sheet or Excel would be in .csv format rather than .json.
+For this challenge, we will now learn how to translate .cvs to .json.
+![csv2json](./assets/kaggle-data-type.png)
+
+## Lab: CSV to JSON
+
+[Csv to json](https://www.npmjs.com/package/csvtojson) is a popular library help process csv file, its main feature is to translate `.csv` to `.json`.
+
+### Set up
+
+Install it as a Dev Dependency using your favorite package manager.
+
+```cmd
+npm i --save csvtojson
+```
+
+### Basic usage
+
+```js
+/** csv file
+a,b,c
+1,2,3
+4,5,6
+*/
+const csvFilePath = "<path to csv file>";
+const csv = require("csvtojson");
+csv()
+  .fromFile(csvFilePath)
+  .then((jsonObj) => {
+    console.log(jsonObj);
+    /**
+     * [
+     * 	{a:"1", b:"2", c:"3"},
+     * 	{a:"4", b:"5". c:"6"}
+     * ]
+     */
+  });
+
+// Async / await usage
+const jsonArray = await csv().fromFile(csvFilePath);
+```
+
+## The end
