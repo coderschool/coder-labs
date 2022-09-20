@@ -31,23 +31,9 @@ READ ONLY files:
 - `./styles/global.css` : Only use the prestyled classnames
 - `./next.config.js` : configuration for Next app.
 
-- The route should have the format: ``
-
-## How to contribute
-
-### Naming convention
-
-```md
-- Full-Stack Web Node Js : wv-node-js
-```
-
-### Git flow
-
-- Clone/Pull existing main
-- Start in a new branch
-- Commit with meaningful message
-- Push to the remote branch (not MAIN)
-- Make a pull request from your remote branch to remote main
+## How to contribute?
+- [Required: Issue to Pull Request](https://www.loom.com/share/0e45f18ccdfa4ada9dabb136d5ddecf8)
+- [Beginner: Github Pull Request](https://www.youtube.com/watch?v=8lGpZkjnkt4)
 
 ### Deployment flow
 
