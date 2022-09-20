@@ -1,0 +1,153 @@
+# Holidates App Walkthrough
+
+## Intro
+
+Let's read the requirements of the app in the `README.md` of [this assignment](https://codesandbox.io/s/holidates-m5ryd)
+
+Now let have a walk through for the first part of the app: Render list of countries
+
+The API we are going to use is [Holiday API](https://holidayapi.com/)
+
+## Get the API KEY
+
+This work flow below will help you to get the API KEY [here](https://scribehow.com/shared/Holidayapi_Workflow___pESClYFSimE_s3wy4DfgQ)
+
+Create a new variable called `API_KEY` that holds the KEY from holiday API
+
+In `script.js`
+
+```js
+const API_KEY = "3c1cd2cf-20e8-4754-a2e3-97be772752b4";
+```
+
+> Note: the API KEY in the code snippet is the fake one, you have to follow those steps above to get your own KEY
+
+## Handle the event `click`
+
+In our website, we've already had the button `Render Countries list` that will help to render the list of countries (from the API) after being clicked.
+
+Now we need to find that button element, then add a handler function that will be invoked whenever we click the button.
+
+In `script.js`
+
+```javascript
+document.getElementById("countries-list-btn").addEventListener("click", () => {
+  console.log("handle click event");
+});
+```
+
+## Fetch the country list from the API
+
+With the API KEY, we are now able to fetch data from Holiday API. But first, let's read the documentation to figure out the right `url`
+
+![list of countries](assets/holidates-0.png)
+
+"Retrieves a list countries with states and provinces."
+
+This is what we want. So based on the documentation, the url is `https://holidayapi.com/v1/countries`.
+
+Also notice that, there is a "Required Request Parameters", which is the API KEY.
+
+Now base on that, let's create a `getCountries` function that returns the data we need.
+
+In `script.js`
+
+```javascript
+const API_KEY = "3c1cd2cf-20e8-4754-a2e3-97be772752b4";
+
+const getCountries = async () => {
+  try {
+    const url = `https://holidayapi.com/v1/countries?pretty&key=${API_KEY}`;
+    //here is how we add a dynamic value (API KEY) to the url
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log("data", data); //have a look the retrieved data
+    return data;
+  } catch (err) {
+    console.log("err", err);
+  }
+};
+```
+
+Feel free to read and add more optional queries to retrieve the specific data that you want.
+
+## Render list of countries
+
+Create a function `renderCountries` that:
+
+1. Fetch all the countries by using function `getCountries`
+2. Find the element with the id `countries-list`
+3. Take out the `ul` element
+4. Delete the sample inside `ul` element
+5. Loop through the list of countries, create new `li` for each of them. Then append them to the `ul` element
+
+```javascript
+const renderCountries = async () => {
+  try {
+    //1. Fetch all the countries by using function `getCountries`
+    const data = await getCountries();
+
+    //2. Find the element with the id `countries-list`
+    const countriesList = document.getElementById("countries-list");
+
+    //3. Take out the `ul` element
+    const ulCountriesList = countriesList.children[2];
+
+    //4. Delete the sample inside `ul` element
+    ulCountriesList.innerHTML = "";
+
+    //5. Loop through the list of countries
+    data.countries.forEach((country, index) => {
+      //Create new `li` for each element
+      const x = document.createElement("li");
+      x.innerHTML = `<div class="bullet">${index + 1}</div>
+            <div class="li-wrapper">
+                <div class="li-title">${country.name}</div>
+                <div>Code: ${country.code}</div>
+            </div>`;
+
+      //Then append them to the `ul` element
+      ulCountriesList.appendChild(x);
+    });
+  } catch (err) {
+    console.log("err", err);
+  }
+};
+```
+
+Now let combine them all, fire the function `renderCountries` whenever we click the button `Render Country List`
+
+In `script.js`
+
+```javascript
+const API_KEY = "3c1cd2cf-20e8-4754-a2e3-97be772752b4";
+
+const renderCountries = async () => {
+  try {
+    const data = await getCountries();
+    const countriesList = document.getElementById("countries-list");
+    const ulCountriesList = countriesList.children[2];
+    ulCountriesList.innerHTML = "";
+    data.countries.forEach((country, index) => {
+      const x = document.createElement("li");
+      x.innerHTML = `<div class="bullet">${index + 1}</div>
+            <div class="li-wrapper">
+                <div class="li-title">${country.name}</div>
+                <div>Code: ${country.code}</div>
+            </div>`;
+      ulCountriesList.appendChild(x);
+    });
+  } catch (err) {
+    console.log("err", err);
+  }
+};
+document.getElementById("countries-list-btn").addEventListener("click", () => {
+  renderCountries();
+});
+```
+
+## Next Steps
+
+By now, you are able to handle event, fetch data and render it to the screen the list of countries. It's your turn to continue on the story.
+
+[Link README](https://codesandbox.io/s/holidates-m5ryd)
