@@ -9,21 +9,29 @@ Welcome to CS content 2.0.
 |- pages/
 |- |- demo/
 |- |- |- file-name.mdx
-|- |- program-name/
-|- |- |- module-name/
-|- |- |- |- mini-course-name/
+|- |- program/
+|- |- |- module/
 |- |- |- |- |-content-name.mdx/
 |- styles/
 |- |- global.css
 ```
 
 - For general purposes add your work in `pages/<purpose-folder>/<purpose>.mdx`
-- For program specific contents add your work in `pages/<program-name>/<module>/<mini-course>/<content>.mdx`
+- For program specific contents add your work in `pages/<program>/{module+course}/{content}.mdx`
+- Content: `section&number-type&order-activityName`
+  - Section number : `s1`, `s2`
+  - Lecture note: `ln1`, `ln2`
+  - Assignments: `a1q` (question 1), `a1s` (solution 1)
+  - Text book: `xxx`,`overview`
+
+e.g. `\wv\m11\s1-a1q-basic-html`
 
 READ ONLY files:
 
 - `./styles/global.css` : Only use the prestyled classnames
 - `./next.config.js` : configuration for Next app.
+
+- The route should have the format: ``
 
 ## How to contribute
 
