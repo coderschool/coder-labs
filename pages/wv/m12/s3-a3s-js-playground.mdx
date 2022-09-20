@@ -1,0 +1,101 @@
+# Assignment 3
+
+# Question 1:
+
+```js
+Body Type from BMI Write a function to check your body type base on weight and
+height. Known that: BMI = weight in kg/ (height in m)2
+
+Check the BMI, if BMI is:
+less than 18: underweight
+18 to less than
+25: normal weight 25 to less than
+30: overweight
+30 and above: obesity Return the right body type.
+
+Examples:
+
+bodyType(1.64,60) should return "normal weight"
+bodyType(1.6,70) should return "overweight"
+
+function bodyType (height, weight) {
+  //YOUR CODE HERE
+  const bmi = weight / (height \* height)
+}
+```
+
+## Answer:
+
+```js
+
+function bodyType (height, weight) {
+//YOUR CODE HERE
+const bmi = weight / (height \* height)
+  if(bmi <18) return "underweight";
+  else if(bmi <25) return "normal weight";
+  else if(bmi <30) return "overweight";
+  else return "obesity";
+
+}
+
+```
+
+# Question 2:
+
+```js
+Count Your Calories You are on a diet and record your total calorie intake every
+day. After a week, the 7 numbers are recorded in an array. Calculate your total
+weight gain or loss for the week if you burn 2000 calories a day, and 1 kg is
+equivalent to 7700 calories.
+
+NOTE: 1 kg = 7700 calories totalKcal([1600, 1600, 1500, 1700, 1800, 2000, 2000]) // should return - 0.233766234, meaning you will lose 0.233766234 kg
+
+totalKcal([2000, 2000, 2000, 2000, 2000, 2000, 2000]) //should return 0
+
+function totalKcal(arr) { let result = 0; // YOUR CODE HERE
+return result; }
+
+```
+
+## Answer:
+
+```js
+function totalKcal(arr) {
+  let result = 0;
+  // YOUR CODE HERE
+  for (i = 0; i < arr.length; i++) {
+    result += (arr[i] - 2000) / 7700;
+  }
+
+  return result;
+}
+```
+
+# Question 3:
+
+```js
+Yard Sale You are moving to a new place and having a yard sale. You make a list
+of all the items and their corresponding prices. Calculate the total money in
+VND you can earn if you sell all the items.
+
+For example: const items = [{ name:"table", price: 100000, currency: "VND" }, { name: "microwave", price: 700000,
+currency: "VND" }, { name: "sofa", price: 500000, currency: "VND" } ]
+totalPrice(items) //should return 1300000
+
+function totalPrice(arr) {
+  let total = 0
+  //YOUR CODE HERE return total
+}
+```
+
+## Answer:
+
+```js
+function totalPrice(arr) {
+  let total = 0;
+  for (i = 0; i < arr.length; i++) {
+    total += arr[i].price;
+  }
+  return total;
+}
+```
