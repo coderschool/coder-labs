@@ -4,7 +4,7 @@ import React from "react";
 const index = () => {
   return (
     <>
-      <h1>Welcome to CoderSchool content 2.0</h1>
+      <h1>Welcome to CoderSchool content 2.0 (beta)</h1>
       <ul>
         <h4>Demo</h4>
         <li>
@@ -18,11 +18,9 @@ const index = () => {
         </li>
       </ul>
       <ul>
-        <h4>Web</h4>
+        <h4>Web Development</h4>
         <li>
-          <Link href={"web/m1/wv-javascript-for-web/calculator"}>
-            Calculator
-          </Link>
+          <Link href={"wv/m13/s2-a1s-calculator"}>Calculator Solution</Link>
         </li>
       </ul>
     </>
