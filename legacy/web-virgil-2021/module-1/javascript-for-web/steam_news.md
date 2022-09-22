@@ -1,0 +1,135 @@
+summary: Create Steam News
+id: wv-m13-steam-news
+categories: web-development
+tags: web-development
+status: Publish
+authors: Tuan Hoang
+Feedback Link: https://www.coderschool.vn
+
+# Steam Game Shop
+
+## Intro
+
+Duration: 5
+
+### Overview
+
+Game is one of the most popular industries nowadays. With the game being created every minute and relayed through TV, radio, and the internet, the updated news on a game is already old by the next morning. And, that’s why game publishers such as Steam created a website to help the user obtain the most updated information about games at the ease
+
+So, game lovers of Steam are reading news and info on games at the convenience of their work desktop or mobiles. The traffic of the news online services is rewardingly high. As we could run ads and generate a good amount of money. 💰
+
+## Demos
+
+Duration: 20
+
+### UI design
+
+We are making a Steam app store, kind of, ours will be better.
+Our inspiration for this website is from [Steam](https://store.steampowered.com), however, you could choose to either make an exact clone of it or freestyle as you like. (🚀 it is more challenging to create an EXACT clone).
+
+#### Steam original
+
+![Steam demo](assets/steam-screen.png)
+
+#### Honorable submission
+
+Here are good submissions from past students 👍
+[Hieu Trung Nguyen](https://steam-solution-v1.netlify.app/)
+
+## Backend API
+
+To have dynamic and up-to-date data in our application we often use API services from others.
+The good mentors of CoderSchool created this API service to help us get the latest news of the game deployed [Steam API](https://documenter.getpostman.com/view/14499722/UVeKqQWh).
+
+Right now eventhough API seem like the rabbit from hats, later on in the course you will be able to create APIs just like this one.
+
+You are expected to be able to find your way through this API by reading its documentation.
+
+## Example UI design
+
+Duration: 20
+
+#### Our suggested design
+
+![Simplified sketch](./assets/steam-sketch.png)
+
+Here is the [Link to the mockup ](https://excalidraw.com/#json=WeOH-cuYiBxtn7K94qjVn,JlYhwgD5vAy1Wc1UcbgNug)
+
+#### Notes
+
+- The dotted arrow from the `Search` button means that, when click, the user will see the below the display with all the search result
+
+- The arrows from each `game` mean that when clicked, the user will see a new screen to display all the news related to that clicked item.
+
+### Make your own
+
+This is just **an example**. You could choose any design that you one or create one yourself using [Excalidraw](https://excalidraw.com), an easy-to-use mockup tool, to sketch out the initial UI design. Go wild 🔥.
+
+## Requirements
+
+Duration: 20
+
+### User Story
+
+As a developer, you will get familiar with the term "User story" at the beginning of any project. It describes what the user will be able to do/see with the application. User story sections are different from project to project, however majority of them will format like this :
+
+1. User see a list of games from the API in any format (list, gallery, ... )
+2. User can see the game initial info (image, title, and price ...) in each item
+3. User see Search input box
+4. User able to Search for games by app name
+5. User able to see the search results
+6. User See list of all genres (category)
+7. User able to filter games that match the genre and tag buttons that clicked.
+8. User sees the website with a clean UI design.
+9. User can view the website in an IphoneX screensize
+
+## Rocket bounus 🚀
+
+User can click any game item in the gallery to see detail of only that selection's detail (name, tags, description, price, developer...) replacing the current gallery.
+
+There are 2 ways to make this happen. Redirect to a new HTML page and replacing the HTML element of the current page:
+
+1. The first method envolving creating a new `.html` and `.js` page that will be render when an `a tag` is clicked. The challenge of this approach is passing the `appId` from the original `script.js` & `index.html` to the new `.html` & `.js` file so that the later duo could make the api request with correct `appId` for examples: _https://someApi/appId/{appId}_.
+   Find more infomation about the `window` object mentioned in the lecture videos as well as look into the `window.location` property [document](https://www.w3schools.com/js/js_window_location.asp) to find the solution.
+
+This is the conventional way to render an `item detail page` in web development.
+
+2. The second one envolving creating a new `html element` to replace the current display of the page. for examples: `main`, `body`, `.gallery`. The challenges of this approach are:
+
+- Knowing when and where to `clean` the existing display before `append` the new content
+- For user experiences, able to go back to previous display after go to app detail display and still seeing proper styling.
+  Essentially you will have to `select` the right `element`; `append` the correct `content`; maintain or add appropriate attributes such as `class` ,`id` or `event-listener`.
+
+This is **NOT** the convential way to render an `item detail page` in web development. However, this is still an aceptable solution for this assignment and also a method to see how `React` would render a `component of a page`.
+
+## Outcomes and grading
+
+Duration: 10
+
+### What you'll practice
+
+This project challenge is designed to test your understanding on :
+
+- Asynchronous javascript by requesting data from API with Fetch.
+- JS on dom by accessing, creating, and editing HTML element
+- JS basic syntax and fundamentals
+- Basic HTML & CSS with appropriate tags and attributes; selectors and properties
+
+### How we grade your project
+
+You will start the assignment with 100% and will be deducted upon missing any feature.
+Our passing grade for this assignment is 80%.
+
+| **Grade** | **Description**                                       |
+| --------- | ----------------------------------------------------- |
+| - 5%      | Missing rocket 🚀                                     |
+| - 5%      | Missing any of other user stories that are not rocket |
+| - 5%      | Clustered UI                                          |
+
+## Outro
+
+Duration: 5
+
+#### Good luck have fun coding!
+
+![GLHF](./assets/you-can-do-it-meme.jpeg)

@@ -1,0 +1,383 @@
+summary: mock data with node js
+id: wv-m31-intro-to-node
+categories: web-development
+tags: web-development
+status: Published
+authors: Tuan Hoang
+Feedback Link: https://www.coderschool.vn
+
+# Intro to NodeJs
+
+## Introduction
+
+Node.js is an open-source and cross-platform JavaScript runtime environment. Node.js runs the V8 JavaScript engine, the core of Chrome, outside of the browser.
+It simple languages, to run this code `in script.js`
+
+```js
+//script.js
+console.log("hello word");
+```
+
+We would either use the browser console or use node to run the program
+
+```cmd
+node script.js
+```
+
+From the perspective of a frontend developer who extensively uses JavaScript, Node.js apps bring with them a huge advantage: the comfort of programming everything - the frontend and the backend - in a single language.
+
+### Differences between Node.js and the browser
+
+In the browser, most of the time what we are doing is interacting with the `DOM`, or other Web Platform APIs like `Cookies`. Those things do not exist in Node.js, of course. We also don't have the `document`, `window` and all the other objects that are provided by the browser.
+
+Another difference is that Node.js uses the CommonJS module system, while in the browser we are starting to see the ES Modules standard being implemented.
+
+In practice, this means that for the time being you use `require()` in Node.js instead of `import`
+
+## Getting Started
+
+- **How to check that you have node install**
+
+```bash
+node -v
+```
+
+```console
+v14.15.4
+```
+
+Your version might be different, no worries. But if you have no version , please make sure that you follow this guide to install [NodeJs](https://nodejs.org/en/)
+
+- **How to run NodeJs scripts from the command line?**
+
+The node command is the one we use to run our Node.js scripts:
+
+```
+node script.js
+node <path.to/js.file>
+```
+
+- **Node.js built-in module system**
+
+A Node.js file can import functionality exposed by other Node.js files.
+
+Import the functionality **exposed** in the `library.js` file that resides in the current file folder.
+
+```javascript
+const library = require("./library");
+```
+
+In this file, functionality must be **exposed** before it can be imported by other files. This is what the `module.exports` API offered by the [`module` system](https://nodejs.org/api/modules.html) allows us to do. To expose is to export.
+
+```javascript
+// in car.js
+const car = {
+  brand: "Ford",
+  model: "Fiesta",
+};
+
+module.exports = car;
+
+//..in the other file
+
+const car = require("./car");
+```
+
+The second way is to add the exported object as a property of `exports`. This way allows you to export multiple objects, functions or data:
+
+```javascript
+// in car.js
+const car1 = {
+  brand: "Ford",
+  model: "Fiesta",
+};
+
+const car2 = {
+  brand: "Kia",
+  model: "Sorento",
+};
+
+exports.car1 = car1;
+exports.car2 = car2;
+```
+
+or directly
+
+```javascript
+exports.car1 = {
+  brand: "Ford",
+  model: "Fiesta",
+};
+
+exports.car2 = {
+  brand: "Kia",
+  model: "Sorento",
+};
+```
+
+In the other file
+
+```javascript
+const cars = require("./car");
+console.log(cars);
+// {
+//   car1: { brand: 'Ford', model: 'Fiesta' },
+//   car2: { brand: 'Kia', model: 'Sorento' }
+// }
+```
+
+Or you can use destructuring
+
+```javascript
+const { car1 } = require("./library");
+
+console.log(car1);
+// { brand: 'Ford', model: 'Fiesta' }
+```
+
+## NodeJS File system (fs) module
+
+One of the most common module in NodeJs is the File System ('fs').
+It provides us with methods to communicate and control our local machine such as : Read, Write and edit file, navigating and create folder.
+
+Most of Node.js methods are available in to forms : Async (default) and Sync. Developers could choose which one depend on different scenario.
+
+- **Reading files with Node.js**
+
+```javascript
+const fs = require("fs");
+
+fs.readFile("test.txt", "utf8", (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
+});
+```
+
+readFile is _Asynchronous_ meaning that code below will be executed before `readFile` finish. Try console.log outside the method you would receive undefined.
+
+Alternatively, you can use the synchronous version `fs.readFileSync()`:
+
+```javascript
+const fs = require("fs");
+
+try {
+  const data = fs.readFileSync("test.txt", "utf8");
+  console.log(data);
+} catch (err) {
+  console.error(err);
+}
+```
+
+fs.xxSync are _Synchronous_ methods, meaning that the method must be finish before other codes could be run.
+Try create a global variable `myGlobal` and assign to it the value of `fs.readFileSync`. Then console.log `myGlobal` at the end of script file.
+
+### Common FS module methods
+
+The fs module provides a lot of very useful functionality to access and interact with the file system.
+
+| File system method | Effect                                                                  |
+| ------------------ | ----------------------------------------------------------------------- |
+| `fs.access()`      | check if the file exists and Node.js can access it with its permissions |
+| `fs.appendFile()`  | append data to a file. If the file does not exist, it's created         |
+| `fs.close()`       | close a file descriptor                                                 |
+| `fs.copyFile()`    | copies a file                                                           |
+| `fs.mkdir()`       | create a new folder                                                     |
+| `fs.readdir()`     | read the contents of a directory                                        |
+| `fs.readFile()`    | read the content of a file. Related: `fs.read()`                        |
+| `fs.rename()`      | rename a file or folder                                                 |
+| `fs.rmdir()`       | remove a folder                                                         |
+| `fs.writeFile()`   | write data to a file. Related: `fs.write()`                             |
+
+### File extension
+
+Because NodeJs allow us to communicate with our file system, it is important to note the differences of many different types of a file.
+
+A filename extension, file name extension or file extension is a suffix to the name of a computer file (e.g., .txt, .docx, .md). The extension indicates a characteristic of the file contents or its intended use. A filename extension is typically delimited from the rest of the filename with a full stop (period), but in some systems it is separated with spaces. Other extension formats include dashes and/or underscores on early versions of GNU Linux and some versions of IBM AIX.
+
+Most of the time we will be using these file extensions `.md`,`.js`,`.css`,`.html`,`.csv`, and `.json` for many uses in programing. Knowing how to process these file extensions is also an important skill for developers at any level.
+
+## NodeJS Path module
+
+The path module provides a lot of very useful functionality to access and interact with the file system.
+
+```javascript
+const path = require("path");
+```
+
+Every file in the system has a path. On Linux and macOS, a path might look like:
+
+`/users/joe/file.txt`
+
+while Windows computers are different, and have a structure such as:
+
+`C:\users\joe\file.txt`
+
+You need to pay attention when using paths in your applications, as this difference must be taken into account. The `path.join()` method joins all given path segments together using the platform-specific separator as a delimiter, then normalizes the resulting path. More [details](https://nodejs.org/api/path.html#path_path_join_paths)
+
+## The Node.js HTTP module
+
+The following example creates a web server that listens for any kind of HTTP request on the URL `http://127.0.0.1:5000/` — when a request is received, the script will respond with the string: "Hello World".
+
+- Create a folder called `test-node`. Create a new file called `hello.js`:
+
+```javascript
+// Load HTTP module
+const http = require("http");
+// Create some constants help configurate connection
+const hostname = "127.0.0.1";
+const port = 5000;
+
+// Create HTTP server with http method
+const server = http.createServer((req, res) => {
+  // Set the response HTTP header with HTTP status and Content type
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  // Send the response body "Hello World"
+  res.end("Hello World\n");
+});
+
+// Prints a log once the server starts listening
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+```
+
+- Execute this command in the terminal
+
+```
+node hello.js
+```
+
+Making API from plain NodeJS is a tidious task since we have to configure many repetitive setting. For this reason, API developers are using frameworks such as Express to quickly create a standardized API project.
+
+## NPM Node Package Manager
+
+The World's Largest Software Registry (Library). They host, stored and distribute more than 800,000 code packages. Open-source solutions, library ,softwares sharing platform.
+Many organizations also use `npm` to manage private development. Another poppular alternateive is `yarn`.
+
+- Recommended to start a npm for your project. At `root` !
+
+```bash
+npm init
+```
+
+```console
+accept all question , enter keys
+```
+
+When starting a npm for your project, a `package.json` file will be create.
+This file is writen in `JSON` format. Here lies all your projects infos
+
+```json
+{
+  "name": "project_name",
+  "version": "project_version",
+  "description": "project_description",
+  "main": "root_file",
+  "scripts": {
+    "test": "test command run",
+    "start": "start command run",
+    "xxx": "xxx command run"
+  },
+  "dependencies": {
+    "library": "library_verison"
+  },
+  "author": "author",
+  "license": "ISC"
+}
+```
+
+Required fields:
+
+- name
+- version
+
+Importants fields:
+
+- scripts: In scripts object, we specify the command pipeline to run when code is executed
+- dependencies : list out all 3rd parties software that needed to be install to run this project. Thing that this project _depended to_. One benefit of this is to **minimize** codebase file size when transfering to other places : github, gitlab, **cloud service**. `package.json` keeping a list of `dependencies` name and version so that running the code would only need to use `npm install` everything in the list.
+
+**REMEMEBER**: to install dependecies right after clonning, pulling or receiving any code.
+
+```bash
+npm install
+# or
+npm i
+```
+
+**WARNING**: Sometimes, you may encounter instruction to `npm i -g ...`. The `-g` is a flag that help us to install the software `GLOBALLY`. Ask yourself do you need to install this to **your entire machine** or just simply in the directory for your project. Be vert **cautious** on what you installing on your machine.
+
+Also npm have many options, the list of them could be find [here](npmjs.com).
+
+### Nodemon : Automate restart on changes saved
+
+nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+
+nodemon does not require any additional changes to your code or method of development. nodemon is a replacement wrapper for node. To use nodemon, replace the word node on the command line when executing your script.
+
+using npm to install nodemon
+
+```bash
+npm i nodemon
+```
+
+Add new command for `scripts` in `package.json` so that your machine using `nodemon` to execute your code
+
+```json
+{
+  // ...
+"scripts":{
+  // ...
+  "dev": "nodemon yourStartFile"
+}
+"dependencies":{
+  "nodemon":"x.x.x"  }
+}
+```
+
+### Note on .gitIgnore
+
+Previously :
+_`package.json` keeping a list of `dependencies` name and version so that running the code would only need to use `npm install` everything in the list_
+
+Yes, but we are missing one important step.
+To not use git history track for files, softwarem or changes we must specify so to `git`. The `.gitignore` file contain list of _paths_ to files and folders that you wish not to track history. Thus, _not included_ in your `push` to `github` or any `cloud`
+
+- At `root`
+
+```cmd
+touch .gitignore
+```
+
+- In `.gitignore` add
+
+```t
+# node_modules
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+```
+
+**Warning** : one common mistake is to `git init` then `npm init` then create `.gitignore`. This will not have effect on `node_modules/` ignore since the `npm init alread make a node module` and the `git init before it has track the changes`. You may need to remove the `git cache` to fix this issue.
+
+**Recommended** : Workflow
+
+```md
+1. Create folder structure
+2. Initialize NPM
+3. Install NPM to create `node_modules/`
+4. Create `.gitignore` and add `node_modules/` to the list
+5. Initialize Git
+6. as usual...
+```
+
+## End of lesson
