@@ -1,0 +1,138 @@
+# <img src="https://i.imgur.com/dpd20EG.png" style={{width:"20px"}}/> CSS: Introduction
+
+## What is CSS?
+
+Cascading Stylesheets (CSS) is the code that you use to style your website.
+
+**Anatomy of a CSS ruleset**
+
+<img
+  style={{ width: "500px" }}
+  src="https://i.imgur.com/RdLtqUP.png
+"
+/>
+
+This whole structure is called a ruleset. A ruleset consists of:
+
+> - **Declaration**: is a single rule which specifies which of the element's properties you want to style.
+> - **Selector**: defines the element(s) to be styled.
+> - **Properties**: are the way you can style an HTML element.
+> - **Property value**: is one out of many possible appearances for a given property. (For example, there are many color values, like red, blue, etc.)
+
+The important part of the syntax:
+
+> - Each ruleset must be wrapped in curly braces `{}`.
+> - Use a colon `:` to separate the property from its values.
+> - Use a semicolon `;` to separate each declaration from the next one.
+
+<br />
+<br />
+
+## How to attaching the styles to the document?
+
+There are three ways that style rules can be applied to an HTML document:
+
+<CH.Slideshow>
+
+#### Inline styles
+
+Applying properties and values to a single element by using style attribute in the element itself.
+
+🚩 Inline styles should be avoided. They are problematic in that they merge presentation information into the structural markup and make it more difficult to make changes.
+
+```html index.html focus=8:10
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    <h1 style="color:red">Heading 1 with Inline styles</h1>
+  </body>
+</html>
+```
+
+---
+
+#### Embedded style sheets
+
+Embedded style sheets are placed in a HTML document via the `style` tag.
+
+🚩 The style could be in the `body` or `head` tag. But we recommend to place it in the head of the document.
+
+```html index.html focus=3,7:15
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading 1 with Inline styles</h1>
+  </body>
+</html>
+```
+
+---
+
+```html index.html focus=3,7:11
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Heading 1 with Inline styles</h1>
+  </body>
+</html>
+```
+
+#### External style sheets
+
+```css styles.css
+h1 {
+  color: red;
+}
+```
+
+The external `.css` file that contains a number of style rules.
+
+The `.css` document is then linked to the HTML documents.
+
+🚩 This is the most powerful and recommended method for attaching style sheets to content.
+
+</CH.Slideshow>
+<br/>
+<br/>
+<br/>
+<br/>
+
+## References
+
+⭐️ [MDN: CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)<br/>
+
+⭐️ [MDN: Common CSS Properties Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index)<br/>
+
+⭐️ [MDN: Pseudo-classes and pseudo-elements](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)<br/>
+
+**Additional Readings**
+
+⭐️ [CSS Tricks](https://css-tricks.com/): The is the blog of CSS guru Chris Coyier. Chris loves CSS and enthusiastically shares his research and tinkering on his site.
+
+⭐️ [A List Apart](https://alistapart.com/): This online magazine features some of the best thinking and writing on cutting-edge, standards-based web design. It was founded in 1998 by Jeffrey Zeldman and Brian Platz.
+
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "20px", float: "left" }}
+/>
