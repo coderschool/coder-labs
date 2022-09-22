@@ -45,6 +45,23 @@ export const courseWebUnits = [
       },
     ],
   },
+  {
+    id: "wv/m12",
+    title: "Module 1.2",
+    courseUnits: [
+      {
+        id: "wv/m12/s2",
+        title: "Section 2",
+        courseUnits: [
+          {
+            id: "wv/m12/s2-a1s-karel",
+            title: "Assignment 1 - Solution - Karel",
+            path: "wv/m12/s2-a1s-karel",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const courses = [
