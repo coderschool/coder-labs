@@ -1,0 +1,214 @@
+# <img src="https://i.imgur.com/dpd20EG.png" style={{width:"20px"}}/> CSS: Important Concepts
+
+## 1️⃣ Inheritance
+
+<div class="text-box">
+Some CSS properties by default inherit values set on the current element's parent element, and some don't. This can also cause some behavior that you might not expect.
+
+There are two groups of inherited properties, including: the pertaining to text properties, the list properties and the rest - the non-inherited properties.
+
+</div>
+<CH.Scrollycoding preset="https://codesandbox.io/s/intro-to-css-x1yo7u">
+
+#### 1. Pertaining to text properties
+
+> - Including: color, font, font-family, font-size, font-weight, font-variant, font-style, line-height, letter-spacing, text-align, text-indent, text-transform, white-space, and word-spacing.
+
+> - It's common to apply a `font-family` to the `body` element. All the descended elements within will then inherit this font; you don't have to apply it explicitly to each element on the page.
+
+> - Example: All `<p>` elements that are children of `.box1` will inherit the style `color:red`.
+
+```html index.html
+<div class="box1">
+  <p>line 1</p>
+  <p>line 2</p>
+  <p>line 3</p>
+</div>
+
+<style>
+  .box1 {
+    color: red;
+  }
+</style>
+```
+
+---
+
+#### 2. List properties
+
+> - Including : `list-style`, `list-style -type`, `list-style-position`, and `list-style-image`.
+
+> - Example: All `<li>` elements that are children of `ul` will inherit the style `list-style: square;`.
+
+```html index.html
+<ul class="box1">
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ul>
+
+<style>
+  ul {
+    list-style: square;
+  }
+</style>
+```
+
+---
+
+#### 3. Non-inherited properties
+
+> - Some properties do not inherit — for example if you set a width of 50% on an element, all of its descendants do not get a width of 50% of their parent's width.
+
+> - Example: All `<p>` elements that are children of `.box1` will inherit the style `color:red`, but do not inherit the `border` property.
+
+```html index.html
+<div class="box1">
+  <p>line 1</p>
+  <p>line 2</p>
+  <p>line 3</p>
+</div>
+
+<style>
+  .box1 {
+    color: red;
+    border: 2px solid red;
+  }
+</style>
+```
+
+</CH.Scrollycoding>
+
+## 2️⃣ The Cascade
+
+<div class="text-box" >
+Fundamentally, CSS is about declaring rules: Under various conditions, we want certain things to happen. If this class is added to that element, apply these styles. If element X is a child of element Y, apply those styles. The browser then takes these rules, figures out which ones apply where, and uses them to render the page.
+
+Each rule may be straightforward on its own, but what happens when two rules provide conflicting information about how to style an element? The cascade determines how conflicts are resolved, and it's a fundamental part of how the language works.
+
+</div>
+<img
+  style={{ width: "500px" }}
+  src="https://i.imgur.com/HmaoVxS.png
+"
+/>
+
+#### 1. Style sheet origin
+
+<div class="text-box">
+  > - The style sheets you add to your web page aren't the only one the browser
+  applies. Yours are called author styles; there are also user agent styles,
+  which are the browser's default styles. User agent styles have lower priority,
+  so your styles override them.
+</div>
+#### 2. `!importance`
+<div class="text-box">
+  > - Declarations marked `!important` are treated as a higher-priority origin.
+  A declaration can be marked important by adding `!important` to the end of the
+  declaration, before the semicolon.
+  
+  > - Example: `color: red !important;`
+</div>
+#### 3. Specificity:
+<div class="text-box">
+If conflicting declarations can't be resolved based on their origin, the browser next tries to resolve them by looking at their specificity. Understanding specificity is essential.
+</div>
+<CH.Scrollycoding preset="https://codesandbox.io/s/intro-to-css-x1yo7u">
+
+> - ID has highest priority. If a selector has more **IDs**, it wins (that is, it's more specific).
+
+> - Example: the `.second` style is not applied because class selector has lower priority than ID `#first`.
+
+```html index.html
+<div>
+  <h1 id="first" class="second">Target text</h1>
+</div>
+
+<style>
+  #first {
+    color: red;
+  }
+  .second {
+    color: blue;
+  }
+</style>
+```
+
+---
+
+> - If that results in a tie, the selector with the most **classes** wins.
+
+> - Example: Select the same Id `#first` but the selector with more classes `.second .third` wins.
+
+```html index.html
+<div>
+  <h1 id="first" class="second third">Target text</h1>
+</div>
+
+<style>
+  #first.second {
+    color: red;
+  }
+  #first.second.third {
+    color: blue;
+  }
+</style>
+```
+
+---
+
+> - If that results in a tie, the selector with the most **tag names** wins.
+
+> - Example: Both declaration has the same amount of ids and classes, but `color:red` wins as it has more tag name than the other.
+
+```html index.html
+<div>
+  <h1 id="first" class="second third">Target text</h1>
+</div>
+
+<style>
+  h1#first.second.third {
+    color: red;
+  }
+  #first.second.third {
+    color: blue;
+  }
+</style>
+```
+
+</CH.Scrollycoding>
+
+#### 4. Pseudo-class selectors
+
+> - For example: `:hover` and attribute selectors (for example, `[type="input"]`) each have the same specificity as a class selector.
+
+#### 5. The universal selector (\*) and combinators (>, +, ~) have no effect on specificity.
+
+> - If you add a declaration to your CSS and it seems to have no effect, often it's because a more specific rule is overriding it.
+
+#### 6. The order of CSS rules matter:
+
+> - When two rules apply that have equal specificity the one that comes last in the CSS is the one that will be used. This listing shows styles for links on a page in the "correct" order.
+
+<br />
+<br />
+<br />
+
+## 3️⃣ Absolute and Relative units
+
+#### Absolute length units are fixed to a physical length.
+
+<img
+  style={{ width: "300px" }}
+  src="https://i.imgur.com/m3R1COl.png
+"
+/>
+
+<br />
+#### Relative length units specify a length in relation to something else.
+
+<img
+  style={{ width: "300px" }}
+  src="https://i.imgur.com/nwAPgqE.png
+"
+/>

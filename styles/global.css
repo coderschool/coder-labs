@@ -19,3 +19,11 @@ a {
 .mark-highlight:hover {
   transform: scale(1.5);
 }
+
+/* one backtick pair is wrapped with the code tag */
+code {
+  background-color: rgba(135, 131, 120, 0.15);
+  color: #eb5757;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
