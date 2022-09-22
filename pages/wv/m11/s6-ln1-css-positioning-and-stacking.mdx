@@ -1,41 +1,36 @@
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
+
 # CSS - Positioning and Stacking
 
-## 1. Types of positioning
+## 1. Positioning
 
-Positioning is a way to specify the location of an element anywhere on the page with pixel precision.
+### Postioning types
 
-Property: **position**
+- Positioning is a way to specify the location of an element anywhere on the page with pixel precision.
 
-Values: `static` | `relative` | `absolute` | `fixed` | `sticky`
+  - Property: **position**
+  - Values: `static` | `relative` | `absolute` | `fixed` | `sticky`
+  - Default: `static`
+  - Applies to: all elements
+  - Inherits: no
 
-Default: `static`
+- Once you've established the positioning method, the actual position is specified with some combination of up to four offset properties: `top`, `right`, `bottom`, `left`.
+  **Note**: Negative values are acceptable and move the element in the opposite direction of positive values. For example, a negative value for `top` would have the effect of moving the element up.
 
-Applies to: all elements
+> The first step to position your element Top, Left, Right, Bottom : xPx is to defined its position type (`static` | `relative` | `absolute` | `fixed` | `sticky`). As it will be the **anchor** to start moving your element from.
 
-Inherits: no
+### Examples:
 
-- **static**: The normal position scheme in which elements are positioned as they occur in the normal document flow
-- **relative**: Relative positioning moves the element box relative to its original position in the flow. The distinctive behavior of relative positioning is that the space the element would have occupied in the normal flow is preserved as empty space. Relative positioning is commonly used to create a "positioning context" for an absolutely positioned element.
-- **absolute**: Absolutely positioned elements are removed from the document flow entirely and positioned with respect to the viewport or a containing element. Basically:
-
-  - If the positioned element is not contained within another positioned element, then it will be placed relative to the initial containing block (created by the html element).
-
-  - But if the element has an ancestor (i.e., is contained within an element) that has its position set to **relative**, **absolute**, or **fixed**, the element will be positioned relative to the edges of that element instead. Unlike relatively positioned elements, the space they would have occupied is closed up. In fact, they have no influence at all on the layout of surrounding elements.
-
-- **fixed**: The distinguishing characteristic of fixed positioning is that the element stays in one position in the viewport even when the document scrolls. Fixed elements are removed from the document flow and positioned relative to the viewport rather than another element in the document.
-- **sticky**: Sticky positioning is a combination of relative and fixed in that it behaves as though it is relatively positioned, until it is scrolled into a specified position relative to the viewport, at which point it remains fixed.
-
-Once you've established the positioning method, the actual position is specified with some combination of up to four offset properties: `top`, `right`, `bottom`, `left`.
-
-**Note**: Negative values are acceptable and move the element in the opposite direction of positive values. For example, a negative value for `top` would have the effect of moving the element up.
-
-**Example: (See the change in the yellow box)**
+_eyes on the yellow box_
 
 <CH.Scrollycoding preset="https://codesandbox.io/s/intro-flexbox-cee98w">
 
 {/* id:1 */}
 
-position: static;
+- **Static**: The normal position scheme in which elements are positioned as they occur in the normal document flow
 
 ```html index.html focus=46[41:64]
 <style>
@@ -91,8 +86,19 @@ position: static;
 ---
 
 {/* id:2 */}
-position: relative;
-top: 40px; left: 40px;
+
+- **Relative**: Relative positioning moves the element box relative to its original position in the flow.
+  This simply mean, all relative position elements will have an **anchor** which place at its original static place.
+  And whenever we move a `position:relative` element, we are moving it by starting from it anchor.
+
+  For this demo purpose, we will also move the yellow box
+
+  - top: 40px; left: 40px;
+
+  Which mean moving it 40px from the top of its anchor top, and left 40px from it anchor left
+
+  The distinctive behavior of relative positioning is that the space the element would have occupied in the normal flow is preserved as empty space.
+  Relative positioning is commonly used to create a "positioning context" for an absolutely positioned element.
 
 ```html index.html focus=49
 <style>
@@ -125,6 +131,10 @@ top: 40px; left: 40px;
     height: 100%;
     text-align: center;
   }
+  .origin {
+    background: none;
+    border: 1px dashed grey;
+  }
   body {
     color: var(--text-primary);
     background-color: var(--background-primary);
@@ -140,11 +150,15 @@ top: 40px; left: 40px;
     yellow box.
   </p>
   <div class="box"></div>
-  <div
-    class="box"
-    id="example-element"
-    style="position: relative; top: 40px; left: 40px;"
-  ></div>
+  <div class="box origin">
+    If I was static, I'd be here
+    <div
+      class="box"
+      id="example-element"
+      style="position: relative; top: 40px; left: 40px;"
+    ></div>
+  </div>
+
   <div class="box"></div>
 </div>
 ```
@@ -153,7 +167,16 @@ top: 40px; left: 40px;
 
 {/* id:3 */}
 
-position: absolute; top: 40px; left: 40px;
+- **Absolute**: The element is positioned base on it first non-static ancestor element. This means it will find the closet non-static wrapper to be it **anchor**.
+  Then like relative, it will be move base on it anchor.
+
+  Noted that the yellow box is the child of `div id="example-element-container"` which is a static position element.
+
+  It will then looking out to higher ancestor (wrapper) and found the whole HTML document. Hence the HTML document is its anchor.
+
+  Let's move the box and see how it compare to the dashed anchor
+
+  - top: 40px; right: 40px;
 
 ```html index.html focus=49
 <style>
@@ -181,6 +204,8 @@ position: absolute; top: 40px; left: 40px;
   #example-element-container {
     position: relative;
     text-align: left;
+    border: 3px dashed grey;
+    height: 100vh;
   }
   .output section {
     height: 100%;
@@ -204,7 +229,7 @@ position: absolute; top: 40px; left: 40px;
   <div
     class="box"
     id="example-element"
-    style="position: absolute; top: 40px; left: 40px;"
+    style="position: absolute; top: 40px; right: 40px;"
   ></div>
   <div class="box"></div>
 </div>
@@ -213,7 +238,9 @@ position: absolute; top: 40px; left: 40px;
 ---
 
 {/* id:4 */}
-position: sticky; top: 20px;
+
+- **Sticky** Well, it stick! It will set an anchor on where it will not move pass as the user scroll.
+  - Srcoll to try yourself
 
 ```html index.html focus=53
 <style>
@@ -281,25 +308,23 @@ position: sticky; top: 20px;
 
 ## 2. Stacking Order
 
-By default, elements stack up in the order in which they appear in the document, but you can change the stacking order with the `z-index` property.
+### Stacking zIndex
 
-Property: **`z-index`**
+- By default, elements stack up in the order in which they appear in the document, but you can change the stacking order with the `z-index` property.
 
-Values: `number` | `auto`
+  - Property: **`z-index`**
+  - Values: `number` | `auto`
+  - Default: `auto`
+  - Applies to: positioned elements
+  - Inherits: no
 
-Default: `auto`
+- The value of the `z-index` property is a number (positive or negative). The higher the number, the higher the element will appear in the stack (that is, closer to your nose).
 
-Applies to: positioned elements
-
-Inherits: no
-
-The value of the `z-index` property is a number (positive or negative). The higher the number, the higher the element will appear in the stack (that is, closer to your nose).
-
-**Example: (See the change in the yellow box)**
+### Example:
 
 <CH.Scrollycoding preset="https://codesandbox.io/s/intro-flexbox-cee98w">
 
-z-index: auto;
+- z-index: auto;
 
 ```html index.html focus=79[31:51]
 <style>
@@ -393,7 +418,7 @@ z-index: auto;
 
 ---
 
-z-index: 1;
+- z-index: 1;
 
 ```html index.html  focus=79[31:48]
 <style>
@@ -487,7 +512,7 @@ z-index: 1;
 
 ---
 
-z-index: 3;
+- z-index: 3;
 
 ```html index.html focus=79[31:48]
 <style>
@@ -581,7 +606,7 @@ z-index: 3;
 
 ---
 
-z-index: 5;
+- z-index: 5;
 
 ```html index.html focus=79[31:48]
 <style>
@@ -675,7 +700,7 @@ z-index: 5;
 
 ---
 
-z-index: 7;
+- z-index: 7;
 
 ```html index.html focus=79[31:48]
 <style>
@@ -771,12 +796,20 @@ z-index: 7;
 
 </CH.Scrollycoding>
 
-## 3. Additional reading
+## 3. Additional reading ✨
 
-<a href="https://css-tricks.com/centering-css-complete-guide/" target="_blank">
-  You can center things in CSS
-</a>
-
-<a href="https://cssreference.io/positioning/" target="_blank">
-  CSS Reference - Positioning
-</a>
+<ul>
+  <li>
+    <a
+      href="https://css-tricks.com/centering-css-complete-guide/"
+      target="_blank"
+    >
+      You can center things in CSS
+    </a>
+  </li>
+  <li>
+    <a href="https://cssreference.io/positioning/" target="_blank">
+      CSS Reference - Positioning
+    </a>
+  </li>
+</ul>
