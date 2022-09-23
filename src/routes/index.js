@@ -41,6 +41,64 @@ export const courseWebUnits = [
             title: "Assignment 1 - Solution - Intro to HTML",
             path: "wv/m11/s4-a1s-intro-to-html",
           },
+          {
+            id: "wv/m11/s4-ln1-intro-html",
+            title: "Lecture note 1 - Intro to HTML",
+            path: "wv/m11/s4-ln1-intro-html",
+          },
+        ],
+      },
+      {
+        id: "wv/m11/s2",
+        title: "Section 2",
+        courseUnits: [
+          {
+            id: "wv/m11/s2-ln1-intro-to-web",
+            title: "Lecture note 1 - Intro to Web",
+            path: "wv/m11/s2-ln1-intro-to-web",
+          },
+        ],
+      },
+      {
+        id: "wv/m11/s5",
+        title: "Section 5",
+        courseUnits: [
+          {
+            id: "wv/m11/s5-a1s-intro-to-css",
+            title: "Assignment 1 - Solution - Intro to CSS",
+            path: "wv/m11/s5-a1s-intro-to-css",
+          },
+          {
+            id: "wv/m11/s5-ln1-css-introduction",
+            title: "Lecture note 1 - CSS introduction",
+            path: "wv/m11/s5-a1s-intro-to-css",
+          },
+          {
+            id: "wv/m11/s5-ln2-css-selectors",
+            title: "Lecture note 2 - CSS selectors",
+            path: "wv/m11/s5-a1s-intro-to-css",
+          },
+          {
+            id: "wv/m11/s5-ln3-css-concepts",
+            title: "Lecture note 3 - CSS concept",
+            path: "wv/m11/s5-a1s-intro-to-css",
+          },
+        ],
+      },
+      {
+        id: "wv/m11/s6",
+        title: "Section 6",
+        courseUnits: [
+          {
+            id: "wv/m11/s6-ln1-css-positioning-and-stacking",
+            title: "Lecture note 1 - CSS positioning and stacking",
+            path: "wv/m11/s6-ln1-css-positioning-and-stacking",
+          },
+          {
+            id: "wv/m11/s6-a1s-css-layout",
+            title: "Assignment 1 - Solution - CSS layout",
+            path: "wv/m11/s6-a1s-css-layout",
+          },
         ],
       },
     ],
