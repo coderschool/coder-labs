@@ -8,7 +8,8 @@
     "plugin:react/recommended",
     "plugin:@next/next/recommended",
     "next/core-web-vitals",
-    "prettier"
+    "prettier",
+    "plugin:mdx/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {

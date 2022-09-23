@@ -1,0 +1,395 @@
+# Intro to JavaScript
+
+JavaScript was created to make the web more dynamic. It is a scripting language made to run inside a host environment - like a web browser! It provides programatic control over the objects in that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
+
+JavaScript can be client-side and server-side, meaning that it can be used to control user-facing interfaces (e.g. browsers) as well as handle the server-side extensions that connect with a database.
+
+## Variables
+
+JS uses **dynamic typing**, meaning variables can hold values of any type without any type enforcement.
+
+You can declare a variable like this:
+
+```js
+let myVariableName;
+```
+
+**Rules for Naming Variables**:
+
+- Names must begin with a letter, dollar sign, or an underscore. They cannot begin with a number
+- Names can contain any of the above characters plus a number, but you cannot use a dash `-` or a period `.` within the name
+- You cannot use keywords or reserved words (such as `var` or `for`)
+- All variables are case sensitive
+- Use names that describe the kind of information you plan to assign the variable
+- If your variable is made up of more than one word, then use **camelCase**, for example `thisIsMyVariableName`
+
+## Values & Types
+
+There are different data types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
+
+JS uses **dynamic typing**, meaning variables can hold values of any type without any type enforcement.
+
+**Built-in types**: `string`, `number`, `boolean`, `null`, `undefined`, `object`
+
+```js
+let a;
+typeof a; // "undefined"
+
+a = "hello world";
+typeof a; // "string"
+
+a = 42;
+typeof a; // "number"
+
+a = true;
+typeof a; // "boolean"
+
+a = null;
+typeof a; // "object"
+
+a = undefined;
+typeof a; // "undefined"
+
+a = [3, "black", "dog"];
+typeof a; // "object"
+
+a = { b: "c" };
+typeof a; // "object"
+```
+
+## Operators
+
+There are 5 basic types of operators to get you started:
+
+1.  [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment) assign a value to a variable. `let color = 'magenta';`
+2.  [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic) perform basic math. `let addTwo = 2 + 2;`
+3.  [String operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String) combine strings. `let greeting = 'Hello! ' + 'Nice to meet you.';`
+4.  [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison) compare two values and return a true or false. `let buy = 3 > 5; // Value of buy is false`
+5.  [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical) combines expressions and return a Boolean value of true or false. `let buy = (5 > 3) && (2 < 4);`
+
+## Conditional
+
+Basic structure of a conditional:
+
+```js
+if (expression) {
+  statements;
+} else if (expression) {
+  statements;
+} else {
+  statements;
+}
+```
+
+Let's run this example:
+
+```js
+let today = new Date().getDay();
+
+if (today === 6) {
+  console.log("Today is Saturday");
+} else if (today === 0) {
+  console.log("Today is Sunday");
+} else {
+  console.log("Looking forward to the Weekend");
+}
+```
+
+`switch` statement can be used as a shorthand for a series of `if..else` statements.
+
+```js
+switch (today) {
+  case 6:
+    console.log("Today is Saturday");
+    break;
+  case 0:
+    console.log("Today is Sunday");
+    break;
+  default:
+    console.log("Looking forward to the Weekend");
+}
+```
+
+You can put two cases to have the same action:
+
+```js
+switch (a) {
+  case 2:
+  case 10:
+    // some cool stuff
+    break;
+  case 42:
+    // other stuff
+    break;
+  default:
+  // fallback
+}
+```
+
+## Objects
+
+Objects are a collection of **key-value pairs** surrounded by curly braces. A key is like a name that holds a value. You're actually used to working with key-value pairs already, because a key-value pair in an object is similar to a variable - the variable name serves as a label for the data.
+
+Each key in an object must be **unique**. You cannot have two keys with the same name.
+
+```js
+const obj = {
+  a: "hello world",
+  b: 42,
+  c: true,
+};
+
+obj.a; // "hello world"
+obj.b; // 42
+obj.c; // true
+
+obj["a"]; // "hello world"
+obj["b"]; // 42
+obj["c"]; // true
+```
+
+Bracket notation is useful if you have a property name that has special characters in it, like `obj["hello world!"]`. Or if you want to access a property/key but the name is stored in another variable, such as:
+
+```js
+const obj = {
+  a: "hello world",
+  b: 42,
+};
+
+let b = "a";
+
+obj[b]; // "hello world"
+obj["b"]; // 42
+```
+
+When we assign a function as the value to one of our keys, we call that function a **method**.
+
+```js
+const school = {
+  name: "CoderSchool",
+  capacity: 150,
+  currentStudents: 75,
+  getSlogan: function () {
+    return "Always be learning!";
+  },
+};
+
+console.log(school.getSlogan);
+console.log(school.getSlogan());
+```
+
+## Arrays
+
+An `array` is an `object` that holds values in nummerically indexed positions. Each value is referred to as an element.
+
+Each value in an array is automatically given a number called an `index`. This index can be used to access a particular value in any given array.
+
+Indices begin at 0 and order incrementally.
+
+```js
+const arr = ["hello world", 42, true];
+
+arr[0]; // "hello world"
+arr[1]; // 42
+arr[2]; // true
+arr.length; // 3
+
+typeof arr; // "object"
+```
+
+An array is capable of holding any type of data (even objects and other arrays!), but generally each array should hold just one type of data.
+
+```js
+// Good practice - each array only holds one type of data
+const rainbowColors = ["Red", "Orange", "Yellow"];
+const lotteryNumbers = [33, 72, 64, 18, 17, 85];
+
+const denver = "Denver, CO";
+const raleigh = "Raleigh, NC";
+const atlanta = "Atlanta, GA";
+
+const locations = [denver, raleigh, atlanta];
+
+// Bad practice - this array holds a mix of data types
+const randomData = ["hello", true, 100, denver, [1, 2, 3]];
+```
+
+### Looping over arrays
+
+`for` loops are commonly used to iterate over the items in an array. To do this, we use the property length and call it on the variable associated with the array we want to iterate over. This property returns the length of, or number of elements in, an array.
+
+```js
+var fruits = ["apples", "oranges", "bananas"];
+
+function listFruits() {
+  for (var i = 0; i < fruits.length; i++) {
+    console.log("I have some " + fruits[i]);
+  }
+}
+```
+
+## Truthy & Falsy
+
+Truthy & Falsy are nature of values: when a non-boolean value is converted to `boolean`, does it become `true` or `false`.
+
+List of falsy:
+
+- "" (empty string)
+- 0, NaN (invalid number)
+- null, undefined
+- false
+
+List of truthy:
+
+- "hello"
+- 42
+- true
+- [ ], [ 1, 2, 3 ] (arrays)
+- { }, { a: 42 } (objects)
+- function foo() { .. } (functions)
+
+## Functions
+
+To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces
+
+```js
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+```
+
+Function **parameters** are listed inside the parentheses `()` in the function definition.
+
+Function **arguments** are the **values** received by the function when it is invoked.
+
+```js
+// parameters named on declaration of function
+function bakeCake(flavor, frosting, decoration) {
+  return `I am baking a ${flavor} cake with ${frosting}. It will be decorated with ${decoration}.`;
+}
+
+// arguments passed into a called function
+bakeCake("carrot", "cream cheese icing", "walnuts");
+```
+
+Inside the function, the arguments (the parameters) behave as local variables.
+
+Because functions perform an action, it's best to name it with an action verb! For example: `generateRandomNum`, `printGreeting`, `saveGroceryItem`, etc. Notice that the names are camelCased!
+
+## Scope
+
+In JS, each function gets its own scope. Scope is basically a collection of variables as well as the rules for how those variables are accessed by name. Only code inside that function can access that function's local variables.
+
+Wherever a `var` appears inside a scope, that declaration is taken to belong to the entire scope and accessible everywhere throughout. This behavior is called **hoisting**.
+
+```js
+var a = 2;
+
+foo(); // works because `foo()`
+// declaration is "hoisted"
+
+function foo() {
+  a = 3;
+
+  console.log(a); // 3
+
+  var a; // declaration is "hoisted"
+  // to the top of `foo()`
+}
+
+console.log(a); // 2
+```
+
+A variable name has to be unique within the same scope—there can't be two different a variables sitting right next to each other. But the same variable name a could appear in different scopes:
+
+```js
+function one() {
+  // this `a` only belongs to the `one()` function
+  var a = 1;
+  console.log(a);
+}
+
+function two() {
+  // this `a` only belongs to the `two()` function
+  var a = 2;
+  console.log(a);
+}
+
+one(); // 1
+two(); // 2
+```
+
+Also, a scope can be nested inside another scope. If one scope is nested inside another, code inside the inner scope can access variables from either scope.
+
+```js
+function outer() {
+  var a = 1;
+
+  function inner() {
+    var b = 2;
+
+    // we can access both `a` and `b` here
+    console.log(a + b); // 3
+  }
+
+  inner();
+
+  // we can only access `a` here
+  console.log(a); // 1
+}
+
+outer();
+```
+
+## `var` vs `let` & `const` <a id="var-let-const"></a>
+
+We"ve learned that scope is the area of code in which a variable or value can be accessed.
+
+We already know that variables declared (using the keyword `var`) inside of a function will remain scoped to that function. In other words, it won"t be accessible outside of the function.
+
+ES6 gives us two new variable keywords: `let` and `const`. These two variable keywords introduce **block scope**. This means the variable will be confined to the scope of a block that it is defined in, such as an `if` statement or `for` loop and will not be accessible outside of the opening and closing curly braces of the block.
+
+**The differences between `var` vs `let` & `const`**
+
+- The variables declared by `let` and `const` are block-scoped, their scopes are the innermost enclosing blocks. `let` and `const` behave more strictly and throw more exceptions (e.g. when you access their variables inside their scope before they are declared)
+
+```js
+function blockScoping() {
+  if (true) {
+    // this will throw an error
+    const x = 24;
+    let y = 10;
+    // this works
+    // var x = 24;
+    // var y = 10;
+  }
+  return { x: x, y: y };
+}
+```
+
+- Unlike `var`, `let` and `const` statements are not hoisted to the top of their enclosing scope.
+
+```js
+function temporalDeadZone() {
+  console.log(myVar);
+  console.log(myLet);
+  console.log(myConst);
+  var myVar = "var";
+  // you cannot use variables that are defined with let and const
+  let myLet = "let";
+  const myConst = "const";
+  return { myVars, myLets, myConsts };
+}
+```
+
+**The differences between** `let` vs `const`:
+
+- Variables declared with `let` can be reassigned, whereas variables declared with `const` cannot.
+
+- If an array or object is declared using the keyword `const`, the contents of that array or object can be changed, but that variable name will always point to that same piece of memory.
+
+```js
+const obj = { a: 1, b: 2 };
+obj.b = 3;
+// obj: {a: 1, b: 3}
+```
