@@ -6,7 +6,7 @@ export default async function getCourses(req, res) {
   try {
     return res.status(200).json(courses);
   } catch (error) {
-    console.error(e);
+    console.error(error);
     return res.status(500).end();
   }
 }
