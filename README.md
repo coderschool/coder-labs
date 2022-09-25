@@ -15,6 +15,9 @@ Welcome to CS content 2.0.
 |- |- |- module/
 |- |- |- |- |-content-name.mdx/
 |- styles/
+|- src/
+|- |- routes
+|- |- |- index.js
 |- |- global.css
 ```
 
@@ -28,20 +31,20 @@ Welcome to CS content 2.0.
 
 e.g. `\wv\m11\s1-a1q-basic-html`
 
-READ ONLY files:
-
-- `./styles/global.css` : Only use the prestyled classnames
-- `./next.config.js` : configuration for Next app.
+- IMPORTANT:
+  - Remember to update path to your page in `routes/index.js` before commit.
 
 ## How to contribute?
+
 - [Required: Issue to Pull Request](https://www.loom.com/share/0e45f18ccdfa4ada9dabb136d5ddecf8)
 - [Beginner: Github Pull Request](https://www.youtube.com/watch?v=8lGpZkjnkt4)
+- [MDX Troubleshoot](https://mdxjs.com/docs/troubleshooting-mdx/)
 
 ### Deployment flow
 
 - Get the production link
-- Create LW activity
-- Embed link to the activity
+- Create a LearnWorld activity
+- Embed link to the activity with the correct icon
 
 ## Read also
 
