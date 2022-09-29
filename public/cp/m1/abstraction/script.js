@@ -9,7 +9,51 @@ window.onload = () => {
 
   numberSlider.addEventListener("input", handleInput);
   numberSlider.addEventListener("change", handleChange);
+  observeContent();
 };
+
+function observeContent() {
+  let options = {
+    root: document.querySelector("#interactive-content"),
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+  let targets = document.querySelectorAll(".ob-test");
+
+  let observer = new IntersectionObserver(IOHandler, options);
+
+  function IOHandler(entries, observer) {
+    //check all observed target
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) {
+        //when a target is disappear
+        if (entry.target.id === "para1") {
+          renderImage();
+        }
+      } else {
+        //when a target is appear
+        if (entry.target.id === "number") {
+          const numberSlider = document.querySelector("#number");
+          render(numberSlider.value);
+        }
+      }
+    });
+  }
+  targets.forEach(function (target) {
+    observer.observe(target);
+  });
+}
+
+function renderImage() {
+  const display = document.querySelector(".interactive-svg");
+  display.innerHTML = `
+  <img src="assets/erd.png" />
+  <p style="font-weight:lighter">
+    <i>fig1 ⎯ Entity Relationship Diagram. By looking at this, we can
+    understand, for example, which customer makes which order of which
+    product and their review.</i>
+  </p>`;
+}
 
 function handleInput(e) {
   e.preventDefault();
@@ -19,6 +63,7 @@ function handleInput(e) {
   // slider update current number
   currentNumber.innerHTML = e.target.value;
 }
+
 function handleChange(e) {
   //prevent default
   e.preventDefault();
@@ -49,7 +94,6 @@ async function render(inputValue) {
       nodeTitle: (d) => `${d.id}\n${d.group}`,
       linkStrokeWidth: (l) => Math.sqrt(l.value) * 2,
     });
-    console.table(chart);
   } catch (error) {
     console.log("D3 render error", error.message);
   }
@@ -122,7 +166,10 @@ function ForceGraph(
     .force("center", d3.forceCenter())
     .on("tick", ticked);
 
-  //remove before create new svg
+  //clear dom
+  document.querySelector(".interactive-svg").innerHTML = "";
+
+  //remove d3 before create new svg
   d3.select("svg")?.remove();
 
   const svg = d3

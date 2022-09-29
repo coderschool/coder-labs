@@ -93,6 +93,7 @@ img {
 .interactive-svg {
   flex: 3;
   height: 100vh;
+  padding: 2em;
 }
 
 /* Components */

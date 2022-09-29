@@ -2,6 +2,7 @@ export const COURSE_ID = {
   WEB: "ftw-virgil",
   DS: "da-virgil",
   DEMO: "coder-labs-demo",
+  CP: "cp",
 };
 
 export const courseDSUnits = [];
@@ -277,6 +278,26 @@ export const courseWebUnits = [
   },
 ];
 
+export const courseCPUnits = [
+  {
+    id: "cp/m1",
+    title: "Module 1: Programing Mindset",
+    courseUnits: [
+      {
+        id: "cp/m1/s1",
+        title: "Section 1 : Abstraction",
+        courseUnits: [
+          {
+            id: "cp/m1/s1-ln1-abstraction",
+            title: "Lecture note 1 - Abstraction",
+            path: "cp/m1/s1-ln1-abstraction",
+          },
+        ],
+      },
+    ],
+  },
+];
+
 export const courses = [
   {
     id: COURSE_ID.WEB,
@@ -292,5 +313,10 @@ export const courses = [
     id: COURSE_ID.DEMO,
     title: "CoderLabs Demo",
     courseUnits: courseDemoUnits,
+  },
+  {
+    id: COURSE_ID.CP,
+    title: "CoderPrep",
+    courseUnits: courseCPUnits,
   },
 ];
