@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="script.js"></script>
+    <!-- //chon link:css tab -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="#" />
+  </head>
+  <body>
+    <!-- Create an interactive window -->
+    <!-- Left: parameter input -->
+    <!-- Right: Visulization -->
+    <!-- class can be reused -->
+    <!-- id only one -->
+    <div class="interactive-container">
+      <div class="interactive-form-wrapper">
+        <form id="interactive-form">
+          <label for="number">
+            Number of characters
+            <span id="currentNumber"> 1</span>
+          </label>
+          <input
+            type="range"
+            id="number"
+            value="1"
+            name="number"
+            min="1"
+            max="47"
+          />
+        </form>
+      </div>
+      <div class="interactive-svg"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.interactive-container {
+    border: 1px solid black;
+    min-height: 500px;
+    border-radius: 5px;
+    display: flex;
+  }
+  
+  .interactive-form-wrapper {
+    flex: 1;
+    background-color: grey;
+    padding: 5px;
+  }
+  
+  .interactive-svg {
+    flex: 2;
+    background-color: white;
+  }
+  

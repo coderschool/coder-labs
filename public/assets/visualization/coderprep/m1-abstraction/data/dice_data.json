@@ -1,0 +1,1689 @@
+{
+      "nodes": [
+            {
+                  "id": "Eleven",
+                  "group": 1
+            },
+            {
+                  "id": "Mike Wheeler",
+                  "group": 1
+            },
+            {
+                  "id": "Dustin Henderson",
+                  "group": 1
+            },
+            {
+                  "id": "Jim Hopper",
+                  "group": 2
+            },
+            {
+                  "id": "Joyce Byers",
+                  "group": 2
+            },
+            {
+                  "id": "Lucas Sinclair",
+                  "group": 1
+            },
+            {
+                  "id": "Nancy Wheeler",
+                  "group": 2
+            },
+            {
+                  "id": "Will Byers",
+                  "group": 1
+            },
+            {
+                  "id": "Jonathan Byers",
+                  "group": 2
+            },
+            {
+                  "id": "Steve Harrington",
+                  "group": 2
+            },
+            {
+                  "id": "Max Mayfield",
+                  "group": 1
+            },
+            {
+                  "id": "Bob Newby",
+                  "group": 3
+            },
+            {
+                  "id": "Dr Sam Owens",
+                  "group": 3
+            },
+            {
+                  "id": "Kali",
+                  "group": 3
+            },
+            {
+                  "id": "Dr Martin Brenner",
+                  "group": 3
+            },
+            {
+                  "id": "Karen Wheeler",
+                  "group": 3
+            },
+            {
+                  "id": "Officer Powell",
+                  "group": 3
+            },
+            {
+                  "id": "Officer Callahan",
+                  "group": 3
+            },
+            {
+                  "id": "Axel",
+                  "group": 3
+            },
+            {
+                  "id": "Dottie",
+                  "group": 3
+            },
+            {
+                  "id": "Funshine",
+                  "group": 3
+            },
+            {
+                  "id": "Terry Ives",
+                  "group": 3
+            },
+            {
+                  "id": "Becky Ives",
+                  "group": 3
+            },
+            {
+                  "id": "Mick",
+                  "group": 3
+            },
+            {
+                  "id": "Billy Hargrove",
+                  "group": 3
+            },
+            {
+                  "id": "Ted Wheeler",
+                  "group": 3
+            },
+            {
+                  "id": "The Mind Flayer",
+                  "group": 3
+            },
+            {
+                  "id": "Mr Clarke",
+                  "group": 3
+            },
+            {
+                  "id": "Barbara Holland",
+                  "group": 3
+            },
+            {
+                  "id": "Tommy H",
+                  "group": 3
+            },
+            {
+                  "id": "The Monster",
+                  "group": 3
+            },
+            {
+                  "id": "Carol",
+                  "group": 3
+            },
+            {
+                  "id": "Holly Wheeler",
+                  "group": 3
+            },
+            {
+                  "id": "DArtagnan",
+                  "group": 3
+            },
+            {
+                  "id": "Agent Connie Frazier",
+                  "group": 3
+            },
+            {
+                  "id": "Lead Agent",
+                  "group": 3
+            },
+            {
+                  "id": "Ray",
+                  "group": 3
+            },
+            {
+                  "id": "Murray Bauman",
+                  "group": 3
+            },
+            {
+                  "id": "Lonnie Byers",
+                  "group": 3
+            },
+            {
+                  "id": "Rift Soldier",
+                  "group": 3
+            },
+            {
+                  "id": "Lead Rift Soldier",
+                  "group": 3
+            },
+            {
+                  "id": "Erica Sinclair",
+                  "group": 3
+            },
+            {
+                  "id": "Principal Coleman",
+                  "group": 3
+            },
+            {
+                  "id": "Nerdy Tech",
+                  "group": 3
+            },
+            {
+                  "id": "Troy",
+                  "group": 3
+            },
+            {
+                  "id": "Marsha Holland",
+                  "group": 3
+            },
+            {
+                  "id": "Benny Hammond",
+                  "group": 3
+            }
+      ],
+      "links": [
+            {
+                  "source": "Eleven",
+                  "target": "Dr Sam Owens",
+                  "value": 0.003780718336483932
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Ted Wheeler",
+                  "value": 0.00408997955010225
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Karen Wheeler",
+                  "value": 0.007827788649706457
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Barbara Holland",
+                  "value": 0.008403361344537815
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Holly Wheeler",
+                  "value": 0.00851063829787234
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Agent Connie Frazier",
+                  "value": 0.008547008547008548
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Lead Agent",
+                  "value": 0.008565310492505354
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Principal Coleman",
+                  "value": 0.013043478260869565
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Steve Harrington",
+                  "value": 0.015527950310559006
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Will Byers",
+                  "value": 0.016216216216216217
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Mr Clarke",
+                  "value": 0.016563146997929608
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Troy",
+                  "value": 0.017429193899782137
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Max Mayfield",
+                  "value": 0.022690437601296597
+            },
+            {
+                  "source": "Eleven",
+                  "target": "The Monster",
+                  "value": 0.02536997885835095
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Ray",
+                  "value": 0.02591792656587473
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Benny Hammond",
+                  "value": 0.026200873362445413
+            },
+            {
+                  "source": "Eleven",
+                  "target": "The Mind Flayer",
+                  "value": 0.041237113402061855
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Terry Ives",
+                  "value": 0.0482897384305835
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Nancy Wheeler",
+                  "value": 0.06324110671936758
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Jonathan Byers",
+                  "value": 0.06575342465753424
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Joyce Byers",
+                  "value": 0.07106598984771574
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Becky Ives",
+                  "value": 0.0931174089068826
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Dr Martin Brenner",
+                  "value": 0.09671179883945841
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Mick",
+                  "value": 0.12955465587044535
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Axel",
+                  "value": 0.13972055888223553
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Funshine",
+                  "value": 0.14084507042253522
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Dottie",
+                  "value": 0.1437125748502994
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Jim Hopper",
+                  "value": 0.15950920245398773
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Kali",
+                  "value": 0.23193916349809887
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Lucas Sinclair",
+                  "value": 0.23754789272030652
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Dustin Henderson",
+                  "value": 0.2562874251497006
+            },
+            {
+                  "source": "Eleven",
+                  "target": "Mike Wheeler",
+                  "value": 0.3210161662817552
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Officer Powell",
+                  "value": 0.004228329809725159
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Agent Connie Frazier",
+                  "value": 0.0045662100456621
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Erica Sinclair",
+                  "value": 0.004651162790697674
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Marsha Holland",
+                  "value": 0.004662004662004662
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Billy Hargrove",
+                  "value": 0.008620689655172414
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "The Monster",
+                  "value": 0.009029345372460496
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Lead Agent",
+                  "value": 0.009153318077803204
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Lonnie Byers",
+                  "value": 0.009259259259259259
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Officer Callahan",
+                  "value": 0.012738853503184714
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Dr Martin Brenner",
+                  "value": 0.01642710472279261
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "DArtagnan",
+                  "value": 0.02733485193621868
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Principal Coleman",
+                  "value": 0.03255813953488372
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Troy",
+                  "value": 0.04195804195804196
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Holly Wheeler",
+                  "value": 0.06363636363636363
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Dr Sam Owens",
+                  "value": 0.07214428857715431
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Mr Clarke",
+                  "value": 0.07505518763796909
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Bob Newby",
+                  "value": 0.08863198458574181
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Ted Wheeler",
+                  "value": 0.0915032679738562
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Steve Harrington",
+                  "value": 0.12052117263843648
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Karen Wheeler",
+                  "value": 0.12058212058212059
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Nancy Wheeler",
+                  "value": 0.1262002743484225
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Jonathan Byers",
+                  "value": 0.1457142857142857
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Jim Hopper",
+                  "value": 0.1732484076433121
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Joyce Byers",
+                  "value": 0.22691292875989447
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Max Mayfield",
+                  "value": 0.2453151618398637
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Will Byers",
+                  "value": 0.3295774647887324
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Lucas Sinclair",
+                  "value": 0.5630810092961488
+            },
+            {
+                  "source": "Mike Wheeler",
+                  "target": "Dustin Henderson",
+                  "value": 0.5813664596273292
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Officer Powell",
+                  "value": 0.004524886877828055
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Agent Connie Frazier",
+                  "value": 0.004914004914004914
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Lonnie Byers",
+                  "value": 0.004987531172069825
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Erica Sinclair",
+                  "value": 0.005012531328320802
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Billy Hargrove",
+                  "value": 0.009237875288683603
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "The Monster",
+                  "value": 0.009708737864077669
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Lead Agent",
+                  "value": 0.009852216748768473
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Dr Martin Brenner",
+                  "value": 0.013157894736842105
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Officer Callahan",
+                  "value": 0.013636363636363636
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Holly Wheeler",
+                  "value": 0.014669926650366748
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Karen Wheeler",
+                  "value": 0.03111111111111111
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Principal Coleman",
+                  "value": 0.03508771929824561
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Ted Wheeler",
+                  "value": 0.037383177570093455
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Troy",
+                  "value": 0.04522613065326633
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "DArtagnan",
+                  "value": 0.058823529411764705
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Jim Hopper",
+                  "value": 0.07692307692307693
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Joyce Byers",
+                  "value": 0.09353507565337002
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Mr Clarke",
+                  "value": 0.0947867298578199
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Jonathan Byers",
+                  "value": 0.10762331838565023
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Will Byers",
+                  "value": 0.15022091310751104
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Nancy Wheeler",
+                  "value": 0.166189111747851
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Steve Harrington",
+                  "value": 0.29845626072041165
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Max Mayfield",
+                  "value": 0.35611510791366907
+            },
+            {
+                  "source": "Dustin Henderson",
+                  "target": "Lucas Sinclair",
+                  "value": 0.7174515235457064
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Dr Martin Brenner",
+                  "value": 0.0045871559633027525
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Karen Wheeler",
+                  "value": 0.004651162790697674
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Ted Wheeler",
+                  "value": 0.004901960784313725
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Barbara Holland",
+                  "value": 0.005063291139240506
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "The Monster",
+                  "value": 0.00510204081632653
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Agent Connie Frazier",
+                  "value": 0.00516795865633075
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Lead Agent",
+                  "value": 0.0051813471502590676
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Rift Soldier",
+                  "value": 0.005263157894736842
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Lead Rift Soldier",
+                  "value": 0.005263157894736842
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Troy",
+                  "value": 0.005291005291005291
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Benny Hammond",
+                  "value": 0.005305039787798408
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Terry Ives",
+                  "value": 0.009615384615384616
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Principal Coleman",
+                  "value": 0.010554089709762533
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Mr Clarke",
+                  "value": 0.014925373134328358
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Murray Bauman",
+                  "value": 0.026246719160104987
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Nerdy Tech",
+                  "value": 0.036939313984168866
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Max Mayfield",
+                  "value": 0.041044776119402986
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Steve Harrington",
+                  "value": 0.04262877442273535
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "The Mind Flayer",
+                  "value": 0.04455445544554455
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Becky Ives",
+                  "value": 0.048426150121065374
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Bob Newby",
+                  "value": 0.05982905982905983
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Lucas Sinclair",
+                  "value": 0.08262108262108261
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Nancy Wheeler",
+                  "value": 0.10914454277286136
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Will Byers",
+                  "value": 0.16995447647951442
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Officer Callahan",
+                  "value": 0.18095238095238095
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Officer Powell",
+                  "value": 0.1848341232227488
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Jonathan Byers",
+                  "value": 0.2033898305084746
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Dr Sam Owens",
+                  "value": 0.20535714285714285
+            },
+            {
+                  "source": "Jim Hopper",
+                  "target": "Joyce Byers",
+                  "value": 0.44130127298444133
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Dr Martin Brenner",
+                  "value": 0.004889975550122249
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "The Mind Flayer",
+                  "value": 0.005305039787798408
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Barbara Holland",
+                  "value": 0.005434782608695652
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "The Monster",
+                  "value": 0.005479452054794521
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Erica Sinclair",
+                  "value": 0.005681818181818182
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Terry Ives",
+                  "value": 0.010282776349614395
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Mr Clarke",
+                  "value": 0.010666666666666666
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Principal Coleman",
+                  "value": 0.011363636363636364
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Officer Powell",
+                  "value": 0.015189873417721518
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Ted Wheeler",
+                  "value": 0.015748031496062992
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Holly Wheeler",
+                  "value": 0.016574585635359115
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Officer Callahan",
+                  "value": 0.020356234096692113
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Steve Harrington",
+                  "value": 0.033582089552238806
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Karen Wheeler",
+                  "value": 0.034739454094292806
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Lonnie Byers",
+                  "value": 0.05084745762711865
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Becky Ives",
+                  "value": 0.05181347150259067
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Max Mayfield",
+                  "value": 0.07072691552062868
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Lucas Sinclair",
+                  "value": 0.1037037037037037
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Dr Sam Owens",
+                  "value": 0.12826603325415678
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Nancy Wheeler",
+                  "value": 0.16282642089093702
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Bob Newby",
+                  "value": 0.19954648526077098
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Jonathan Byers",
+                  "value": 0.3504823151125402
+            },
+            {
+                  "source": "Joyce Byers",
+                  "target": "Will Byers",
+                  "value": 0.4177215189873418
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Agent Connie Frazier",
+                  "value": 0.005633802816901409
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Dr Martin Brenner",
+                  "value": 0.009900990099009901
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Officer Callahan",
+                  "value": 0.010309278350515464
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "The Monster",
+                  "value": 0.011111111111111112
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Lead Agent",
+                  "value": 0.011299435028248588
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Lonnie Byers",
+                  "value": 0.011461318051575931
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Holly Wheeler",
+                  "value": 0.01680672268907563
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Billy Hargrove",
+                  "value": 0.026246719160104987
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Erica Sinclair",
+                  "value": 0.02881844380403458
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Troy",
+                  "value": 0.028901734104046242
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Ted Wheeler",
+                  "value": 0.031914893617021274
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "DArtagnan",
+                  "value": 0.033707865168539325
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Karen Wheeler",
+                  "value": 0.035175879396984924
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Principal Coleman",
+                  "value": 0.040345821325648415
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Mr Clarke",
+                  "value": 0.10270270270270271
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Jonathan Byers",
+                  "value": 0.12317666126418152
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Nancy Wheeler",
+                  "value": 0.14860681114551083
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Will Byers",
+                  "value": 0.16905901116427433
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Steve Harrington",
+                  "value": 0.23728813559322035
+            },
+            {
+                  "source": "Lucas Sinclair",
+                  "target": "Max Mayfield",
+                  "value": 0.49206349206349204
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Mr Clarke",
+                  "value": 0.005780346820809248
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Erica Sinclair",
+                  "value": 0.006191950464396285
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Dr Sam Owens",
+                  "value": 0.01020408163265306
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "The Mind Flayer",
+                  "value": 0.011494252873563218
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Lonnie Byers",
+                  "value": 0.012307692307692308
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Billy Hargrove",
+                  "value": 0.01680672268907563
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Marsha Holland",
+                  "value": 0.018633540372670808
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Officer Powell",
+                  "value": 0.02185792349726776
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Officer Callahan",
+                  "value": 0.02197802197802198
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Murray Bauman",
+                  "value": 0.036923076923076927
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "The Monster",
+                  "value": 0.05952380952380952
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Will Byers",
+                  "value": 0.05970149253731343
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Holly Wheeler",
+                  "value": 0.06606606606606606
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Barbara Holland",
+                  "value": 0.07079646017699115
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Carol",
+                  "value": 0.09580838323353294
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Ted Wheeler",
+                  "value": 0.09659090909090909
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Tommy H",
+                  "value": 0.10682492581602374
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Max Mayfield",
+                  "value": 0.11666666666666667
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Karen Wheeler",
+                  "value": 0.11764705882352941
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Steve Harrington",
+                  "value": 0.42209072978303747
+            },
+            {
+                  "source": "Nancy Wheeler",
+                  "target": "Jonathan Byers",
+                  "value": 0.5396290050590219
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "Karen Wheeler",
+                  "value": 0.011267605633802818
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "Steve Harrington",
+                  "value": 0.012295081967213115
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "The Monster",
+                  "value": 0.01892744479495268
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "Principal Coleman",
+                  "value": 0.03289473684210526
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "Mr Clarke",
+                  "value": 0.03669724770642202
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "DArtagnan",
+                  "value": 0.04472843450479233
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "Dr Sam Owens",
+                  "value": 0.10187667560321716
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "Max Mayfield",
+                  "value": 0.12147505422993492
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "The Mind Flayer",
+                  "value": 0.1458966565349544
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "Bob Newby",
+                  "value": 0.1628498727735369
+            },
+            {
+                  "source": "Will Byers",
+                  "target": "Jonathan Byers",
+                  "value": 0.20557491289198607
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "The Mind Flayer",
+                  "value": 0.006269592476489028
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Mr Clarke",
+                  "value": 0.006309148264984227
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Erica Sinclair",
+                  "value": 0.006802721088435374
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Marsha Holland",
+                  "value": 0.006825938566552901
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Dr Sam Owens",
+                  "value": 0.011019283746556474
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Barbara Holland",
+                  "value": 0.012903225806451613
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Bob Newby",
+                  "value": 0.020887728459530026
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Ted Wheeler",
+                  "value": 0.02476780185758514
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "The Monster",
+                  "value": 0.026058631921824105
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Officer Powell",
+                  "value": 0.02967359050445104
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Karen Wheeler",
+                  "value": 0.034782608695652174
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Officer Callahan",
+                  "value": 0.03582089552238806
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Carol",
+                  "value": 0.03934426229508197
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Lonnie Byers",
+                  "value": 0.04054054054054054
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Murray Bauman",
+                  "value": 0.04054054054054054
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Tommy H",
+                  "value": 0.045454545454545456
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Max Mayfield",
+                  "value": 0.06651884700665188
+            },
+            {
+                  "source": "Jonathan Byers",
+                  "target": "Steve Harrington",
+                  "value": 0.1799163179916318
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "Officer Powell",
+                  "value": 0.00796812749003984
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "Officer Callahan",
+                  "value": 0.008032128514056224
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "DArtagnan",
+                  "value": 0.009216589861751152
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "Karen Wheeler",
+                  "value": 0.015444015444015444
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "Ted Wheeler",
+                  "value": 0.02531645569620253
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "The Monster",
+                  "value": 0.027149321266968326
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "Marsha Holland",
+                  "value": 0.028985507246376812
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "Barbara Holland",
+                  "value": 0.0625
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "Billy Hargrove",
+                  "value": 0.08264462809917356
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "Carol",
+                  "value": 0.1917808219178082
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "Tommy H",
+                  "value": 0.21621621621621623
+            },
+            {
+                  "source": "Steve Harrington",
+                  "target": "Max Mayfield",
+                  "value": 0.3452054794520548
+            },
+            {
+                  "source": "Max Mayfield",
+                  "target": "Principal Coleman",
+                  "value": 0.011049723756906077
+            },
+            {
+                  "source": "Max Mayfield",
+                  "target": "DArtagnan",
+                  "value": 0.05263157894736842
+            },
+            {
+                  "source": "Max Mayfield",
+                  "target": "Mr Clarke",
+                  "value": 0.06862745098039216
+            },
+            {
+                  "source": "Max Mayfield",
+                  "target": "Billy Hargrove",
+                  "value": 0.23255813953488372
+            },
+            {
+                  "source": "Bob Newby",
+                  "target": "Dr Sam Owens",
+                  "value": 0.10989010989010989
+            },
+            {
+                  "source": "Dr Sam Owens",
+                  "target": "Rift Soldier",
+                  "value": 0.02127659574468085
+            },
+            {
+                  "source": "Dr Sam Owens",
+                  "target": "Lead Rift Soldier",
+                  "value": 0.02127659574468085
+            },
+            {
+                  "source": "Dr Sam Owens",
+                  "target": "Nerdy Tech",
+                  "value": 0.1935483870967742
+            },
+            {
+                  "source": "Kali",
+                  "target": "Dr Martin Brenner",
+                  "value": 0.013605442176870748
+            },
+            {
+                  "source": "Kali",
+                  "target": "Ray",
+                  "value": 0.12903225806451613
+            },
+            {
+                  "source": "Kali",
+                  "target": "Mick",
+                  "value": 0.6451612903225806
+            },
+            {
+                  "source": "Kali",
+                  "target": "Dottie",
+                  "value": 0.6870229007633588
+            },
+            {
+                  "source": "Kali",
+                  "target": "Axel",
+                  "value": 0.6870229007633588
+            },
+            {
+                  "source": "Kali",
+                  "target": "Funshine",
+                  "value": 0.6929133858267716
+            },
+            {
+                  "source": "Dr Martin Brenner",
+                  "target": "The Monster",
+                  "value": 0.02127659574468085
+            },
+            {
+                  "source": "Dr Martin Brenner",
+                  "target": "Karen Wheeler",
+                  "value": 0.030303030303030304
+            },
+            {
+                  "source": "Dr Martin Brenner",
+                  "target": "Becky Ives",
+                  "value": 0.034782608695652174
+            },
+            {
+                  "source": "Dr Martin Brenner",
+                  "target": "Ted Wheeler",
+                  "value": 0.05454545454545454
+            },
+            {
+                  "source": "Dr Martin Brenner",
+                  "target": "Ray",
+                  "value": 0.07142857142857142
+            },
+            {
+                  "source": "Dr Martin Brenner",
+                  "target": "Terry Ives",
+                  "value": 0.13559322033898305
+            },
+            {
+                  "source": "Dr Martin Brenner",
+                  "target": "Agent Connie Frazier",
+                  "value": 0.2247191011235955
+            },
+            {
+                  "source": "Dr Martin Brenner",
+                  "target": "Lead Agent",
+                  "value": 0.3409090909090909
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Officer Powell",
+                  "value": 0.01694915254237288
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Officer Callahan",
+                  "value": 0.017241379310344827
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Lead Agent",
+                  "value": 0.024390243902439025
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Erica Sinclair",
+                  "value": 0.02666666666666667
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Billy Hargrove",
+                  "value": 0.03669724770642202
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Mr Clarke",
+                  "value": 0.04081632653061224
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Agent Connie Frazier",
+                  "value": 0.04819277108433735
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Marsha Holland",
+                  "value": 0.05405405405405406
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Lonnie Byers",
+                  "value": 0.07792207792207792
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Holly Wheeler",
+                  "value": 0.47058823529411764
+            },
+            {
+                  "source": "Karen Wheeler",
+                  "target": "Ted Wheeler",
+                  "value": 0.6346153846153846
+            },
+            {
+                  "source": "Officer Powell",
+                  "target": "Mr Clarke",
+                  "value": 0.022222222222222223
+            },
+            {
+                  "source": "Officer Powell",
+                  "target": "Tommy H",
+                  "value": 0.024691358024691357
+            },
+            {
+                  "source": "Officer Powell",
+                  "target": "Benny Hammond",
+                  "value": 0.03076923076923077
+            },
+            {
+                  "source": "Officer Powell",
+                  "target": "Murray Bauman",
+                  "value": 0.057971014492753624
+            },
+            {
+                  "source": "Officer Powell",
+                  "target": "Troy",
+                  "value": 0.06060606060606061
+            },
+            {
+                  "source": "Officer Powell",
+                  "target": "Officer Callahan",
+                  "value": 0.8333333333333334
+            },
+            {
+                  "source": "Officer Callahan",
+                  "target": "Tommy H",
+                  "value": 0.02531645569620253
+            },
+            {
+                  "source": "Officer Callahan",
+                  "target": "Benny Hammond",
+                  "value": 0.031746031746031744
+            },
+            {
+                  "source": "Officer Callahan",
+                  "target": "Murray Bauman",
+                  "value": 0.05970149253731343
+            },
+            {
+                  "source": "Officer Callahan",
+                  "target": "Principal Coleman",
+                  "value": 0.06153846153846154
+            },
+            {
+                  "source": "Officer Callahan",
+                  "target": "Troy",
+                  "value": 0.0625
+            },
+            {
+                  "source": "Officer Callahan",
+                  "target": "Mr Clarke",
+                  "value": 0.06818181818181818
+            },
+            {
+                  "source": "Axel",
+                  "target": "Ray",
+                  "value": 0.058823529411764705
+            },
+            {
+                  "source": "Axel",
+                  "target": "Mick",
+                  "value": 0.9292929292929293
+            },
+            {
+                  "source": "Axel",
+                  "target": "Funshine",
+                  "value": 0.9411764705882353
+            },
+            {
+                  "source": "Axel",
+                  "target": "Dottie",
+                  "value": 0.9811320754716981
+            },
+            {
+                  "source": "Dottie",
+                  "target": "Ray",
+                  "value": 0.058823529411764705
+            },
+            {
+                  "source": "Dottie",
+                  "target": "Mick",
+                  "value": 0.9292929292929293
+            },
+            {
+                  "source": "Dottie",
+                  "target": "Funshine",
+                  "value": 0.9411764705882353
+            },
+            {
+                  "source": "Funshine",
+                  "target": "Ray",
+                  "value": 0.0625
+            },
+            {
+                  "source": "Funshine",
+                  "target": "Mick",
+                  "value": 0.9473684210526315
+            },
+            {
+                  "source": "Terry Ives",
+                  "target": "Ray",
+                  "value": 0.1875
+            },
+            {
+                  "source": "Terry Ives",
+                  "target": "Becky Ives",
+                  "value": 0.42105263157894735
+            },
+            {
+                  "source": "Billy Hargrove",
+                  "target": "Carol",
+                  "value": 0.028985507246376812
+            },
+            {
+                  "source": "Billy Hargrove",
+                  "target": "Tommy H",
+                  "value": 0.08333333333333333
+            },
+            {
+                  "source": "Ted Wheeler",
+                  "target": "Erica Sinclair",
+                  "value": 0.03773584905660377
+            },
+            {
+                  "source": "Ted Wheeler",
+                  "target": "Mr Clarke",
+                  "value": 0.05263157894736842
+            },
+            {
+                  "source": "Ted Wheeler",
+                  "target": "Lead Agent",
+                  "value": 0.06666666666666667
+            },
+            {
+                  "source": "Ted Wheeler",
+                  "target": "Marsha Holland",
+                  "value": 0.07692307692307693
+            },
+            {
+                  "source": "Ted Wheeler",
+                  "target": "Agent Connie Frazier",
+                  "value": 0.09836065573770492
+            },
+            {
+                  "source": "Ted Wheeler",
+                  "target": "Lonnie Byers",
+                  "value": 0.10909090909090909
+            },
+            {
+                  "source": "Ted Wheeler",
+                  "target": "Holly Wheeler",
+                  "value": 0.5079365079365079
+            },
+            {
+                  "source": "The Mind Flayer",
+                  "target": "DArtagnan",
+                  "value": 0.034482758620689655
+            },
+            {
+                  "source": "Mr Clarke",
+                  "target": "Erica Sinclair",
+                  "value": 0.0425531914893617
+            },
+            {
+                  "source": "Mr Clarke",
+                  "target": "Troy",
+                  "value": 0.043478260869565216
+            },
+            {
+                  "source": "Mr Clarke",
+                  "target": "Agent Connie Frazier",
+                  "value": 0.07272727272727272
+            },
+            {
+                  "source": "Mr Clarke",
+                  "target": "Lonnie Byers",
+                  "value": 0.08163265306122448
+            },
+            {
+                  "source": "Mr Clarke",
+                  "target": "Principal Coleman",
+                  "value": 0.2127659574468085
+            },
+            {
+                  "source": "Barbara Holland",
+                  "target": "The Monster",
+                  "value": 0.03773584905660377
+            },
+            {
+                  "source": "Barbara Holland",
+                  "target": "Tommy H",
+                  "value": 0.18518518518518517
+            },
+            {
+                  "source": "Barbara Holland",
+                  "target": "Carol",
+                  "value": 0.19607843137254902
+            },
+            {
+                  "source": "Tommy H",
+                  "target": "Carol",
+                  "value": 0.8979591836734694
+            },
+            {
+                  "source": "The Monster",
+                  "target": "Lead Agent",
+                  "value": 0.09090909090909091
+            },
+            {
+                  "source": "Agent Connie Frazier",
+                  "target": "Benny Hammond",
+                  "value": 0.13333333333333333
+            },
+            {
+                  "source": "Agent Connie Frazier",
+                  "target": "Lead Agent",
+                  "value": 0.358974358974359
+            },
+            {
+                  "source": "Lonnie Byers",
+                  "target": "Erica Sinclair",
+                  "value": 0.07692307692307693
+            },
+            {
+                  "source": "Rift Soldier",
+                  "target": "Lead Rift Soldier",
+                  "value": 1.0
+            },
+            {
+                  "source": "Principal Coleman",
+                  "target": "Troy",
+                  "value": 0.08695652173913043
+            }
+      ]
+}
