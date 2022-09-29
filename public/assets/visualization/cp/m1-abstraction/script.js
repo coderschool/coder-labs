@@ -5,23 +5,26 @@
 // calback
 // () => anonymous function / error func
 window.onload = () => {
-  document.querySelector("#number").addEventListener("input", handleInput);
+  const numberSlider = document.querySelector("#number");
+
+  numberSlider.addEventListener("input", handleInput);
+  numberSlider.addEventListener("change", handleChange);
 };
 
 function handleInput(e) {
-  //prevent default
   e.preventDefault();
-
   //select elements
   const currentNumber = document.querySelector("#currentNumber");
-  const numberSlider = document.querySelector("#number");
-
   //on input
-  // // slider update current number
-  currentNumber.innerHTML = numberSlider.value;
-
-  // // render d3 with slider value
-  render(numberSlider.value);
+  // slider update current number
+  currentNumber.innerHTML = e.target.value;
+}
+function handleChange(e) {
+  //prevent default
+  e.preventDefault();
+  // on change
+  // render d3 with slider value
+  render(e.target.value);
 }
 
 async function render(inputValue) {
