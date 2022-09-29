@@ -5,6 +5,9 @@
 window.onload = () => {
   document.querySelector("#number").addEventListener("input", handleInput);
 };
+window.onscroll = () => {
+  alert("scroll ne  ba");
+};
 
 function handleInput(e) {
   //prevent default
