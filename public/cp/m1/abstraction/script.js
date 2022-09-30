@@ -4,6 +4,7 @@
 // function dc execute khi window load xong
 // calback
 // () => anonymous function / error func
+
 window.onload = () => {
   const numberSlider = document.querySelector("#number");
 
@@ -47,12 +48,14 @@ function observeContent() {
 function renderImage() {
   const display = document.querySelector(".interactive-svg");
   display.innerHTML = `
+  <div style="margin: auto auto">
   <img src="assets/erd.png" />
   <p style="font-weight:lighter">
     <i>fig1 ⎯ Entity Relationship Diagram. By looking at this, we can
     understand, for example, which customer makes which order of which
     product and their review.</i>
-  </p>`;
+  </p>
+  </div>`;
 }
 
 function handleInput(e) {
