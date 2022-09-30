@@ -1,13 +1,78 @@
-body {
-  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
-  padding: 20px 20px 60px;
-  margin: 0 auto;
+/* MUI palette */
+:root {
+  --info-lighter: #d0f2ff;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+/* MUI global csss */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  color: #212b36;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-family: Public Sans, sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+
+body::backdrop {
+  background-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+#__next {
+  width: 100%;
+  height: 100%;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .mark-highlight {
@@ -26,4 +91,18 @@ code {
   color: #eb5757;
   padding: 0.2em 0.4em;
   border-radius: 3px;
+}
+
+/* responsive iframe wrapper */
+.iframe-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

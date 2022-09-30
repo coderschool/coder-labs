@@ -78,21 +78,16 @@ img {
 /* Visualization CSS */
 
 .interactive-container {
-  min-height: 500px;
-  border-radius: 5px;
   display: flex;
 }
 
 .interactive-content {
   flex: 2;
   padding: 2em;
-  height: 100vh;
-  overflow: scroll;
 }
 
 .interactive-svg {
   flex: 3;
-  height: 100vh;
   padding: 2em;
 }
 
@@ -118,24 +113,17 @@ img {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .interactive-container {
-    display: block;
-    height: 100vh;
-  }
-  .interactive-content {
-    height: 60vh;
+    flex-direction: column;
   }
   .interactive-svg {
-    height: 40vh;
+    height: 40px !important;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up to 900px) */
 @media only screen and (min-width: 600px) and (max-width: 900px) {
-  .interactive-container > * {
-    flex: 1;
-  }
-  .resonsive-example {
-    display: none;
+  .interactive-content {
+    flex: 3;
   }
 }
 
