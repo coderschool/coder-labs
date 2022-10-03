@@ -1,11 +1,20 @@
-import { Container, Typography, Box, Alert, Paper } from "@mui/material";
+import {
+  Divider,
+  Container,
+  Typography,
+  Box,
+  Alert,
+  Paper,
+} from "@mui/material";
 import Image from "next/image";
 
-<Container>
-<img src="https://i.imgur.com/dpd20EG.png" style={{width:"3em",paddingTop:"1em"}}/>
-<br />
+<Container style={{ maxWidth:"900px" }}>
+
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "3em", paddingTop: "1em" }}
+/>
 # Abstraction
-<br />
 
 **Abstraction** is one of the fundamental core components of Computer Science,
 together with Decomposition, Pattern Recognition, and Algorithms. The essence
@@ -13,24 +22,21 @@ of Abstraction involves hiding all the features that we don’t need in order to
 focus on those that are more important. From this, we create a representation
 of what we are trying to solve and develop algorithms.
 
-<br />
-
 Abstraction can be applied to any aspect of our life. For example, to print a document, users can just simply press the button “Print” without understanding how the machine applies ink onto the paper. The button “Print” is a representation of the whole printing process. By using abstraction, the engineer hides all the unnecessary detail about the printing process from the users.
 
-<br />
 Abstraction can be applied in e-commerce to help a business operate in a more systematic
 and efficient way. All the information about inventories and customers, for example,
 can be recorded and organized in tables. In these tables, only important features
-are highlighted while all the other irrelevant information is filtered out). For
-example, in fig1’s, the PEOPLE table only records important fields such as Address,
+are highlighted while all the other irrelevant information is filtered out).
+
+For example, in fig1’s, the PEOPLE table only records important fields such as Address,
 Email, etc., and ignores other irrelevant ones like “Hair Color”, and “Pets”.
-<br />
 From these tables, we can develop a system called ERD (Entity Relationship Diagram).
 Based on this, we can further understand the relationship within our data. For example,
 the links between tables show us which customer makes which order of which product,
 and their review about the product. ERD is an example of how abstraction can help
 management understand their data before diving deeper into details.
-<br />
+
 <div>
   <Image
     src="/cp/m1/abstraction/assets/erd.png"
@@ -40,38 +46,24 @@ management understand their data before diving deeper into details.
     height={475}
   />
 </div>
-_fig1 ⎯ Entity Relationship Diagram._
-<br />
-Abstraction is also useful in data visualization. A social network can be
-visualized with dots and lines. Each dot represents one person. The line that
-connects two dots represents the relationship. In real life, a person can be
-described using many different characteristics (age, hair color, nationality,
+_fig1 ⎯ Entity Relationship Diagram._ Abstraction is also useful in data visualization.
+A social network can be visualized with dots and lines. Each dot represents one person.
+The line that connects two dots represents the relationship. In real life, a person
+can be described using many different characteristics (age, hair color, nationality,
 sense of humor, etc). However, to achieve this visualization, we use abstraction
 to hide all the irrelevant information and highlight the concept of “people” and
 “relationships” using the forms of “dot” and “line”.
 
-<br />
-
 <Alert severity="info">**Try it yourself** ✨</Alert>
 
-<br />
 <div className="iframe-wrapper">
   <iframe src="/cp/m1/abstraction/index.html" width="560" height="315" />
 </div>
-<br />
-## 🚀 Continue to explore the concept of Abstraction
 
-<br />
-<div className="iframe-wrapper">
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/_y-5nZAbgt4"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-</div>
+<Alert severity="info">**Learn more** 🚀</Alert>
+
+[Continue to explore the concept of Abstraction](https://www.youtube.com/embed/_y-5nZAbgt4)
+
+<div className="page-footer"></div>
 
 </Container>
