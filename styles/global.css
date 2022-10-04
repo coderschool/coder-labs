@@ -127,7 +127,9 @@ code {
   width: 100%;
   height: 100%;
 }
-
+ol {
+  padding: 1em;
+}
 /* Styled Components */
 .page-footer {
   height: 20vh;
