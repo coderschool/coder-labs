@@ -1,3 +1,7 @@
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
 # Question 1:
 
 ```
@@ -112,15 +116,9 @@ currency: 'VND',
 function sortItemsByPrice(listOfItems) {
   // Write your code here.
   // Return a sorted array of the items.
-  for (i = 0; i < listOfItems.length - 1; i++) {
-    for (j = i + 1; j < listOfItems.length; j++) {
-      if (listOfItems[i].price > listOfItems[j].price) {
-        const temp = listOfItems[i];
-        listOfItems[i] = listOfItems[j];
-        listOfItems[j] = temp;
-      }
-    }
-  }
+  listOfItems = listOfItems.sort((item1, item2) => {
+    return item1.price - item2.price;
+  });
   return listOfItems;
 }
 ```
@@ -185,6 +183,7 @@ function getAffordableItems(listOfItems, maxPriceVnd) {
       result.push(listOfItems[i]);
     }
   }
+
   return result;
 }
 ```
