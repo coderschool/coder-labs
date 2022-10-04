@@ -1,8 +1,14 @@
-# <img src="https://i.imgur.com/dpd20EG.png" style={{width:"20px"}}/> CSS: Selectors
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
 
-To select an element you can call its tag name, class, id, etc. However, most of the time you
+# CSS: Selectors
 
-### Type of selectors
+<br />
+<br />
+<br />
+## 1️⃣ Type of selectors
 
 <CH.Section>
 
@@ -46,12 +52,12 @@ div > p {
 
 </CH.Section>
 
-### Combinators
+<br />
+<br />
+
+## 2️⃣ Combinators
 
 You can combine many type selectors and make your selection more [specific](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity).
-
-<br />
-<br />
 
 <CH.Scrollycoding preset="https://codesandbox.io/s/intro-to-css-x1yo7u">
 
@@ -104,7 +110,7 @@ You can combine many type selectors and make your selection more [specific](http
 > - Compound selector
 > - Matches elements A and B
 
-> > Example: Here we combine two class selector `.box1` and `.box2`
+> - Example: Here we combine two class selector `.box1` and `.box2`
 
 ```css index.html
 <div class="box1">
@@ -134,8 +140,7 @@ You can combine many type selectors and make your selection more [specific](http
 
 > - Descendant combinator
 > - Matches B only if it is descendant of element A
-
-> > Example: Here we select `p` that **is descendant of** `.box1` - which are Target 3 and Target 4.
+> - Example: Here we select `p` that **is descendant of** `.box1` - which are Target 3 and Target 4.
 
 ```css index.html
 <div class="box1">
@@ -171,8 +176,7 @@ You can combine many type selectors and make your selection more [specific](http
 
 > - Child combinator
 > - Matches element B that is a child of element A
-
-> > Example: Here we select `p` that is **the direct child** of `.box1` - which is only Target 3.
+> - Example: Here we select `p` that is **the direct child** of `.box1` - which is only Target 3.
 
 ```css index.html
 <div class="box1">
@@ -208,8 +212,7 @@ You can combine many type selectors and make your selection more [specific](http
 
 > - Next-sibling combinator
 > - Matches element B that immediately follows element A, where A and B share the same parent
-
-> > Example: Here we select only `p` that is **immiediatly follows** `.target-4` - which is only Target 6.
+> - Example: Here we select only `p` that is **immiediatly follows** `.target-4` - which is only Target 6.
 
 ```css index.html
 <div class="box1">
@@ -250,8 +253,7 @@ You can combine many type selectors and make your selection more [specific](http
 
 > - Subsequent-sibling combinator
 > - Matches element B that is preceded by A, where A and B share the same parent
-
-> > Example: Here we select all `p` that is **preceeded by** `.target-4` - which are Target 6 and Target 7.
+> - Example: Here we select all `p` that is **preceeded by** `.target-4` - which are Target 6 and Target 7.
 
 ```html index.html
 <div class="box1">
@@ -401,7 +403,7 @@ You can combine many type selectors and make your selection more [specific](http
 
 `:root`
 
-> - Tree-structural pseudo-class selector
+> - Tree-structural pseudo-class selector.
 > - Selects an element that is the root of the document. In HTML, it is the html element.
 
 ```html index.html
@@ -474,7 +476,7 @@ You can combine many type selectors and make your selection more [specific](http
 
 `:hover`
 
-> - User-action pseudo-class selector
+> - User-action pseudo-class selector.
 
 > - Specifies a style for elements (typically links) that appear when the mouse is placed over them.
 
@@ -515,9 +517,9 @@ When focused this box has no styles: <input id="not-selected" type="text" />
 > - Selects an element that is the first child of its parent element.
 
 > - Example:
->   > Select all the `h1` that is the first child of its parent element.
->   > Target 1 is selected as it is the first child of `.box1`.
->   > Target 3 is not selected because it is the second child.
+>   > - Select all the `h1` that is the first child of its parent element.
+>   > - Target 1 is selected as it is the first child of `.box1`.
+>   > - Target 3 is not selected because it is the second child.
 
 ```html index.html
 <div class="box1">
@@ -543,8 +545,8 @@ When focused this box has no styles: <input id="not-selected" type="text" />
 
 > - Selects an element that is the last child of its parent element.
 > - Example:
->   > Select all the `h1` that is the last child of its parent element.
->   > Now only Target 2 is selected because it is the last child of `.box1-1`
+>   > - Select all the `h1` that is the last child of its parent element.
+>   > - Now only Target 2 is selected because it is the last child of `.box1-1`
 
 ```html index.html
 <div class="box1">
@@ -592,7 +594,7 @@ When focused this box has no styles: <input id="not-selected" type="text" />
 > - Structural pseudo-class selector
 > - Selects an element that is the nth child of its parent. The notation can include a number, a notation, or the keywords odd or even.
 > - Example:
->   > `div:nth-child(2)` - select the second element of div siblings.
+>   > - `div:nth-child(2)` - select the second element of div siblings.
 
 ```html index.html
 <div class="box1">
@@ -610,3 +612,6 @@ When focused this box has no styles: <input id="not-selected" type="text" />
 ```
 
 </CH.Scrollycoding>
+<br />
+<br />
+<br />

@@ -1,12 +1,21 @@
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
 # Intro to ES6
 
-## Introduction
+<br />
+<br />
+<br />
+## 1️⃣ Introduction
 
 JavaScript is what everyone calls the language, but the official name of JavaScript is ECMAScript. That name comes from the standards organization Ecma, which manages the language standard. **ECMAScript 1 (June 1997)** was the first version of the JavaScript language standard.
 
 Up until now, you’ve mostly been writing ECMAScript 5. ES5 is comfortable and familiar, but ES6 gives us a lot of great new features, which we’ll start learning about this week.
 
-## Table of Contents
+<br />
+<br />
+## 2️⃣ Table of Contents
 
 - [Shorthand object assignment](#shorthand-object-assignment)
 - [Template Literal](#template-literal)
@@ -16,7 +25,9 @@ Up until now, you’ve mostly been writing ECMAScript 5. ES5 is comfortable and 
 - [Arrow Functions](#arrow-functions)
 - [What is `this`?](#this)
 
-## Shorthand object assignment
+<br />
+<br />
+## 3️⃣ Shorthand object assignment
 
 Intuitive and flexible destructuring of Objects into individual variables during assignment.
 
@@ -37,7 +48,9 @@ function shorthandPropertyNames() {
 console.log(shorthandPropertyNames());
 ```
 
-## Template Literal <a id="template-literal"></a>
+<br />
+<br />
+## 4️⃣ Template Literal <a id="template-literal"></a>
 
 In ES5, you put values into strings by concatenating those values and string fragments:
 
@@ -70,7 +83,9 @@ const HTML5_SKELETON = `
     </html>`;
 ```
 
-## Destructuring, Rest, and Spread <a id="destructuring"></a>
+<br />
+<br />
+## 5️⃣ Destructuring, Rest, and Spread <a id="destructuring"></a>
 
 [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) is a convenient way of extracting multiple values from data stored in (possibly nested) objects and arrays.
 
@@ -149,7 +164,9 @@ const z = ["d", "e"];
 const arr = [...x, ...y, ...z]; // ["a", "b", "c", "d", "e"]
 ```
 
-## Default and Rest Parameters <a id="parameters" ></a>
+<br />
+<br />
+## 6️⃣ Default and Rest Parameters <a id="parameters"></a>
 
 ES6 gives us more ways to handle parameters.
 
@@ -172,7 +189,9 @@ function f(x, y, ...a) {
 f(1, 2, "hello", true, 7); // 9
 ```
 
-## Arrow Functions <a id="arrow-functions" ></a>
+<br />
+<br />
+## 7️⃣ Arrow Functions <a id="arrow-functions"></a>
 
 ES6 introduced arrow functions, which allow us to write functions with shorter syntax.
 
@@ -202,13 +221,15 @@ const squared = (x) => {
 const squared = (x) => x * x; // expression
 ```
 
-**Summary**
+### Summary:
 
 Arrow functions are handy for one-liners. They come in two flavors:
 
 1.  Without curly braces: `(...args) => expression` - the right side is an expression: the function evaluates it and returns the result.
 2.  With curly braces: `(...args) => { body }` - brackets allow us to write multiple statements inside the function, but we need an explicit `return` to return something.
 
+<br />
+<br />
 ## What is `this`? <a id="this"></a>
 
 In regular functions the `this` keyword represented the object that called the function, which could be the window, the document, a button or whatever. When a function is called as a method of an object, its `this` is set to the object the method is called on.
@@ -255,13 +276,18 @@ let person = {
 person.sayName(); // undefined
 ```
 
-**Summary**
+### Summary
 
 - When a function is declared, it may use `this`, but that `this` has no value until the function is called.
 - When a function is called in the “method” syntax: `object.method()`, the value of `this` during the call is `object`.
 - When `this` is accessed inside an arrow function, it is taken from outside.
 
-## Additional reading
+<br />
+<br />
+## ✨ References
 
 - [ES6 Cheatsheet](http://es6-features.org/#Lexicalthis)
 - [When not to use arrow functions](https://wesbos.com/arrow-function-no-no)
+  <br />
+  <br />
+  <br />

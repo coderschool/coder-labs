@@ -1,3 +1,8 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 body {
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
@@ -26,4 +31,22 @@ code {
   color: #eb5757;
   padding: 0.2em 0.4em;
   border-radius: 3px;
+}
+p {
+  margin: 10px 0;
+}
+li {
+  margin: 20px 0 20px 35px;
+}
+blockquote {
+  margin-left: 35px;
+}
+a {
+  color: rgb(79, 129, 189);
+  text-decoration: underline;
+}
+.ch-section-link {
+  background-color: rgba(191, 191, 191, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 0 5px;
 }
