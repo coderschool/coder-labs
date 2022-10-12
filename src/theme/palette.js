@@ -21,13 +21,13 @@ const SECONDARY = {
   dark: "#0C102C",
   darker: "#04061D",
 };
-const SECONDARY_DARK = {
-  lighter: "#FADDFD",
-  light: "#E198F5",
-  main: "#AF52DE",
-  dark: "#68299F",
-  darker: "#340F6A",
-};
+// const SECONDARY_DARK = {
+//   lighter: "#FADDFD",
+//   light: "#E198F5",
+//   main: "#AF52DE",
+//   dark: "#68299F",
+//   darker: "#340F6A",
+// };
 const INFO = {
   lighter: "#D0F2FF",
   light: "#74CAFF",
