@@ -1,10 +1,17 @@
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
 # Intro to JavaScript
 
 JavaScript was created to make the web more dynamic. It is a scripting language made to run inside a host environment - like a web browser! It provides programatic control over the objects in that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
 
 JavaScript can be client-side and server-side, meaning that it can be used to control user-facing interfaces (e.g. browsers) as well as handle the server-side extensions that connect with a database.
 
-## Variables
+<br />
+<br />
+<br />
+## 1️⃣ Variables
 
 JS uses **dynamic typing**, meaning variables can hold values of any type without any type enforcement.
 
@@ -22,8 +29,10 @@ let myVariableName;
 - All variables are case sensitive
 - Use names that describe the kind of information you plan to assign the variable
 - If your variable is made up of more than one word, then use **camelCase**, for example `thisIsMyVariableName`
+  <br />
+  <br />
 
-## Values & Types
+## 2️⃣ Values & Types
 
 There are different data types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
 
@@ -57,7 +66,9 @@ a = { b: "c" };
 typeof a; // "object"
 ```
 
-## Operators
+<br />
+<br />
+## 3️⃣ Operators
 
 There are 5 basic types of operators to get you started:
 
@@ -66,8 +77,10 @@ There are 5 basic types of operators to get you started:
 3.  [String operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String): combine strings.`let greeting = 'Hello! ' + 'Nice to meet you.';`
 4.  [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison): compare two values and return a true or false. `let buy = 3 > 5; // Value of buy is false`
 5.  [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical): combines expressions and return a Boolean value of true or false. `let buy = (5 > 3) && (2 < 4);`
+    <br />
+    <br />
 
-## Conditional
+## 4️⃣ Conditional
 
 Basic structure of a conditional:
 
@@ -126,7 +139,9 @@ switch (a) {
 }
 ```
 
-## Objects
+<br />
+<br />
+## 5️⃣ Objects
 
 Objects are a collection of **key-value pairs** surrounded by curly braces. A key is like a name that holds a value. You're actually used to working with key-value pairs already, because a key-value pair in an object is similar to a variable - the variable name serves as a label for the data.
 
@@ -178,7 +193,9 @@ console.log(school.getSlogan);
 console.log(school.getSlogan());
 ```
 
-## Arrays
+<br />
+<br />
+## 6️⃣ Arrays
 
 An `array` is an `object` that holds values in nummerically indexed positions. Each value is referred to as an element.
 
@@ -214,6 +231,8 @@ const locations = [denver, raleigh, atlanta];
 const randomData = ["hello", true, 100, denver, [1, 2, 3]];
 ```
 
+<br />
+
 ### Looping over arrays
 
 `for` loops are commonly used to iterate over the items in an array. To do this, we use the property length and call it on the variable associated with the array we want to iterate over. This property returns the length of, or number of elements in, an array.
@@ -228,29 +247,31 @@ function listFruits() {
 }
 ```
 
-## Truthy & Falsy
+<br />
+<br />
+## 7️⃣ Truthy & Falsy
 
 Truthy & Falsy are nature of values: when a non-boolean value is converted to `boolean`, does it become `true` or `false`.
 
-List of falsy:
+**List of falsy:**
 
-```md
-- "" (empty string)
-- 0, NaN (invalid number)
-- null, undefined
-- false
+- `""` (empty string)
+- `0`, `NaN` (invalid number)
+- `null`, `undefined`
+- `false`
 
-List of truthy:
+**List of truthy:**
 
-- "hello"
-- 42
-- true
-- [ ], [ 1, 2, 3 ] (arrays)
-- { }, { a: 42 } (objects)
-- function foo() { .. } (functions)
-```
+- `"hello"`
+- `42`
+- `true`
+- `[ ]`, `[ 1, 2, 3 ]` (arrays)
+- `{ }`, `{ a: 42 }` (objects)
+- `function foo() { ... }` (functions)
 
-## Functions
+<br />
+<br />
+## 8️⃣ Functions
 
 To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces
 
@@ -278,7 +299,9 @@ Inside the function, the arguments (the parameters) behave as local variables.
 
 Because functions perform an action, it's best to name it with an action verb! For example: `generateRandomNum`, `printGreeting`, `saveGroceryItem`, etc. Notice that the names are camelCased!
 
-## Scope
+<br />
+<br />
+## 9️⃣ Scope
 
 In JS, each function gets its own scope. Scope is basically a collection of variables as well as the rules for how those variables are accessed by name. Only code inside that function can access that function's local variables.
 
@@ -343,7 +366,9 @@ function outer() {
 outer();
 ```
 
-## `var` vs `let` & `const` <a id="var-let-const"></a>
+<br />
+<br />
+## 1️⃣0️⃣ `var` vs `let` & `const` <a id="var-let-const"></a>
 
 We"ve learned that scope is the area of code in which a variable or value can be accessed.
 
@@ -384,7 +409,7 @@ function temporalDeadZone() {
 }
 ```
 
-**The differences between** `let` vs `const`:
+**The differences between `let` vs `const`:**
 
 - Variables declared with `let` can be reassigned, whereas variables declared with `const` cannot.
 
@@ -395,3 +420,7 @@ const obj = { a: 1, b: 2 };
 obj.b = 3;
 // obj: {a: 1, b: 3}
 ```
+
+<br />
+<br />
+<br />

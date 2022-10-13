@@ -77,7 +77,7 @@ export const courseWebUnits = [
           {
             id: "wv/m11/s5-ln1-css-introduction",
             title: "Lecture note 1 - CSS introduction",
-            path: "wv/m11/s5-a1s-intro-to-css",
+            path: "wv/m11/s5-ln1-css-introduction",
           },
           {
             id: "wv/m11/s5-ln2-css-selectors",

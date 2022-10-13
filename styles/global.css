@@ -1,8 +1,8 @@
+
 /* MUI palette */
 :root {
   --info-lighter: #d0f2ff;
 }
-
 /* MUI global csss */
 html {
   -webkit-font-smoothing: antialiased;
@@ -20,7 +20,6 @@ strong,
 b {
   font-weight: 700;
 }
-
 body {
   margin: 0;
   color: #212b36;
@@ -107,6 +106,7 @@ code {
   border-radius: 3px;
 }
 
+
 /* responsive iframe wrapper */
 .iframe-wrapper {
   border: none;
@@ -133,4 +133,25 @@ ol {
 /* Styled Components */
 .page-footer {
   height: 20vh;
+
+p {
+  margin: 10px 0;
 }
+li {
+  margin: 20px 0 20px 35px;
+}
+blockquote {
+  margin-left: 35px;
+}
+a {
+  color: rgb(79, 129, 189);
+  text-decoration: underline;
+}
+.ch-section-link {
+  background-color: rgba(191, 191, 191, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 0 5px;
+}
+
+
+
