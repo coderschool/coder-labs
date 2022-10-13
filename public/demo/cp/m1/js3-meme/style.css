@@ -1,0 +1,101 @@
+
+html,
+body {
+  background-color: #580808;
+  background-image: url("https://assets.codepen.io/284450/cb_background.png");
+  background-repeat: repeat-xy;
+  height: 100%;
+  margin: 0 0 0 0;
+  font-family: "Architects Daughter", "Comic Sans MS";
+}
+
+
+.main-Container {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-color: #7e0c0c;
+  width: 75%;
+  height: 100vh;
+  margin: auto;
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  padding-top: 20px;
+}
+
+.imgBox {
+  max-width: 606px;
+  color: #fff;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: auto;
+}
+
+#thumbnail {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #000;
+  max-width: 606px;
+
+}
+
+.cmTitle {
+  margin: 20px auto 20px auto;
+  width: 504px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 3px #000;
+  font-size: 2.5em;
+}
+
+.topCaption,
+.bottomCaption {
+  color: #fff;
+  text-shadow: #000 0px 0px 6px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+}
+
+.topCaption {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  
+
+}
+
+.bottomCaption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.gradient {
+  border: 3px solid #000;
+  height: 35px;
+  width: 300px;
+  line-height: 20px;
+  font-size: 20px;
+    background: -moz-linear-gradient(top, #fdca4b, #f8981d);
+}
+
+.topInpDiv,
+.botInpDiv,
+.imgInpDiv,
+#littleButton {
+  margin: 10px auto 20px auto;
+  width: 300px;
+
+}
+
+#littleButton {
+  display: block;
+}
