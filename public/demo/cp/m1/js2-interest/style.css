@@ -1,0 +1,208 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-smooth: auto;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #444;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.simple-interest {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  margin: 0;
+  padding: 2.5rem;
+  background-color: whitesmoke;
+  border-radius: 0.3125rem;
+  box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.3);
+}
+.simple-interest h2 {
+  margin: 0 0 1.875rem;
+  padding: 0 0 0.9375rem;
+  border-bottom: 0.0625rem solid #ddd;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+.simple-interest .error {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 1.25rem;
+  padding: 0.625rem;
+  background-color: #f8c9c4;
+  border: 0.125rem solid #e74c3c;
+  border-radius: 0.625rem;
+  color: #e74c3c;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.simple-interest .error.hide {
+  display: none;
+}
+.simple-interest form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.simple-interest form label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 0 0.625rem;
+  background: white;
+  border: 0.0625rem solid slategray;
+}
+.simple-interest form label > span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0.625rem 0.3125rem;
+  background-color: slategray;
+  color: white;
+  font-weight: bold;
+}
+.simple-interest form label input {
+  position: relative;
+  display: flex;
+  width: 85%;
+  margin: 0;
+  padding: 0.625rem 0.3125rem 0.625rem 0.75rem;
+  background: transparent;
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+.simple-interest form .button {
+  position: relative;
+  width: 100%;
+  height: 33px;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  background-color: #8d9aa6;
+  border: none;
+  border-radius: 0.3125rem;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: 0.25s;
+  overflow: hidden;
+}
+.simple-interest form .button:before {
+  content: "Calculate";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.simple-interest form .button.loading:before, .simple-interest form .button.loading:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.simple-interest form .button.loading:before {
+  content: "LOADING";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  font-size: 0.75rem;
+  font-weight: bold;
+  z-index: 1;
+}
+.simple-interest form .button.loading:after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: #2ecc71;
+  animation: loading 2s ease;
+  z-index: 0;
+}
+@keyframes loading {
+  100% {
+    width: 100%;
+  }
+}
+.simple-interest form .button:hover {
+  background-color: slategray;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.simple-interest .results {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+.simple-interest .results.hide {
+  display: none;
+}
+.simple-interest .results .monthly-payment,
+.simple-interest .results .total-interest,
+.simple-interest .results .total-amount {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.3125rem;
+}
+.simple-interest .results .monthly-payment > span,
+.simple-interest .results .total-interest > span,
+.simple-interest .results .total-amount > span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+  padding: 0.3125rem 0.625rem;
+  border: 0.0625rem solid #3498db;
+  font-size: 0.75rem;
+}
+.simple-interest .results .monthly-payment > span:first-child,
+.simple-interest .results .total-interest > span:first-child,
+.simple-interest .results .total-amount > span:first-child {
+  justify-content: flex-start;
+  width: 40%;
+  margin: 0;
+  background-color: #3498db;
+  color: white;
+}
+.simple-interest .results .monthly-payment > span:last-child,
+.simple-interest .results .total-interest > span:last-child,
+.simple-interest .results .total-amount > span:last-child {
+  justify-content: flex-end;
+  width: 60%;
+  margin: 0;
+  background-color: white;
+  font-weight: 600;
+}
