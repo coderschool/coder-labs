@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GA4 Particle Text</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="simple-interest">
+    <h2>Simple Interest Calculator</h2>
+    <form id="calculate">
+      <label for="principal" class="principal">
+        <span>
+          <i class="fa fa-usd" aria-hidden="true"></i>
+        </span>
+        <input id="principal" type="text" placeholder="Loan Amount" />
+      </label>
+  
+      <label for="rate" class="rate">
+        <span class="percent">
+          %
+        </span>
+        <input id="rate" type="text" placeholder="Interest Rate" />
+      </label> 
+  
+      <label for="time">
+        <span>
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+        </span>
+        <input id="time" type="number" placeholder="Years to Repay" />
+      </label>
+  
+      <button class="button" type="submit"></button>
+    </form>
+    
+    <div class="results hide">
+      <div class="monthly-payment">
+        <span>Monthly Payment</span>
+        <span id="payment"></span>
+      </div>
+      <div class="total-interest">
+        <span>Total Interest</span>
+        <span id="interest"></span>
+      </div>
+      <div class="total-amount">
+        <span>Total Amount</span>
+        <span id="total"></span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

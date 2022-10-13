@@ -13,6 +13,7 @@ const Page = forwardRef(({ children, title = "", meta, ...other }, ref) => (
     </Head>
 
     <Box ref={ref} {...other}>
+      <br />
       {children}
     </Box>
   </>
