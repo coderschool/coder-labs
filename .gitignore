@@ -5,3 +5,4 @@ dist
 .prettierignore
 .env
 .vscode
+test.*
