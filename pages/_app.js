@@ -7,6 +7,7 @@ import { CacheProvider } from "@emotion/react";
 import ThemeProvider from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
 import ContentLayout from "../src/layouts/ContentLayout";
+import { useRouter } from "next/router";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
