@@ -1,13 +1,9 @@
 import { Container } from "@mui/material";
 import { useRouter } from "next/router";
-import { useMemo, useRef } from "react";
 
 const ContentLayout = ({ children }) => {
   const router = useRouter();
-  const isWV = useMemo(
-    () => router.pathname.startsWith("/wv"),
-    [router.pathname]
-  );
+  const isWV = router.pathname.startsWith("/wv");
 
   return (
     <>
