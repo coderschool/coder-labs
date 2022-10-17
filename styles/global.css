@@ -40,6 +40,6 @@ code {
 }
 
 /* Must select all to apply for markdown list-items rendered by MDX  */
-li {
+.wv-content__container li {
   margin-left: 1em;
 }
