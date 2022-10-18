@@ -301,9 +301,30 @@ export const courseWebUnits = [
         title: "Section 3",
         courseUnits: [
           {
+
             id: "wv/m22/s3-a1q-material-ui-basic-app",
             title: "Assignment 1 Question - MUI Basic App",
             path: "wv/m22/s3-a1q-material-ui-basic-app",
+},
+{
+            id: "wv\m22\s3-a3s-music-player-app",
+            title: "Assignment 3 Solution - Mini Spotify with useContext",
+            path: "wv\m22\s3-a3s-music-player-app",
+            }
+            ]
+},
+{
+    id: "wv/m23",
+    title: "Module 2.3",
+    courseUnits: [
+      {
+        id: "wv/m23/s4",
+        title: "Section 4",
+        courseUnits: [
+          {
+            id: "wv/m23/s4-a1s-quiz",
+            title: "Assignment 1 Solution - Redux Quiz",
+            path: "wv/m23/s4-a1s-quiz",
           },
         ],
       },
