@@ -293,6 +293,23 @@ export const courseWebUnits = [
     ],
   },
   {
+    id: "wv/m22",
+    title: "Module 2.2",
+    courseUnits: [
+      {
+        id: "wv/m22/s3",
+        title: "Section 3",
+        courseUnits: [
+          {
+            id: "wv\m22\s3-a3s-music-player-app",
+            title: "Assignment 3 Solution - Mini Spotify with useContext",
+            path: "wv\m22\s3-a3s-music-player-app",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "wv/m31",
     title: "Module 3.1",
     courseUnits: [
