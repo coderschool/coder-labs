@@ -305,13 +305,13 @@ export const courseWebUnits = [
             id: "wv/m22/s3-a1q-material-ui-basic-app",
             title: "Assignment 1 Question - MUI Basic App",
             path: "wv/m22/s3-a1q-material-ui-basic-app",
-},
-{
+          },
+          {
             id: "wv\m22\s3-a3s-music-player-app",
             title: "Assignment 3 Solution - Mini Spotify with useContext",
             path: "wv\m22\s3-a3s-music-player-app",
-            }
-            ]
+           },
+       ],
 },
 {
     id: "wv/m23",
