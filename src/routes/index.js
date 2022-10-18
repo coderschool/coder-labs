@@ -280,13 +280,30 @@ export const courseWebUnits = [
     title: "Module 2.1",
     courseUnits: [
       {
-        id: "wv/m21/s2-a1s-counter",
+        id: "wv/m21/s2",
         title: "Section 2",
         courseUnits: [
           {
             id: "wv/m21/s2-a1s-counter",
             title: "Assignment 1 Solution - Counter",
             path: "wv/m21/s2-a1s-counter",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "wv/m23",
+    title: "Module 2.3",
+    courseUnits: [
+      {
+        id: "wv/m23/s4",
+        title: "Section 4",
+        courseUnits: [
+          {
+            id: "wv/m23/s4-a1s-quiz",
+            title: "Assignment 1 Solution - Redux Quiz",
+            path: "wv/m23/s4-a1s-quiz",
           },
         ],
       },
