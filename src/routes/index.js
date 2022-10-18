@@ -301,13 +301,20 @@ export const courseWebUnits = [
         title: "Section 3",
         courseUnits: [
           {
-            id: "wv\m22\s3-a3s-music-player-app",
+            id: "wv/m22/s3-a1q-material-ui-basic-app",
+            title: "Assignment 1 Question - MUI Basic App",
+            path: "wv/m22/s3-a1q-material-ui-basic-app",
+          },
+          {
+            id: "wvm22s3-a3s-music-player-app",
             title: "Assignment 3 Solution - Mini Spotify with useContext",
-            path: "wv\m22\s3-a3s-music-player-app",
-            }
-            ]
-},
-{
+            path: "wvm22s3-a3s-music-player-app",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "wv/m23",
     title: "Module 2.3",
     courseUnits: [
@@ -329,7 +336,7 @@ export const courseWebUnits = [
     title: "Module 3.1",
     courseUnits: [
       {
-        id: "wv/m31/s2-ln1-automate-boring-stuff-with-node",
+        id: "wv/m31/s2",
         title: "Section 2",
         courseUnits: [
           {
