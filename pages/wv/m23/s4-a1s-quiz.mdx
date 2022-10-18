@@ -46,7 +46,7 @@
 
 7. Given the below block of code. Please fill in the AsyncThunk function's name, and `slice.name`
 
-```javascript=
+```javascript
 export const "Your Code Here" = createAsyncThunk(
     "book/fetchData",
     async (props) => {
@@ -88,7 +88,7 @@ export const bookSlice = createSlice({
 
 9. Given the below block of code, there are still a few lines of missing code. Fill in with the correct code.
 
-```javascript=
+```javascript
 import React, { useState } from "react";
 import {fetchData} from "../features/bookSlice.js"
 import { useDispatch, useSelector } from "react-redux";
@@ -132,15 +132,15 @@ return (
 
 ```javascript
 const initialState = {
-    userName: '',
-}
+  userName: "",
+};
 const userSlice = creatSlice({
-    name: 'user',
-    initialState,
-    reducers: {
-        changeUserName: (state,action) => {
-            state.userName = atcion.payload.text;
-        },
+  name: "user",
+  initialState,
+  reducers: {
+    changeUserName: (state, action) => {
+      state.userName = atcion.payload.text;
     },
+  },
 });
 ```
