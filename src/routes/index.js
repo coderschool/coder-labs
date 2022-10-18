@@ -275,6 +275,40 @@ export const courseWebUnits = [
       },
     ],
   },
+  {
+    id: "wv/m21",
+    title: "Module 2.1",
+    courseUnits: [
+      {
+        id: "wv/m21/s2-a1s-counter",
+        title: "Section 2",
+        courseUnits: [
+          {
+            id: "wv/m21/s2-a1s-counter",
+            title: "Assignment 1 Solution - Counter",
+            path: "wv/m21/s2-a1s-counter",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "wv/m31",
+    title: "Module 3.1",
+    courseUnits: [
+      {
+        id: "wv/m31/s2-ln1-automate-boring-stuff-with-node",
+        title: "Section 2",
+        courseUnits: [
+          {
+            id: "wv/m31/s2-ln1-automate-boring-stuff-with-node",
+            title: "Lecture Note 1 - Automate Boring Stuff With Node",
+            path: "wv/m31/s2-ln1-automate-boring-stuff-with-node",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const courses = [

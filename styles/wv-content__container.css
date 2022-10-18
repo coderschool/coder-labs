@@ -1,0 +1,24 @@
+.wv-content__container .code {
+  background-color: rgba(135, 131, 120, 0.15);
+  color: #eb5757;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+.wv-content__container p {
+  margin: 10px 0;
+}
+.wv-content__container li {
+  margin: 20px 0 20px 35px;
+}
+.wv-content__container blockquote {
+  margin-left: 35px;
+}
+.wv-content__container a {
+  color: rgb(79, 129, 189);
+  text-decoration: underline;
+}
+.ch-section-link {
+  background-color: rgba(191, 191, 191, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 0 5px;
+}
