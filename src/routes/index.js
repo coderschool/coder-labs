@@ -280,7 +280,7 @@ export const courseWebUnits = [
     title: "Module 2.1",
     courseUnits: [
       {
-        id: "wv/m21/s2-a1s-counter",
+        id: "wv/m21/s2",
         title: "Section 2",
         courseUnits: [
           {
@@ -293,11 +293,28 @@ export const courseWebUnits = [
     ],
   },
   {
+    id: "wv/m22",
+    title: "Module 2.2",
+    courseUnits: [
+      {
+        id: "wv/m22/s3",
+        title: "Section 3",
+        courseUnits: [
+          {
+            id: "wv/m22/s3-a1q-material-ui-basic-app",
+            title: "Assignment 1 Question - MUI Basic App",
+            path: "wv/m22/s3-a1q-material-ui-basic-app",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "wv/m31",
     title: "Module 3.1",
     courseUnits: [
       {
-        id: "wv/m31/s2-ln1-automate-boring-stuff-with-node",
+        id: "wv/m31/s2",
         title: "Section 2",
         courseUnits: [
           {
