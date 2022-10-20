@@ -290,6 +290,17 @@ export const courseWebUnits = [
           },
         ],
       },
+      {
+        id: "wv/m21/s4",
+        title: "Section 4",
+        courseUnits: [
+          {
+            id: "wv/m21/s4-a1s-weather-app",
+            title: "Assignment 1 Solution - Weather App",
+            path: "wv/m21/s4-a1s-weather-app",
+          },
+        ],
+      },
     ],
   },
   {
@@ -297,16 +308,35 @@ export const courseWebUnits = [
     title: "Module 2.2",
     courseUnits: [
       {
+        id: "wv/m22/s2",
+        title: "Section 2",
+        courseUnits: [
+          {
+            id: "wv/m22/s2-a1s-advanced-react-timer",
+            title: "Assignment 1 Solution - Advanced React Timer",
+            path: "wv/m22/s2-a1s-advanced-react-timer",
+          },
+        ],
+      },
+      {
         id: "wv/m22/s3",
         title: "Section 3",
         courseUnits: [
           {
+
+            id: "wv/m22/s3-a1q-material-ui-basic-app",
+            title: "Assignment 1 Question - MUI Basic App",
+            path: "wv/m22/s3-a1q-material-ui-basic-app",
+          },
+          {
+
             id: "wvm22s3-a3s-music-player-app",
             title: "Assignment 3 Solution - Mini Spotify with useContext",
             path: "wvm22s3-a3s-music-player-app",
           },
         ],
       },
+
       {
         id: "wv/m22/s5",
         title: "Section 5",
@@ -342,7 +372,7 @@ export const courseWebUnits = [
     title: "Module 3.1",
     courseUnits: [
       {
-        id: "wv/m31/s2-ln1-automate-boring-stuff-with-node",
+        id: "wv/m31/s2",
         title: "Section 2",
         courseUnits: [
           {
