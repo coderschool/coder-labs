@@ -323,14 +323,28 @@ export const courseWebUnits = [
         title: "Section 3",
         courseUnits: [
           {
+
             id: "wv/m22/s3-a1q-material-ui-basic-app",
             title: "Assignment 1 Question - MUI Basic App",
             path: "wv/m22/s3-a1q-material-ui-basic-app",
           },
           {
+
             id: "wvm22s3-a3s-music-player-app",
             title: "Assignment 3 Solution - Mini Spotify with useContext",
             path: "wvm22s3-a3s-music-player-app",
+          },
+        ],
+      },
+
+      {
+        id: "wv/m22/s5",
+        title: "Section 5",
+        courseUnits: [
+          {
+            id: "wvm22s5-a1s-react-ecosystem-quizz",
+            title: "Assignment 1 Solution - React Ecosystem Quiz",
+            path: "wvm22s5-a1s-react-ecosystem-quizz",
           },
         ],
       },
