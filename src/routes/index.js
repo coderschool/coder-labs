@@ -304,7 +304,12 @@ export const courseWebUnits = [
             id: "wv\m22\s3-a3s-music-player-app",
             title: "Assignment 3 Solution - Mini Spotify with useContext",
             path: "wv\m22\s3-a3s-music-player-app",
-            }
+          },
+          {
+            id: "wv\m22\s5-a1s-react-ecosystem-quizz",
+            title: "Assignment 1 Solution - React Ecosystem Quiz",
+            path: "wv\m22\s5-a1s-react-ecosystem-quizz",
+          },
             ]
 },
 {
