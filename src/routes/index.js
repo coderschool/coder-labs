@@ -290,6 +290,17 @@ export const courseWebUnits = [
           },
         ],
       },
+      {
+        id: "wv/m21/s4",
+        title: "Section 4",
+        courseUnits: [
+          {
+            id: "wv/m21/s4-a1s-weather-app",
+            title: "Assignment 1 Solution - Weather App",
+            path: "wv/m21/s4-a1s-weather-app",
+          },
+        ],
+      },
     ],
   },
   {
