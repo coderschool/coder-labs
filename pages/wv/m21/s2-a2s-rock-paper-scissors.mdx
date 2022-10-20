@@ -1,0 +1,48 @@
+# Rock-paper-scissors App
+[Demo Website: https://rock-paper-scissor-trancaodua.netlify.app/](https://rock-paper-scissor-trancaodua.netlify.app/)
+[Link to solution github repo: https://github.com/trancaodua/rock-paper-scrissor-game/tree/solution](https://github.com/trancaodua/rock-paper-scrissor-game/tree/solution)
+
+The purpose of this project is to practice our skills with React props.
+
+## Explain code
+
+- src/utils/index.js
+
+
+```javascript
+
+// input: gamesItems is a list of items.
+// return: a random item in the list.
+// Description: get random item from gamesItems list.
+export const getRandomGameItem = (gamesItems) => {
+  const index = Math.floor(Math.random() * gamesItems.length); //create index random between 0 to gamesItems.length - 1
+  return gamesItems[index]; //return item
+};
+
+```
+
+
+
+```javascript
+// input: user1GameItem, user2GameItem - is object game, contains game item id and list can win.
+// return: game result.
+// Description: calculator result player.
+export const calculatorUserWinner = (user1GameItem, user2GameItem) => {
+  if (user1GameItem.id === user2GameItem.id) {
+    return "Peace"; //return both player same.
+  } else if (user1GameItem.winItemIds.includes(user2GameItem.id)) {
+    return "Win"; //if player 1 winItemIds list contain game player 2 id => player 1 win player 2.
+  } else {
+    return "Lost"; //if winItemIds list not contain game player 2 id => player 1 lost, player 2 .
+  }
+};
+```
+Example input:
+```javascript
+user1GameItem = {
+    url: "/images/paper.png",
+    id: 0,
+    winItemIds: [1],
+    name: "Paper",
+}
+```

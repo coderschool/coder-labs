@@ -288,6 +288,11 @@ export const courseWebUnits = [
             title: "Assignment 1 Solution - Counter",
             path: "wv/m21/s2-a1s-counter",
           },
+          {
+            id: "wv/m21/s2-a2s-rock-paper-scissors.mdx",
+            title: "Assignment 2 Solution - Rock-paper-scissors",
+            path: "wv/m21/s2-a2s-rock-paper-scissors",
+          },
         ],
       },
     ],
