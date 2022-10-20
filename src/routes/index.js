@@ -308,6 +308,17 @@ export const courseWebUnits = [
     title: "Module 2.2",
     courseUnits: [
       {
+        id: "wv/m22/s2",
+        title: "Section 2",
+        courseUnits: [
+          {
+            id: "wv/m22/s2-a1s-advanced-react-timer",
+            title: "Assignment 1 Solution - Advanced React Timer",
+            path: "wv/m22/s2-a1s-advanced-react-timer",
+          },
+        ],
+      },
+      {
         id: "wv/m22/s3",
         title: "Section 3",
         courseUnits: [
