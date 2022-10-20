@@ -23,13 +23,15 @@
         <h1>Challenge 15</h1>
       </header>
       <div class="container">
-        <div class="col">
-          <div class="box-square-xl bg-dark">div 1</div>
-          <div class="box-square bg-black">div 3</div>
-        </div>
-        <div class="col col2">
-          <div class="box-square bg-black">div 2</div>
-          <div class="box-square-xl bg-dark">div 4</div>
+        <div class="box-wrapper">
+          <div class="col">
+            <div class="box-square-xl bg-dark">div 1</div>
+            <div class="box-square bg-black">div 3</div>
+          </div>
+          <div class="col col2">
+            <div class="box-square bg-black">div 2</div>
+            <div class="box-square-xl bg-dark">div 4</div>
+          </div>
         </div>
       </div>
     </section>
@@ -613,14 +615,14 @@ section h1 {
 }
 ```
 
-#### Challenge 12
+#### Challenge 15
 
 ```css
 /* Challenge 15 */
 #challenge15 {
   height: 450px;
 }
-#challenge15 .container {
+#challenge15 .box-wrapper {
   display: flex;
   justify-content: space-between;
   height: 350px;
