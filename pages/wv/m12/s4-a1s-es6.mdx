@@ -92,6 +92,7 @@ D. const [[], [mango]] = food
 
 ```
 A. const [[],[apple, mango]] = food
+B. const [,[, mango]] = food
 C. const [,[, mango, orange]] = food
 
 ```
@@ -101,7 +102,7 @@ C. const [,[, mango, orange]] = food
 ```js
 
 Which of the options below will return true?
-function restParams(first, rest)
+function restParams(first,...rest)
 {
 console.log(rest);
 return rest[0] === 1 && rest[1] === 2;
