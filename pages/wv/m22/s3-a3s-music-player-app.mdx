@@ -1,26 +1,47 @@
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
 # Mini Spotify with `useContext`
 
-Welcome to the `useContext` master exercise, to better prep you for further challenges – this demo is here to save the day.
+<br />
+<br />
 
-![](https://i.imgur.com/WckMmqj.png)
+<div style={{ display: "flex", flexDirection: "column" }}>
+  <span style={{ width: "50%", marginBottom: "5px" }}>
+    Welcome to the `useContext` master exercise, to better prep you for further
+    challenges – this demo is here to save the day.
+  </span>
+  <img
+    src="https://i.imgur.com/WckMmqj.png"
+    alt="demo"
+    style={{ width: "300px" }}
+  />
+</div>
 
-### In this project you will learn:
+<br />
+<br />
+#### In this project you will learn:
 
 - Common logic in building a mini music player.
 - How to use the React hook – useContext
 - How to make your own hook by utilizing React Custom Hook and `useContext`
 
-### User story:
+<br />
+#### User story:
 
 - Users are able to see a tracklist or a list of songs.
 - Users are able to see a controller with pause, play, next and playback buttons.
 - Users are able to play a track and see the track's name displayed.
 - Users are able to play, pause or jump from one song to another with the controller.
 
----
+<br />
+<br />
+<br />
 
-## Project Breakdown
+## 1️⃣ Project Breakdown
 
+<br />
 ### 1. Building a Music player
 
 `useContext` is needed because we have two child components that share the same information (or **state**).
@@ -44,6 +65,7 @@ The tracklist and the controller both need to know:
 
 That's a lot of infomation needed to be shared between two components, which will be more complex and chaotic in bigger projects. Thanks to React and the useContext hook, we are now able to manage these information easier than ever.
 
+<br />
 ### 2. `useContext` and `useCustomHook`
 
 While useContext helps share information, useCustomHook is here for us to reuse functions – everywhere across the app.
@@ -54,6 +76,7 @@ The amazing thing about `useContext` and `useCustomHook` is that you can combine
 
 How do all these theories come to life? Let's kick off the miniSpotify.
 
+<br />
 ### 3. Resources
 
 **Demo application:** [Cs's MiniSpotify](https://reliable-sfogliatella-5fb38d.netlify.app/)
@@ -193,10 +216,14 @@ export { MusicPlayerContext, MusicPlayerProvider };
 
 ```
 
+<br />
+<br />
+<br />
 ---
 
-## Code Walkthrough
+## 2️⃣ Code Walkthrough
 
+<br />
 ### MusicPlayerContext.js
 
 - **1st:** There are more than just one piece of information (for example: `isPlaying`, `currentTrackIndex`) we need to share across the app, therefore, let's put all the information in one object – `defaulValues`.
@@ -257,9 +284,10 @@ const App = () => {
 export default App;
 ```
 
+<br />
 ### useMusicPlayer.js
 
-:fire: Congratulations on making it this far down the rabbit hole – you are almost there, keep on!
+🔥 Congratulations on making it this far down the rabbit hole – you are almost there, keep on!
 
 Inside `useMusicPlayer()`:
 
@@ -279,6 +307,7 @@ Inside `useMusicPlayer()`:
 
   ![](https://i.imgur.com/9UGqJq5.png)
 
+<br />
 ### TrackList.js
 
 :clap: :raised_hands: Hooray - it's action time! Now we can finally access and update information with just 1 line of code.
@@ -313,12 +342,20 @@ return (
 export default TrackList;
 ```
 
+<br />
+<br />
 ---
 
-### :muscle: :tada:You made it!
+<br />
+<br />
+### 🎉 You made it!
 
 You are introduced to all the tools needed for this project, let's connect all the pieces and complete your own MiniSpotify!
 
 Reading code walkthrough might take a lot of brain energy :fire: :sweat_drops: but reading will help organize your logic stream and develop great habits, especially for life-learners like us – the programmers :wink:.
 
 You've changed a lot since our first project, have fun and see you!
+
+<br />
+<br />
+<br />
