@@ -88,6 +88,11 @@ export const courseWebUnits = [
             title: "Lecture note 3 - CSS concept",
             path: "wv/m11/s5-ln3-css-concepts",
           },
+          {
+            id: "wv/m11/s5-ln4-css-colors-images",
+            title: "Lecture note 4 - CSS Colors",
+            path: "wv/m11/s5-ln4-css-colors-images",
+          },
         ],
       },
       {
@@ -218,9 +223,9 @@ export const courseWebUnits = [
             path: "wv/m13/s2-a1s-calculator",
           },
           {
-            id: "wv/m13/s2-ln1-js-on-browser",
+            id: "wv/m13/s2-ln1-js-on-browsers",
             title: "Lecture note 1 - JS On Browser",
-            path: "wv/m13/s2-ln1-js-on-browser",
+            path: "wv/m13/s2-ln1-js-on-browsers",
           },
         ],
       },

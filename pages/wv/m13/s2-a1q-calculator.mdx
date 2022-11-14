@@ -8,7 +8,7 @@ Duration: 10
 
 As your first big project, there will be a lot of detailed instructions that you can follow along. As you progress, you will be given fewer and fewer instructions (but more freedom) to work with until you can make an app just from a simple idea!
 
-![Cal demo](assets/cal-0.png)
+![Cal demo](../../assets/wv/m13/cal-0.png)
 
 Demo:
 [https://coderschool-calculator.netlify.app/](https://coderschool-calculator.netlify.app/)
@@ -38,7 +38,7 @@ You can work on an online editor like [CodeSandbox](https://codesandbox.io/) or 
 
 ## UI: Specifications
 
-Download the assets [here](https://docs.coderschool.vn/assets/web-virgil/design.zip). We will attempt to follow a design by a UX/UI designer.
+Download the assets [here](https://docs.coderschool.vn/../../assets/wv/m13/web-virgil/design.zip). We will attempt to follow a design by a UX/UI designer.
 
 Each designer may have a different way of presenting the mockup and specifications to you. Sometimes, the design may not be very clear, and as a web developer, we need to be flexible and work with what's given to us. For this exercise, feel free to apply the specifications in your own interpretation.
 
@@ -86,10 +86,10 @@ body {
 }
 ```
 
-![cal png 1](assets/cal-1.png)
+![cal png 1](../../assets/wv/m13/cal-1.png)
 
 Notice that in the design, the calculator is centered in the middle of the page. Let's move our "calculator" there. But before you do, if you inspect, you will see the real body is only this tall and has some weird margin:
-![cal png 2](assets/cal-2.png)
+![cal png 2](../../assets/wv/m13/cal-2.png)
 
 We cannot center the "calculator" vertically if there's no height space, so we need to increase this height to the maximum available to us.
 
@@ -121,7 +121,7 @@ What we really want is not `width: 400px` but `width: 400px` for screens wider t
 - Use `max-width` and `width: 100%` to make the "calculator" responsive.
 - Add some margin to the "calculator".
 
-Check it out! Now the website is truly responsive![cal 3](assets/cal-3.gif)
+Check it out! Now the website is truly responsive![cal 3](../../assets/wv/m13/cal-3.gif)
 
 ## UI: Calculator Buttons + Display
 
@@ -144,7 +144,7 @@ Hint: Use `flex-basis`. As `flex-basis` doesn't take margin into account, it's b
 </div>
 ```
 
-![cal png 3](assets/cal-4.png)
+![cal png 3](../../assets/wv/m13/cal-4.png)
 
 ### With wrappers and `padding: 10px` on the wrappers:
 
@@ -157,7 +157,7 @@ Hint: Use `flex-basis`. As `flex-basis` doesn't take margin into account, it's b
 </div>
 ```
 
-![cal png 5](assets/cal-5.png)
+![cal png 5](../../assets/wv/m13/cal-5.png)
 
 Now use your CSS knowledge to make this look like the design. Don't forget to add a div with the id `display` where we will display a number later (you can use a placeholder number for now). After this step, you can get rid of the fixed height too.
 
@@ -296,3 +296,7 @@ const equal = () => {
 What we need to do here is to check what the operator is, and change the `display.innerHTML` to the result of that operation.
 
 That's it! You've finished the basic calculator app! Check the requirement list and make sure to complete every required features. Try to finish the optional ones too, because pushing to the limit is how you can improve yourself fast.
+
+<br />
+<br />
+<br />

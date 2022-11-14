@@ -1,4 +1,5 @@
 # Rock-paper-scissors App
+
 [Demo Website: https://rock-paper-scissor-trancaodua.netlify.app/](https://rock-paper-scissor-trancaodua.netlify.app/)
 [Link to solution github repo: https://github.com/trancaodua/rock-paper-scrissor-game/tree/solution](https://github.com/trancaodua/rock-paper-scrissor-game/tree/solution)
 
@@ -8,9 +9,7 @@ The purpose of this project is to practice our skills with React props.
 
 - src/utils/index.js
 
-
 ```javascript
-
 // input: gamesItems is a list of items.
 // return: a random item in the list.
 // Description: get random item from gamesItems list.
@@ -18,10 +17,7 @@ export const getRandomGameItem = (gamesItems) => {
   const index = Math.floor(Math.random() * gamesItems.length); //create index random between 0 to gamesItems.length - 1
   return gamesItems[index]; //return item
 };
-
 ```
-
-
 
 ```javascript
 // input: user1GameItem, user2GameItem - is object game, contains game item id and list can win.
@@ -37,12 +33,18 @@ export const calculatorUserWinner = (user1GameItem, user2GameItem) => {
   }
 };
 ```
+
 Example input:
+
 ```javascript
 user1GameItem = {
-    url: "/images/paper.png",
-    id: 0,
-    winItemIds: [1],
-    name: "Paper",
-}
+  url: "/images/paper.png",
+  id: 0,
+  winItemIds: [1],
+  name: "Paper",
+};
 ```
+
+<br />
+<br />
+<br />
