@@ -244,9 +244,9 @@ export const courseWebUnits = [
             path: "wv/m13/s3-a1s-holidate-app",
           },
           {
-            id: "wv/m13/s3-ln1-asynchronous",
+            id: "wv/m13/s3-ln1-asynchronous-js",
             title: "Lecture note 1 - Asynchronous",
-            path: "wv/m13/s3-ln1-asynchronous",
+            path: "wv/m13/s3-ln1-asynchronous-js",
           },
         ],
       },
