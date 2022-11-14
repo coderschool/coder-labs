@@ -273,6 +273,27 @@ export const courseWebUnits = [
     title: "Module 1.4",
     courseUnits: [
       {
+        id: "wv/m14/s1",
+        title: "Section 1",
+        courseUnits: [
+          {
+            id: "wv/m14/s1-ln1-setup-dev-env",
+            title: "Lecture note 1 - Setup Dev Environment",
+            path: "wv/m14/s1-ln1-setup-dev-env",
+          },
+          {
+            id: "wv/m14/s1-ln2-install-vsc",
+            title: "Lecture note 2 - Install VS Code",
+            path: "wv/m14/s1-ln2-install-vsc",
+          },
+          {
+            id: "wv/m14/s1-ln3-basic-cli",
+            title: "Lecture note 3 - CLI",
+            path: "wv/m14/s1-ln3-basic-cli",
+          },
+        ],
+      },
+      {
         id: "wv/m14/s2",
         title: "Section 2",
         courseUnits: [
