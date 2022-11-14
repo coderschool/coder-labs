@@ -1,0 +1,244 @@
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
+
+# Intro to Git & Github
+
+Github, in a nutshell, is the way to share files with other people collaboratively without overwriting other people’s stuff. Github is sort of a community, and there are a lot of open-source projects, which means the project’s code is available to look at. Github is a web-based platform, and it bases on a technology called Git, G-I-T.
+
+Git is a piece of software called version control. It is a fancy way of saying Keeps track of changes to code. Git has a lot of other features that are useful for software developers. So if you’re programming, eventually you have to learn Git at some point.
+
+**Learn Git with visualization:** [https://learngitbranching.js.org/](https://learngitbranching.js.org/)
+
+## Git commands
+
+<br />
+
+### Working on a local repository
+
+<CH.Spotlight>
+
+```bash
+git init
+```
+
+---
+
+**1. Turning the current folder into a git repository**
+
+> Why do we need to turn a folder into a git repository?
+
+> - Turning a normal folder into a git repo will help us keep track of changes happened between files within the folder. We can see a history of changes amongst many developers who are working on the same repo.
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/undHVSv.png" />
+
+```bash
+git init
+```
+
+---
+
+**2. A helpful command, to see what’s currently going on in the git repo**
+
+> What `git status` show us?
+>
+> - What branch we are in: `On branch master`
+> - What commits we have made: `No commits yet`
+> - What files that have been created but havent been added or committed: `Untracked files`
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/WZVHWgG.png" />
+
+```bash
+git status
+```
+
+---
+
+**3. Adds a file to “staging area”.**
+
+> Which means telling git to include the file in the next time it saves a version of the repo. `git add .` to add all changed files.
+>
+> - After, adding the `example.txt` file, let's `git status` to check what changes have been made.
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/fOAVJLr.png" />
+
+> - Or you can just `git add .` to add all the files have been created.
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/Fgfw8wp.png" />
+
+```bash
+git add <file_name>
+git add .
+```
+
+---
+
+**4. Saves the version of the repository with a message.**
+
+> After, the file is added, let's `commit` that changes to the repo. Why do you need to [commit](https://www.w3schools.com/git/git_commit.asp#:~:text=Adding%20commits%20keep%20track%20of,should%20always%20include%20a%20message.)?
+>
+> - Most of the time, when you made changes in a file, it's a good practice to left a message on what have been done. Especially, when you are working with a team of developers.
+> - After commit, let's check again with `git status`
+> - `nothing to commit` shows how all your changes have been committed and ready for other teammates to read.
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/VWjUo68.png" />
+
+```bash
+git commit -m "Your message here"
+```
+
+---
+
+**5. To see all the actions you have done**
+
+> To see all the version that you have saved and you can see the commit message is a very good indicator or reminder of what was changed in a particular version. So make sure you use good commit messages.
+
+> - After `git log`, you will be taken to a different view.
+> - To exit this viewport : `:q`
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/eucTHsR.png" />
+
+```bash
+git log
+```
+
+---
+
+**6. Reverts code back to the previous commit**
+
+> To revert to the previous commit, you first have to get the commit code.
+>
+> - Call `git log` to get the right code.
+> - Exit the view : `:q`
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/IrcLSGB.png" />
+
+> - Then replace that code with `<commit>`.
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/rJntyUg.png" />
+
+```bash
+git reset --hard <commit>
+```
+
+---
+
+</CH.Spotlight>
+
+<br />
+<br />
+<br />
+## Working with branches
+
+Branch is a version of the repository. Each branch has its own commit history and current version.
+
+<CH.Spotlight>
+
+```bash
+git branch
+```
+
+---
+
+**1. Shows all branches of your repository**
+
+> - You will be directed to a different view, here are your existing branches.
+> - To exit view: `:q`
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/QyXoVto.png" />
+
+```bash
+git branch
+```
+
+---
+
+**2. Creates a new branch**
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/qNj4r3Z.png" />
+
+```bash
+git branch <branch_name>
+```
+
+---
+
+**3. Switches to a branch**
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/j8Zq4uf.png" />
+
+```bash
+git checkout <branch_name>
+```
+
+---
+
+**4. Merges the branch `<branch_name>` with current branch**
+
+> - Now let's merge `master` and `branch-01`
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/kinnBGE.png" />
+
+```bash
+git merge <branch_name>
+```
+
+</CH.Spotlight>
+
+<br />
+<br />
+<br />
+## Working with online remote repository
+
+<CH.Spotlight>
+
+```bash
+git clone <url>
+```
+
+---
+
+**1. Makes a copy of a repository and stores it on your computer.**
+
+> - You can copy a repo's `https` link and paste it after `git clone`.
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/OmfvdaA.png" />
+
+```bash
+git clone <url>
+```
+
+---
+
+**2. Pushes the changes I made on my computer up to the Github repo**
+
+> - After making changes to the file, let's push to the remote repo so everybody could clone, read and fix your code.
+> - `origin`: the remote you want to push to.
+> - `main`: name of the branch you want to push to.
+> - If the branch is up-to-date and there is nothing else to push.
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/UbKw7y2.png" />
+
+```bash
+git push -u origin main
+```
+
+---
+
+**3. Is opposite of git push, pull the most recent version of the online repository.**
+
+> - There will be more than one developer working on repo, remember to `pull` every now and then so that you can see the updates from other teammates.
+
+> > <img style={{ width: "600px" }} src="https://i.imgur.com/34fd5PB.png" />
+
+```bash
+git pull
+
+```
+
+</CH.Spotlight>
+
+<br />
+<br />
+<br />

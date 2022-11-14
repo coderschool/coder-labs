@@ -105,6 +105,11 @@ export const courseWebUnits = [
             path: "wv/m11/s6-ln1-css-positioning-and-stacking",
           },
           {
+            id: "wv/m11/s6-ln2-css-flexbox",
+            title: "Lecture note 2 - CSS Flexbox",
+            path: "wv/m11/s6-ln2-css-flexbox",
+          },
+          {
             id: "wv/m11/s6-a1s-css-layout",
             title: "Assignment 1 - Solution - CSS layout",
             path: "wv/m11/s6-a1s-css-layout",
@@ -272,9 +277,14 @@ export const courseWebUnits = [
         title: "Section 2",
         courseUnits: [
           {
-            id: "wv/m14/s2-ln1-github-netlify",
-            title: "Lecture note 1 - Github & Netlify",
-            path: "wv/m14/s2-ln1-github-netlify",
+            id: "wv/m14/s2-ln1-intro-to-git",
+            title: "Lecture note 1 - Intro to Git",
+            path: "wv/m14/s2-ln1-intro-to-git",
+          },
+          {
+            id: "wv/m14/s2-ln2-github-netlify",
+            title: "Lecture note 2 - Github & Netlify",
+            path: "wv/m14/s2-ln2-github-netlify",
           },
         ],
       },
