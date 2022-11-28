@@ -435,6 +435,11 @@ export const courseWebUnits = [
             title: "Lecture Note 1 - Automate Boring Stuff With Node",
             path: "wv/m31/s2-ln1-automate-boring-stuff-with-node",
           },
+          {
+            id: "wv/m31/s2-ln2-intro-nodejs",
+            title: "Lecture Note 2 - Intro to NodeJS",
+            path: "wv/m31/s2-ln2-intro-nodejs",
+          },
         ],
       },
     ],
