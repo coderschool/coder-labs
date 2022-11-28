@@ -1,0 +1,252 @@
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
+
+# Lab: Kitten Model Schema with Mongoose
+
+<br />
+<br />
+
+## Getting started
+
+This starting guide is from [the official Mongoose guide](https://mongoosejs.com/docs/index.html)
+
+### Install Mongoose
+
+```bash
+$ npm install mongoose
+```
+
+### Connect to local MongoDB with Mongoose
+
+Now say we like fuzzy kittens and want to record every kitten we ever meet in MongoDB. The first thing we need to do is include mongoose in our project and open a connection to the test database on our locally running instance of MongoDB.
+
+```js
+// getting-started.js
+const mongoose = require("mongoose");
+```
+
+We will create an async function main that contains our logic because mongoose.connect will return a Promise so we want to let it finish before executing our future scripts. Also, we will need to be notified if we connect successfully
+
+```js
+const main = async () => {
+  await mongoose.connect("mongodb://localhost:27017/test");
+  console.log("DB Connection Success");
+};
+```
+
+We now need to get notified if a connection error occurs:
+
+```js
+main().catch((err) => console.log(err));
+```
+
+<br />
+
+## Mongoose Schema
+
+### Defined Schema
+
+With Mongoose, everything is derived from a Schema. Schema is a set of defined characteristics for model
+Let's get a reference to it and define our kittens.
+
+```js
+const kittySchema = new mongoose.Schema({
+  name: { type: String },
+  //short-hand name: String
+});
+```
+
+### Create Model
+
+So far so good. We've got a schema with one property, **name**, which will be a String. The next step is compiling our schema into a Model.
+
+```js
+const Kitten = mongoose.model("Kitten", kittySchema);
+```
+
+A model is a class with which we construct documents. In this case, each document will be a kitten with properties and behaviors as declared in our schema. Let's create a kitten document representing the little guy we just met on the sidewalk outside:
+
+### Create a new instance from Model
+
+```js
+const silence = new Kitten({ name: "Silence" });
+console.log(silence.name); // 'Silence'
+```
+
+In other words, a model/class is a blueprint to make instances. These instances inherited all the attributes and methods that were defined in that blueprint including one from the schema made up such model.
+
+Kittens can meow, so let's take a look at how to add "speak" functionality to our documents:
+
+### Add methods to a schema
+
+```js
+// NOTE: methods must be added to the schema before compiling it with mongoose.model()
+kittySchema.methods.speak = function () {
+  const greeting = this.name
+    ? "Meow name is " + this.name
+    : "I don't have a name";
+  console.log(greeting);
+};
+```
+
+```js
+const Kitten = mongoose.model("Kitten", kittySchema);
+```
+
+### Execute an inherited method of an instance
+
+Functions added to the methods property of a schema get compiled into the Model prototype and exposed on each document instance:
+
+```js
+const fluffy = new Kitten({ name: "fluffy" });
+fluffy.speak(); // "Meow name is fluffy"
+```
+
+Notice that fluffy.speak is a document method.
+
+<br />
+
+## Saving to MongoDB (Create data)
+
+We have talking kittens! But we still haven't saved anything to MongoDB. Each document can be saved to the database by calling its save method. The first argument to the callback will be an error if any occurred.
+
+```js
+await fluffy.save();
+fluffy.speak();
+```
+
+Notice that fluffy.save is a document method.
+
+<br />
+
+## Retrieve data from MongoDB (Read data)
+
+### Find many that match
+
+Say time goes by and we want to display all the kittens we've seen. We can access all of the kitten documents through our Kitten model.
+
+```js
+const found = await Kitten.find({});
+console.log(found);
+```
+
+Notice that Kitten.find is a Model method.
+
+We just logged all of the kittens in our DB to the console. If we want to filter our kittens by name, Mongoose supports MongoDB rich querying syntax.
+
+```js
+//This /^fluff/ regex pattern means : match any string that start with 'fluff'. eg: fluffy, fluffo, fluffloremip, fluff lorem...
+const found = await Kitten.find({ name: /^fluff/ });
+console.log(found);
+```
+
+This performs a search for all documents with a name property that begins with "fluff" and returns the result as an array of kittens to the callback.
+
+### Find the first occurrence of the match
+
+Finds one document that matches any given condition
+
+```js
+const found = await Kitten.findOne({ name: "Miu" });
+```
+
+Finds one document that matches the \_id
+
+```js
+const found = await Kitten.findById("target_id");
+```
+
+## Edit data in MongoDB (Update data)
+
+There are many ways to edit data in MongoDB. They all share one common pattern we need to tell MongoDB exactly which data we are editing. Thus, in these updating operations, we must locate the data first and then change it.
+
+### Model methods with Model.findOneAndUpdate and Model.findByIdAndUpdate
+
+Finds a matching document, updates it according to the update arg, passes any options, and returns the found document (if any) to the callback. The query executes if a callback is passed.
+
+```js
+const found = await Kitten.findByIdAndUpdate(
+  "target_id",
+  { name: "change" },
+  { new: true }
+);
+```
+
+Issues a mongodb findAndModify update command by a document's \_id field. `findByIdAndUpdate(id, ...)` is equivalent to `findOneAndUpdate({ _id: id }, ...)`. FindOneAnd will allow us to find with other condition as well
+
+```js
+const found = await Kitten.findOneAndUpdate(
+  { _id: "target_id" }, //  { anyLookupField: "anyLookupValue" }
+  { name: "change" },
+  { new: true }
+);
+```
+
+The option `{new: true}` requires MongoDB to return with the updated document. By default, this method returns the found document instead.
+
+- Mutate the document directly then use the document.save() method, given that you have found the document.
+
+```js
+const found = await Kitten.findOne({ name: "target" });
+found.name = "changed";
+await found.save();
+console.log(found);
+```
+
+<br />
+
+## Delete data in MongoDB (Delete data)
+
+### Hard delete
+
+Removing data from the database
+
+```js
+await Kitten.findOneAndDelete({ name: "delete_target" });
+```
+
+Permanently removing data from our database adds a lot of complexity.
+The impact of deleting 1 piece of data will rupture all other pieces that are connected to it. Completely accounting for all these impacts is a must and a difficult one too. In addition, hard delete will eliminate the possibility of recovery in the future.
+In the end, data is the new gold. As for gold, we should not throw it away.
+
+### Soft delete
+
+The idea is to filter query results based on the deleted state of data. We implemented this by creating a `delete` flag to document and configure future queries.
+
+#### Create flag
+
+```js
+const kittySchema = new mongoose.Schema({
+  name: { type: String },
+  //short-hand name: String
+  isDeleted: { type: Boolean, default: false },
+});
+```
+
+#### Delete by update flag
+
+```js
+await Kitten.findOneAndUpdate({ name: "delete_target" }, { isDeleted: true });
+```
+
+#### Configure all queries
+
+```js
+await Kitten.find({ _id: false });
+```
+
+As our project grows, implementing this soft delete in every Read operation will be repeated and thus prone to error. In the upcoming assignment, you will see a hint on how to tweak this.
+
+<br />
+
+## The end
+
+Congratulations
+
+That's the end of our quick start. We created a schema, added a custom document method, and saved, queried, updated, and deleted kittens in MongoDB using Mongoose. Head over to the guide, or API docs for more.
+
+<br />
+<br />
+<br />

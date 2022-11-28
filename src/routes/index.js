@@ -455,6 +455,23 @@ export const courseWebUnits = [
       },
     ],
   },
+  {
+    id: "wv/m32",
+    title: "Module 3.2",
+    courseUnits: [
+      {
+        id: "wv/m32/s3",
+        title: "Section 3",
+        courseUnits: [
+          {
+            id: "wv/m32/s3-lab-mongoose",
+            title: "Lab - Mongoose",
+            path: "wv/m32/s3-lab-mongoose",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const courses = [
