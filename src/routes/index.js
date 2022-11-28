@@ -442,6 +442,17 @@ export const courseWebUnits = [
           },
         ],
       },
+      {
+        id: "wv/m31/s3",
+        title: "Section 3",
+        courseUnits: [
+          {
+            id: "wv/m31/s3-ln1-intro-expressjs",
+            title: "Lecture Note 1 - Intro to ExpressJS",
+            path: "wv/m31/s3-ln1-intro-expressjs",
+          },
+        ],
+      },
     ],
   },
 ];
