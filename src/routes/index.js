@@ -256,13 +256,13 @@ export const courseWebUnits = [
         ],
       },
       {
-        id: "wv/m13/s7",
-        title: "Section 7",
+        id: "wv/m13/s4",
+        title: "Section 4",
         courseUnits: [
           {
-            id: "wv/m13/s7-pcq-steam",
+            id: "wv/m13/s4-pcq-steam",
             title: "Project Challenge - Question - Steam",
-            path: "wv/m13/s7-pcq-steam",
+            path: "wv/m13/s4-pcq-steam",
           },
         ],
       },
