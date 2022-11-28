@@ -351,6 +351,11 @@ export const courseWebUnits = [
             title: "Assignment 1 Solution -  Quizz",
             path: "wv/m21/s5-a1s-quiz",
           },
+          {
+            id: "wv/m21/s5-intro-character-customization",
+            title: "Project Challenge - Character Customization",
+            path: "wv/m21/s5-intro-character-customization",
+          },
         ],
       },
     ],
