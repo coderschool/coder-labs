@@ -12,19 +12,19 @@
 
 In this session, we will learn JS as a way to add interactivity to a page. Whereas the "structural" layer of a page is the HTML markup, and the "presentational" layer of a page is made up of CSS, the third "behavioral" layer is made up of JavaScript.
 
-All of the elements, attributes, and text on a web page can be accessed by scripts using the DOM (Document Objet Model).
+All of the elements, attributes, and text on a web page can be accessed by scripts using the DOM (Document Object Model).
 
 ## Adding JavaScript to a page
 
-As with CSS, you can embed a script right in a document or keep it in an external file and link it to the page. Both methods use the `script` element.
+As with CSS, you can embed a script right in a document or keep it in an external file and link it to the page. Both methods use the `<script>` element.
 
-**Embedded Script**: just add the code as the content of a `&lt;script&gt;` element:
+**Embedded Script**: just add the code as the content of a `<script>` element:
 
 ```html
 <script type="text/javascript> ...JS code goes here... </script>
 ```
 
-**External Scripts**: uses the `src` attribute of the `&lt;script&gt;` element to point to a script file:
+**External Scripts**: uses the `src` attribute of the `<script>` element to point to a script file:
 
 ```html
 <script src="my_script.js"></script>
@@ -32,7 +32,7 @@ As with CSS, you can embed a script right in a document or keep it in an externa
 
 As with CSS, we prefer external scripts.
 
-**Script placement**: For most scripts, the end of the document, just before the `&lt;/body&gt;` tag, is the prefered placement because the browser will be done parsing the document and its DOM structure.
+**Script placement**: For most scripts, the end of the document, just before the `<body>` tag, is the preferred placement because the browser will be done parsing the document and its DOM structure.
 
 ## Document Object Model (DOM)
 
@@ -63,7 +63,7 @@ Nodes can also have event handlers attached to them. Once an event is triggered,
 
 ![node tree](../../assets/wv/m13/dom_node_tree.png)
 
-The nodes within the first `&lt;p&gt;` element:
+The nodes within the first `<p>` element:
 
 ![node tree 2](../../assets/wv/m13/dom_node_tree_2.png)
 
@@ -77,7 +77,7 @@ Methods for accessing nodes in the document:
 var paragraphs = document.getElementsByTagName("p");
 ```
 
-Then `paragraphs` is a collection of nodes or node list. `paragraphs[0]` is a reference to the first paragraph in the document, `paragraphs[1]` refers to the second, and so on.
+Then `paragraphs` is a collection of nodes or a node list. `paragraphs[0]` is a reference to the first paragraph in the document, `paragraphs[1]` refers to the second, and so on.
 
 **getElementById()**
 
@@ -108,11 +108,11 @@ var sidebarPara = document.querySelectorAll(".sidebar p");
 var textInput = document.querySelectorAll("input[type='text']");
 ```
 
-`querySelectorAll()` returns a nodeList, even if the selector matches only a single element.
+`querySelectorAll()` returns a node list, even if the selector matches only a single element.
 
 ### Accessing an attribute value
 
-To get the value of an attribute attached to an element node, we call **getAttribute()`** with a single argument: the attribute nae.
+To get the value of an attribute attached to an element node, we call **getAttribute()** with a single argument: the attribute.
 
 ```html
 <img src="photo.jpg" alt="another cat" id="cat-photo" />
@@ -125,7 +125,7 @@ alert(catImage.getAttribute("src")); // Alerts "photo.jpg".
 
 ### Manipulating Nodes
 
-Once we’ve accessed a node by using one of the methods discussed previously, the DOM gives us several built-in methods for manipulating those elements, their attributes, and their contents.
+Once we've accessed a node by using one of the methods discussed previously, the DOM gives us several built-in methods for manipulating those elements, their attributes, and their contents.
 
 **setAttribute()**
 
@@ -156,7 +156,7 @@ document.getElementById("intro").style.backgroundColor = "#f58220";
 
 In JavaScript and the DOM, property names that are hyphenated in CSS (such as `background-color` and `border-top-width`) become camel case (`backgroundColor` and `borderTopWidth`, respectively).
 
-### Addings and removing elements
+### Adding and removing elements
 
 The DOM also allows developers to change the document structure itself by adding and removing nodes on the fly.
 
@@ -166,11 +166,11 @@ The DOM also allows developers to change the document structure itself by adding
 var newDiv = document.createElement("div");
 ```
 
-This function accepts a single argument: the element to be created. Once we create an element in this way, that new element remains floating in the JavaScript ether until we add it to the document. Think of it as creating a reference to a new element that lives purely in memory
+This function accepts a single argument: the element to be created. Once we create an element in this way, that new element remains floating in the JavaScript ether until we add it to the document. Think of it as creating a reference to a new element that lives purely in memory.
 
 **createTextNode()**
 
-If we want to enter text into either an element we’ve created or an existing element on the page, we can call the createTextNode() method. This creates a reference to the new text node that we can store in a variable and add to the page when the time comes.
+If we want to enter text into either an element we've created or an existing element on the page, we can call the createTextNode() method. This creates a reference to the new text node that we can store in a variable and add to the page when the time comes.
 
 ```javascript
 var ourText = document.createTextNode("This is our text.");
@@ -255,7 +255,7 @@ parentDiv.removeChild(removeMe);
 
 ## Events
 
-An event is an action that can be detected with JavaScript, such as when user clicks an element or just moves the mouse over it. There are 3 ways to register event handlers for a DOM element.
+An event is an action that can be detected with JavaScript, such as when the user clicks an element or just moves the mouse over it. There are 3 ways to register event handlers for a DOM element.
 
 - As an HTML attribute
 
@@ -288,10 +288,10 @@ function greet(event) {
 - **onblur**: An element loses focus.
 - **onchange**: The content of a form field changes.
 - **onclick**: The mouse clicks an object.
-- **onerror**: An error occurs when the document or an image load
+- **onerror**: An error occurs when the document or image loads.
 - **onfocus**: An element gets focus.
 - **onkeydown**: A key on the keyboard is pressed.
-- **onkeypress**: A key on the keyboard is pressed or held down
+- **onkeypress**: A key on the keyboard is pressed or held down.
 - **onkeyup**: A key on the keyboard is released.
 - **onload**: A page or an image is finished loading.
 - **onmousedown**: A mouse button is pressed.
