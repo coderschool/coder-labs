@@ -270,6 +270,11 @@ foodArray.forEach((food) => {
 
 Read more about other reason why we use one over other [here](https://alligator.io/js/foreach-vs-for-loops/).
 
+<br />
+
+---
+
+<br />
 ### find()
 
 Imagine we have an array of objects. How do we find an object with the specific condition?
@@ -315,8 +320,11 @@ In real life arrays of objects is a common thing, so the `find()` method is very
 
 The [array.findIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) method is essentially the same, but it returns the index where the element was found instead of the element itself and -1 is returned when nothing is found.
 
----give more example to emphasize the case that return only first element
+<br />
 
+---
+
+<br />
 ### filter()
 
 The `find()` method looks for a _single (first) element_ that makes the function return true.
@@ -373,6 +381,11 @@ Result:
 - If the `callbackFunction` return true, the **element is pushed** to that new array and the iteration continues till the end of the filtered array
 - If the `callbackFunction` return false, **empty array** is returned
 
+<br />
+
+---
+
+<br />
 ### map()
 
 The [array.map(cb)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method is one of the most useful and often used.
@@ -407,6 +420,11 @@ console.log(lengths); // [5, 6, 6]
 - Create a **new array**
 - Each element in the new array is the return value of the `callbackFunction`
 
+<br />
+
+---
+
+<br />
 ### reduce()
 
 The method [array.reduce(cb)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) is used to calculate a single value based on the array.
@@ -483,6 +501,11 @@ console.log(totalPrice); // $13.3
 The method [array.reduceRight()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) does the same, but goes from right to left.
 
 <br />
+
+<br />
+
+---
+
 <br />
 ## sort() and reverse()
 
@@ -594,6 +617,11 @@ The compare function should return a negative, zero, or positive value
 - The sorted array.
 - Note that the array is sorted in place, and **no copy is made**.
 
+<br />
+
+---
+
+<br />
 ### reverse()
 
 A method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
@@ -651,6 +679,11 @@ console.log(fruitString); //Mango,Orange,Apple
 - A string of array values (comma separated)
 - `arrayl.length === 0` , return empty string
 
+<br />
+
+---
+
+<br />
 ### join()
 
 Also a method "join" array to string, but this time, you can specify the separator
@@ -676,6 +709,11 @@ console.log(fruitString); //Mango-Orange-Apple
 
 **Transform the array:**
 
+<br />
+
+---
+
+<br />
 ### push()
 
 A method that adds one or more elements to the end of an array and return a length of the array
@@ -709,12 +747,20 @@ console.log(fruits); //[ 'Mango', 'Orange', 'Avocado', 'Lemon', 'Lychee' ]
 
 - The `length` property of the array upon with the method was called
 
+<br />
+
+---
+
+<br />
 #### unshift()
 
 `unshift()` is a method just like `push()` but instead of adding an element to the end of an array, `unshift()` add an element to the beginning of an array. Read more about shift [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
+<br />
+
 ---
 
+<br />
 ### pop()
 
 A method that removes the last element from an array and returns that element
@@ -741,12 +787,20 @@ console.log(fruits); // [ 'Mango', 'Orange', 'Avocado' ]
 - The removed element from the array
 - Return the removed element
 
+<br />
+
+---
+
+<br />
 #### shift()
 
 `shift()` is a method just like `pop()` but instead of removing the last element from an array, `shift()` remove the first element. Read more about shift [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 
+<br />
+
 ---
 
+<br />
 ### slice()
 
 - A method that return a shallow copy of a portion of an array into a **new array** selected from `startIndex` to `endIndex` (end not included).
@@ -786,6 +840,11 @@ console.log(sliceFruit4); //[ 'Avocado' ]
 
 - Create a new array that contain the extracted elements
 
+<br />
+
+---
+
+<br />
 ### splice()
 
 A method modify the contents of an array by
@@ -824,8 +883,11 @@ console.log(fruits); // [ 'Mango', 'Apple', 'Lychee', 'Lemon' ]
 
 - An array of removed elements from the array
 
+<br />
+
 ---
 
+<br />
 ### concat()
 
 A method use to merge two or more arrays and return a new array
@@ -862,6 +924,11 @@ console.log(addSingleFruit); //[ 'Mango', 'Orange', 'Strawberry', 'Coconut', 'Le
 - A new merged array
 
 <br />
+
+<br />
+
+---
+
 <br />
 ## Converting between array, string and object
 
@@ -954,6 +1021,11 @@ const randomString = "Hello World! A new day has come.";
 const stringArray = [...randomString]; //[ 'H','e','l','l','o',' ','W','o','r','l','d','!',' ','A',' ','n','e','w',' ','d','a','y',' ','h','a','s',' ','c','o','m','e','.' ]
 ```
 
+<br />
+
+---
+
+<br />
 ### Convert string to array:
 
 There are 3 methods we can use here
