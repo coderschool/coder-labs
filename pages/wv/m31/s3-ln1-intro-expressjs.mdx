@@ -18,11 +18,11 @@ Express is a minimal and flexible Node.js web application framework that provide
 
 ### APIs
 
-With a myriad of HTTP utility methods and middleware at your disposal, creating a robust API is quick and easy.
+Creating a robust API is quick and easy with many HTTP utility methods and middleware at your disposal.
 
 ### Performance
 
-Express provides a thin layer of fundamental web application features, without obscuring Node.js features that you know and love.
+Express provides a thin layer of fundamental web application features without obscuring Node.js features you know and love.
 
 <br />
 
@@ -42,7 +42,7 @@ An API server will allow us to `Create, Read, Update, Delete(C.R.U.D.)` a `resou
 
 The URLs can also "listen" for `query parameters` and produce **dynamic** `results/output/data`.
 
-Hint: try console.log the req object and checkout `body, params, query`
+Hint: try console.log the req object and checkout `body, params, query`.
 
 ### Query String Params
 
@@ -83,24 +83,24 @@ app.use("/news", indexRouter);
 ### Cors
 
 CORS is a node.js package for providing a Connect / Express middleware that can be used to enable CORS with various options
-It help us disable CORS error.
+It helps us disable CORS error.
 Readmore [here](https://github.com/expressjs/cors#:~:text=CORS%20is%20a%20node.js%20package%20for%20providing%20a,with%20various%20options.%20Follow%20me%20%28%40troygoode%29%20on%20Twitter%21)
 
 ### Morgan Logger
 
-Logger is a technique in programming to keepin log of how an program running. It contain many errors such as process, success and error.
+Logger is a programming technique to keep logs of how a program runs. It contains many errors, such as process, success, and error.
 
 Morgan is an HTTP request logger middleware for node.js
 Create a new morgan logger middleware function using the given format and options. The format argument may be a string of a predefined name (see below for the names), a string of a format string, or a function that will produce a log entry.
 
-The format function will be called with three arguments tokens, req, and res, where tokens is an object with all defined tokens, req is the HTTP request and res is the HTTP response. The function is expected to return a string that will be the log line, or undefined / null to skip logging.
+The format function will be called with three arguments `tokens`, `req`, and `res`, where `tokens` is an object with all defined tokens, req is the HTTP request, and res is the HTTP response. The function is expected to return a string that will be the logline or undefined/null to skip logging.
 Readmore [here](https://www.npmjs.com/package/morgan)
 
 ### Path
 
-In Node.js, the path module is an inbuilt module which deals with path and directories. Every Operating System has its own way of managing paths and the operations related to it.
+In Node.js, the path module is an inbuilt module that deals with paths and directories. Every Operating System has its own way of managing paths and related operations.
 
-For examples different OS will have different syntax to navigate in the file system. Path module help Node to adapt on the native OS syntax
+For example, different operating systems will have different syntaxes to navigate the file system. Path module helps NodeJS to adapt to the native OS syntax
 
 - Window: ~\FolderA\FolderB\text.txt
 - Linux: ~/FolderA/FolderB/text.txt
@@ -109,30 +109,30 @@ Readmore [here](https://javascript.plainenglish.io/path-module-in-node-js-46a244
 
 ### Cookie parser
 
-This module help expose the cookies send along with client request. Which may use to help authorization , cache , ...
-Parse Cookie header and populate req.cookies with an object keyed by the cookie names. Optionally you may enable signed cookie support by passing a secret string, which assigns req.secret so it may be used by other middleware.
+This module help exposes the cookies sent along with client request. Which may use to help authorization, cache, ...
+Parse Cookie header and populate `req.cookies` with an object keyed by the cookie names. Optionally you may enable signed cookie support by passing a secret string, which assigns `req.secret` so it may be used by other middleware.
 Readmore [here](http://expressjs.com/en/resources/middleware/cookie-parser.html)
 
 ## Express API Routes management
 
 ### Scalable
 
-In practices an api server may have multiple endpoints. We tend to group endpoint with the same nature together.
-For examples, if we have the same amount of routes for each feature Create, Read, Update, Delete like the exercise.
+In practice, an API server may have multiple endpoints. We tend to group endpoints with the same nature together.
+For example, if we have the same amount of routes for each feature, Create, Read, Update, Delete like the exercise.
 Then apply that for:
 
-- authors/ : everything related to CRUD authors info
+- authors/ : everything related to CRUD authors' info
 - movies/ : everything related to CRUD movie data
 - users/ : everything related to CRUD user info
 
-Since each endpoints listed above serving 1 type of data. It is recommended that we group them in separated file
+Since each endpoint listed above serves 1 type of data. It is recommended that we group them in a separate file
 
 ### File Structure and Index routes
 
-Commonly ruotes folder will contain all endpoints and index will connected to each one and act as a mini router in our backend.
+Commonly routes folder will contain all endpoints, and the index will be connected to each one and act as a mini router in our backend.
 
 ```
-|- ruotes/
+|- routes/
   |- index.js
   |- users.api.js
   |- authors.api.js
@@ -142,21 +142,21 @@ Commonly ruotes folder will contain all endpoints and index will connected to ea
 
 ## Execution of Express Generator project
 
-Since we are working with multiple files in our codebase, it is very important that we understand how each line and file relate to eachother. A request from client will always go through its specific route to a result reponsding (success or error)
+Since we are working with multiple files in our codebase, we must understand how each line and file relate. A request from a client will always go through its specific route to a result response (success or error)
 
-### Flowchart : Execution
+### Flowchart: Execution
 
-Here is [A flow chart on how express file work](https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing) that may help us to visuallize the process of the files
+Here is [A flow chart on how Express file work](https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing) that may help us to visualize the process of the files
 
 <br />
 
-## Middlewares II : App level middlewares (continue)
+## Middlewares II : App-level middlewares (continue)
 
 ### Express `next()`
 
-So we have explore `req` `res` the only thing left in the Express Router callback arguments is `next()`
+So we have explored `req` `res`. The only thing left in the Express Router callback arguments is `next()`.
 
-In short, `next()` is a method, when called, start **executing/calling/running** the next `middlewares` in the line.
+In short, `next()` is a method, and when called, start **executing/calling/running** the next `middlewares` in the line.
 
 ```js
 const express = require("express");
@@ -191,7 +191,7 @@ handling request
 after request handler
 ```
 
-Try comment out the call to next() in the middle handler like this:
+Try commenting out the call to `next()` in the middle handler like this:
 
 ```js
 app.get("/user/:id", function (req, res, next) {
@@ -206,17 +206,17 @@ before request handler
 handling request
 ```
 
-Notice that the last handler (the one that prints after request handler) does not run. That's because you are no longer telling express to run the next handler.
+Notice that the last handler (the one that prints after the request handler) does not run. That's because you no longer tell Express to run the next handler.
 
-So it doesn't really matter if your "main" handler (the one that returns 200) was successful or not, if you want the rest of the middlewares to run, you have to call next().
+So it doesn't really matter if your "main" handler (the one that returns 200) was successful or not; if you want the rest of the middleware to run, you have to call `next()`.
 
-Remember that node is async so it can't know when the first handler's callback has finished. You have to tell it by calling next().
+Remember that node is async, so it can't know when the first handler's callback has finished. You have to tell it by calling next().
 
-Again here is [A flow chart on how express file work](https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing) that may help us to visuallize the process of the files
+Again here is [A flow chart on how Express file work](https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing) that may help us to visualize the process of the files
 
 ### Error handling
 
-The final puzzle in our Express code is Error handling middleware, which help us to handle in the event of error happen in our server code
+The final puzzle in our Express code is Error handling middleware, which helps us handle an error in our server code.
 
 ```js
 app.use((err, req, res, next) => {
@@ -226,29 +226,29 @@ app.use((err, req, res, next) => {
 ```
 
 An error handling middleware of express will have 4 arguments.
-Notice the `err` argument, is carrying the `Error` object passed by method before it.
+Notice that the `err` argument carries the `Error` object passed by the method before it.
 
-We will once again using this [flow chart on how express file work](https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing) to undestand the logic of **Error handling**
+We will once again use this [flow chart on how Express file work](https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing) to understand the logic of **Error handling**
 
 ### The magic control Try-catch(err)-next(err)
 
-We doing a task with our server, no one could make sure that it will always success. So in the case of failure , we must be able to identify and handle it. Recall `try-catch` in previous weeks, wrapping tasks inside of `try-catch` help us control when "thing go wrong, do this instead of crashing my precious server".
+We are doing a task with our server; we need help to ensure it will always succeed. So in the case of failure, we must be able to identify and handle it. Recall `try-catch` in previous weeks; wrapping tasks inside of `try-catch` help us control when "thing go wrong, do this instead of crashing my precious server".
 
 - An ABCXYZ handler
 
 ```js
 try {
-  //dosomethiing that may be success or fail
+  //do something that may be a success or fail
 } catch (err) {
-  //dosomething when it fail and have err object
+  //do something when it fails
   next(err); // calling next-in-line-error-handling-middleware
 }
 ```
 
-Which is this middlewares in `app.js`
+Where is this middleware in `app.js`
 
 ```js
-app.use("/api",ABCXYZ) // see how this middlewares and it handler ABCXYZ run in prior
+app.use("/api", ABCXYZ) // see how this middleware and it handler ABCXYZ run in prior
 
 ...
 app.use((err, req, res, next) => {
@@ -259,21 +259,21 @@ app.use((err, req, res, next) => {
 
 ### Throw
 
-So sometime we want to make an error just for fun we could use
+So sometimes we want to make an error. We could use
 
 ```js
 throw new Error("error message");
 ```
 
-and inside a `try-catch` your new error will be catch by the error catch handler.
+And inside a `try-catch` your new error will be caught by the error catch handler.
 
 ```js
 try {
-  //dosomethiing that may be success or fail
+  //do something that may be a success or fail
   //but too lazy to do anything
   throw new Error("too lazy");
 } catch (err) {
-  //dosomething when it fail and have err object
+  //do something when it fails
   console.log(err.message); // too lazy
   next(err); // calling next-in-line-error-handling-middleware
 }
@@ -281,7 +281,7 @@ try {
 
 ## References
 
-Hey there, travelers! if you want to learn everything about Express and RestfulAPI that has not been covered (lots of it), check out the links below to have better understanding of the concepts.
+Hey there, travelers! If you want to learn everything about Express and RestfulAPI that has not been covered (lots of it), check out the links below to better understand the concepts.
 
 - [Routes](https://en.wikipedia.org/wiki/Routing): Different URL endpoints used to produce different behavior. Usually CRUDing a resource
 - [Query String/Parameters](https://en.wikipedia.org/wiki/Query_string): String sent by client to tell the server what it wants

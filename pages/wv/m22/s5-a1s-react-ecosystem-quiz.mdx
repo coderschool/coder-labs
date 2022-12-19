@@ -2,7 +2,7 @@
   src="https://i.imgur.com/dpd20EG.png"
   style={{ width: "60px", float: "right" }}
 />
-# React Ecosystem Quiz
+# Quiz Solutions - React Ecosystem
 
 <br/>
 <br/>
@@ -15,6 +15,7 @@
 - [ ] All of the above answers.
 
 <br />
+
 ### 2. What type of data you CAN NOT pass across components?
 
 - [ ] String
@@ -25,21 +26,23 @@
 - [x] None of the above.
 
 <br />
-### 3. In React, a stateful component is a component that holds some states. On the
-other hand, a stateless component is a component that has no state.
+
+### 3. In React, a stateful component is a component that holds some states. On the other hand, a stateless component is a component that has no state.
 
 - [x] TRUE
 - [ ] FALSE
 
 <br />
-### 4. What is children prop in React?
+
+### 4. What is the `children` prop in React?
 
 - [ ] A property that lets you set an object as a property
 - [ ] A property that lets you nest components in other components
 - [x] A property that lets you pass data to child components
-- [ ] A property that adds child values to state.
+- [ ] A property that adds child values to the state.
 
 <br />
+
 ### 5. What do we call the copy of the 'real' DOM that is kept in memory?
 
 - [x] Virtual DOM
@@ -49,20 +52,22 @@ other hand, a stateless component is a component that has no state.
 - [ ] React DOM
 
 <br />
+
 ### 6. Pascal case is a must in naming React components.
 
 - [x] TRUE
 - [ ] FALSE
 
 <br />
+
 ### 7. React can only render elements in the React root element.
 
 - [x] TRUE
 - [ ] FALSE
 
 <br />
-### 8. #Which props from the props object is available to the component with the
-following syntax?
+
+### 8. #Which props from the props object are available to the component with the following syntax?
 
 ```javascript
 <Message {...props} />
@@ -74,7 +79,8 @@ following syntax?
 - [ ] Any that have changed
 
 <br />
-### 9. Hooks is one of the core concepts in React, what is true about hooks?
+
+### 9. Hooks is one of the core concepts in React. What is true about hooks?
 
 - [ ] Hooks are functions.
 - [ ] Hooks are stateful.
@@ -83,8 +89,8 @@ following syntax?
 - [x] All of the above answers.
 
 <br />
-### 10. While writing your own hooks in React, what is the one rule to name a custom
-hook?
+
+### 10. While writing your own hooks in React, what is the one rule to name a custom hook?
 
 - [x] Start with `use`
 - [ ] Start with `hook`
@@ -92,12 +98,13 @@ hook?
 - [ ] None of the above answers.
 
 <br />
+
 ### 11. Describe this diagram:
 
 ![](https://i.imgur.com/jyOVKfh.png)
 
 - [x] Props are data passed to a component, and the component returns React elements.
-- [ ] Props create components and compoents create React elements.
+- [ ] Props create components and components create React elements.
 - [ ] Props are parents of components and components are parents of React elements.
 - [ ] All of the above answers.
 
@@ -106,30 +113,31 @@ hook?
 ### 12. `useRef` is a React hook that grants access to DOM element. What is TRUE about `useRef`?
 
 - [x] `useRef` will give you the same ref object on every render.
-- [x] Changing current property of an ref object doesn't cause a rerender.
+- [x] Changing the current property of a ref object doesn't cause a rerender.
 
 <br />
-### 13. `useEffect` is a React hook that allows you to run side effects after the
-app rendered or re-rendered - after the Browser DOM updated.
+
+### `useEffect` is a React hook that allows you to run side effects after the app is rendered or re-rendered - after the Browser DOM is updated.
 
 - [x] TRUE
 - [ ] FALSE
 
 <br />
+
 ### 14.What are TRUE about useContext hook? (Choose all that apply)
 
-- [x] With `useContext`, it is easier to share data across component's hierarchy.
+- [x] With `useContext`, it is easier to share data across the component's hierarchy.
 - [ ] `useContext` helps select a DOM elements.
 - [x] You can call `useContext()` in a component to take out data stored in the context provider.
 - [ ] None of the above answers.
 
 <br />
-### 15. Given the below application and user clicked the button once. What is logged
-to the console?
+
+### 15. Given the below application and user clicked the button once. What is logged to the console?
 
 ![](https://i.imgur.com/OB44hga.png)
 
-**Note:** Let's test this block of code in your codesandbox, with `<StrictMode> ` removed from your `index.js`.
+**Note:** Let's test this code block in your codesandbox, with `<StrictMode> ` removed from your `index.js`.
 
 - [x] `count inside handleClick 0` `count outside handleClick 1`
 - [ ] `count inside handleClick 0` `count outside handleClick 0`
@@ -137,13 +145,15 @@ to the console?
 - [ ] None of the above answers.
 
 <br />
+
 ### 16. Given the below application and user clicked the button once. Keep in mind,
+
 `setCount()` is called twice, we are expecting `count` to be `2` after one click.
 What is logged to the console?
 
 ![](https://i.imgur.com/SVyjzFa.png)
 
-**Note:** Let's test this block of code in your codesandbox, with `<StrictMode> ` removed in your `index.js`. \*
+**Note:** Let's test this code block in your codesandbox, with `<StrictMode> ` removed in your `index.js`. \*
 
 - [x] `count inside handleClick 0` `count outside handleClick 1`
 - [ ] `count inside handleClick 0` `count outside handleClick 2`
@@ -151,7 +161,9 @@ What is logged to the console?
 - [ ] None of the above answers.
 
 <br />
+
 ### 17. Given the below application and user clicked the button once. Keep in mind,
+
 `setCount()` is called twice, we are expecting `count` to be `2` after 1 click.
 
     What is logged to the console?
@@ -166,7 +178,9 @@ What is logged to the console?
 - [ ] None of the above answers.
 
 <br />
+
 ### 18. Given the below application and user clicked the button once. After one click,
+
 what is logged to the console? Choose all correct answers.
 
 ![](https://i.imgur.com/70C4wFz.png)
@@ -186,7 +200,8 @@ https://stackoverflow.com/questions/48563650/does-react-keep-the-order-for-state
       `x outside handleClick 0`
 
 <br />
-### 19. What does "no dependencies" mean, when it comes to `useEffect`?
+
+### 19. What does "no dependencies" mean when it comes to `useEffect`?
 
 ```javascript
 useEffect(() => {
@@ -199,8 +214,8 @@ useEffect(() => {
 - [ ] `useEffect` code throws errors without dependencies.
 
 <br />
-### 20. Given the below block of code, what is the right answer describing the app's
-code flow?
+
+### 20. Given the below block of code, what is the right answer describing the app's code flow?
 
 ![](https://i.imgur.com/4OdZ7zR.png)
 
@@ -210,7 +225,8 @@ code flow?
 - [ ] None of the above answers.
 
 <br />
-### 21. What does "empty array dependency" mean, when it comes to `useEffect`?
+
+### 21. What does "empty array dependency" mean when it comes to `useEffect`?
 
 ![](https://i.imgur.com/ReHokCz.png)
 
@@ -220,7 +236,9 @@ code flow?
 - [ ] None of the above answers.
 
 <br />
+
 ### 22. Consider the following code from React Router. What do you call `:id` in
+
 the path prop?
 
 ```javascript
@@ -233,6 +251,7 @@ the path prop?
 - [ ] This is a route link
 
 <br />
+
 ### 23. What will happen when this `useEffect` Hook is executed?
 
 ```javascript
@@ -244,7 +263,7 @@ useEffect(() => {
 
 - [ ] It will cause an error immediately.
 - [ ] It will execute the code inside the function, but only after waiting to ensure that no other component is accessing the name variable.
-- [x] It will update the value of name once and not run again until name is changed from the outside
+- [x] It will update the value of the name once and not run again until the name is changed from the outside
 - [ ] It will cause an infinite loop.
 
 <br />

@@ -1,29 +1,37 @@
-# Automate boring task with NodeJs
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
+
+# Automate boring tasks with NodeJs
+
+<br />
+<br />
 
 ## Overview
 
-### The important of content
+### The importance of content
 
-In web development, the logics are just one part of making a good web app. A social platform will have no value with out users; A game store is just blank canvas with out game information, images ...
+In web development, logic is just one part of making a good web app. A social platform will have no value without users; A game store is just a blank canvas without game information and images.
 
 ### Making data
 
-To make a prototype to demontrate for audience, we must add content into our web. For examples, to demontrate our pagination we might have to have 100 items with their infos like title, description, ... Meaning someone have to come up with `100\*x` items content and enter into the database. Imagine a bigger application where we want to make a dashboard with sale report. Someone need to make `x` user account , each of them have to make `n` carts which includes `z` products.
-Inshort, a time consuming task that could be automate by writing a script.
+To make a prototype to demonstrate to the audience, we must add content to our web. For example, to display our pagination, we have to have 100 items with their info like title, description, etc. Meaning someone has to come up with `100\*x` items content and enter it into the database. Imagine a more extensive application where we want to make a dashboard with a sale report. Someone must make `x` user accounts, and each has to make `n` carts that include `z` products.
+In short, a time-consuming task could be automated by writing a script.
 
-### Automate the data generating process
+### Automate the data-generating process
 
-Automation is the use of technology to accomplish a task with as little human interaction as possible. In computing, automation is usually accomplished by a program, a script, or batch processing. For example, a web srapper program to get websites data, a tool to transform .mp3 to .mp4, a tool to mock up data for testing, automation test ....
+Automation uses technology to accomplish tasks with as little human interaction as possible. In computing, automation is usually achieved by a program, a script, or batch processing. For example, a web scrapper program to get website data, a tool to transform .mp3 to .mp4, a tool to mock up data for testing, automation test, etc.
 
-There are many way to make data, such as:
+There are many ways to make data, such as:
 
-- Manually entry each piece of information
-- Write a script to randomize info and save to database
+- Manually enter each piece of information
+- Write a script to randomize info and save it to the database
 - Write a script to collect data from a website
-- Write a script to call to an API then save the data in our database
-- Collect dataset from others then write a script to process any given data format into our own.
+- Write a script to call to an API, then save the data in our database
+- Collect datasets from others, then write a script to process any given data format into our own.
 
-We will focus on the Randomize and Collect-Process methods
+We will focus on the Randomize and Collect-Process methods.
 
 ## Random data with Faker Js
 
@@ -56,7 +64,7 @@ const randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
 ## Lab: Random mock user data
 
 Checkout the tutorial video for a complete walkthrough.
-Let's write a script to generate mock user for our database
+Let's write a script to generate a mock user for our database.
 
 ### We will be using :
 
@@ -65,8 +73,8 @@ Let's write a script to generate mock user for our database
 
 ### API Endpoints :
 
-- GET : list of all user with pagination
-- GET : search user by ...
+- GET : list of all users with pagination
+- GET : search users by ...
 
 ### Script feature :
 
@@ -77,10 +85,10 @@ Let's write a script to generate mock user for our database
 node create-users 40
 ```
 
-## Collect and process dataset from others (Kaggle)
+## Collect and process datasets from others (Kaggle)
 
-The other way to have content for our project database is collecting datasets from different sources.
-There are many awesome platform that serve datasets for us to choose from. [Kaggle](https://www.kaggle.com/datasets) is one example. Simply go to the website and browse many different categories of data for your upcoming projects.
+The other way to have content for our project database is by collecting datasets from different sources.
+Many awesome platforms serve datasets for us to choose from. [Kaggle](https://www.kaggle.com/datasets) is one example. Go to the website and browse many different categories of data for your upcoming projects.
 
 ### Kaggle dataset collection
 
@@ -88,13 +96,13 @@ There are many awesome platform that serve datasets for us to choose from. [Kagg
 
 ## CSV to JSON
 
-Most of the time, there will be a dataset to help you create your next projects. It is easy to find datasets , but it is harder to use one. Sometimes the dataset you found could be in a format that are not familiar. For examples, spreadsheet files from Google sheet or Excel would be in .csv format rather than .json.
+Most of the time, there will be a dataset to help you create your next projects. It is easy to find datasets but harder to use. Sometimes the dataset you found could be in a format that is not familiar. For example, spreadsheet files from Google Sheets or Excel would be in `.csv` format rather than `.json`.
 For this challenge, we will now learn how to translate .cvs to .json.
 ![csv2json](../../assets/wv/m31/kaggle-data-type.png)
 
 ## Lab: CSV to JSON
 
-[Csv to json](https://www.npmjs.com/package/csvtojson) is a popular library help process csv file, its main feature is to translate `.csv` to `.json`.
+[Csv to json](https://www.npmjs.com/package/csvtojson) is a popular library that helps process CSV files. Its main feature is to translate `.csv` to `.json`.
 
 ### Set up
 

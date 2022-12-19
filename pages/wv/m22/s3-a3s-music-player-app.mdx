@@ -63,7 +63,7 @@ The tracklist and the controller both need to know:
 3. If Track 1 is playing and user plays Track 2, Track 1 sees the action and pauses automatically.
 4. What track is playing, for the controller to display track's name.
 
-That's a lot of infomation needed to be shared between two components, which will be more complex and chaotic in bigger projects. Thanks to React and the useContext hook, we are now able to manage these information easier than ever.
+That's a lot of information needed to be shared between two components, which will be more complex and chaotic in bigger projects. Thanks to React and the useContext hook, we are now able to manage these information easier than ever.
 
 <br />
 ### 2. `useContext` and `useCustomHook`
@@ -226,7 +226,7 @@ export { MusicPlayerContext, MusicPlayerProvider };
 <br />
 ### MusicPlayerContext.js
 
-- **1st:** There are more than just one piece of information (for example: `isPlaying`, `currentTrackIndex`) we need to share across the app, therefore, let's put all the information in one object – `defaulValues`.
+- **1st:** There is more than just one piece of information (for example: `isPlaying`, `currentTrackIndex`) we need to share across the app, therefore, let's put all the information in one object – `defaulValues`.
 
   ![](https://i.imgur.com/N835ndu.png)
 
@@ -234,14 +234,14 @@ export { MusicPlayerContext, MusicPlayerProvider };
 
   ![](https://i.imgur.com/NHCKu1r.png)
 
-  Now, everytime you want to:
+  Now, every time you want to:
 
-  - Access an information: `state.isPlaying`
+  - Access information: `state.isPlaying`
   - Change an information: `setState((state) => {...state, isPlaying: true} )`
 
   You might notice how `setState()` looks a bit more complex than it used to be.
 
-  In older project, this is how we `setState()` – by simply pass in a new value. It's because we are setting state of only one information.
+  This is how we `setState()` in older projects – by simply passing in a new value. It's because we are setting the state of only one piece of information.
 
   ```javascript
   const handleLogin = () => {
@@ -252,7 +252,7 @@ export { MusicPlayerContext, MusicPlayerProvider };
   };
   ```
 
-  Today, to code leaner projects we can store many pieces of information in one object, just with a few extra things to notice when you `setState()`.
+  Today, to code leaner projects, we can store many pieces of information in one object, just with a few extra things to notice when you `setState()`.
 
   ```javascript
   const playSong = () => {
@@ -265,7 +265,7 @@ export { MusicPlayerContext, MusicPlayerProvider };
   The above technique is not new, we have learned it before in Object Destructuring, let's playback _CoderSchool's M1.2 Programming with JavaScript_.
 
 - **3rd:** Finally, let's look at what the function MusicPlayerProvider does.
-  It returns the `.Provider` and hold values in prop `value`. Now, in the `App.js`, instead of wrapping `<MusicPlayerContext.Provider>`, we can just simply use `<MusicPlayerProvider>`.
+  It returns the `.Provider` and holds values in prop `value`. Now, in the `App.js`, instead of wrapping `<MusicPlayerContext.Provider>`, we can just simply use `<MusicPlayerProvider>`.
 
 ```javascript
 import { MusicPlayerProvider } from "./contexts/MusicPlayerContext";
@@ -299,7 +299,7 @@ Inside `useMusicPlayer()`:
   ...  }
 ```
 
-- **2nd:** Continue with a list of functions, including `playTrack()`, `togglePlay()`, `playPreviousTrack()`, etc. For now, don't worry so much about the mathematics and logic inside of them. Let's take some time, chew on it and consult your mentor. We will zoom out and see what the big boss `useMusicPlayer()` does.
+- **2nd:** Continue with a list of functions, including `playTrack()`, `togglePlay()`, `playPreviousTrack()`, etc. For now, don't worry so much about the mathematics and logic inside of them. Let's take some time, chew on it, and consult your mentor. We will zoom out and see what the big boss `useMusicPlayer()` does.
 
   ![](https://i.imgur.com/bceN3is.png)
 
@@ -350,7 +350,7 @@ export default TrackList;
 <br />
 ### 🎉 You made it!
 
-You are introduced to all the tools needed for this project, let's connect all the pieces and complete your own MiniSpotify!
+You are introduced to all the tools needed for this project; let's connect all the pieces and complete your own MiniSpotify!
 
 Reading code walkthrough might take a lot of brain energy :fire: :sweat_drops: but reading will help organize your logic stream and develop great habits, especially for life-learners like us – the programmers :wink:.
 

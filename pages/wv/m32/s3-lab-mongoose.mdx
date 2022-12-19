@@ -20,14 +20,14 @@ $ npm install mongoose
 
 ### Connect to local MongoDB with Mongoose
 
-Now say we like fuzzy kittens and want to record every kitten we ever meet in MongoDB. The first thing we need to do is include mongoose in our project and open a connection to the test database on our locally running instance of MongoDB.
+Now say we like fuzzy kittens and want to record every kitten we ever meet in MongoDB. We first need to include `mongoose` in our project and open a connection to the test database on our locally running instance of MongoDB.
 
 ```js
 // getting-started.js
 const mongoose = require("mongoose");
 ```
 
-We will create an async function main that contains our logic because mongoose.connect will return a Promise so we want to let it finish before executing our future scripts. Also, we will need to be notified if we connect successfully
+We will create an async function main that contains our logic because `mongoose.connect` will return a Promise, so we want to let it finish before executing our future scripts. Also, we will need to be notified if we connect successfully.
 
 ```js
 const main = async () => {
@@ -48,7 +48,7 @@ main().catch((err) => console.log(err));
 
 ### Defined Schema
 
-With Mongoose, everything is derived from a Schema. Schema is a set of defined characteristics for model
+With Mongoose, everything is derived from a Schema. A schema is a set of defined characteristics for a model.
 Let's get a reference to it and define our kittens.
 
 ```js
@@ -60,22 +60,22 @@ const kittySchema = new mongoose.Schema({
 
 ### Create Model
 
-So far so good. We've got a schema with one property, **name**, which will be a String. The next step is compiling our schema into a Model.
+So far, so good. We've got a schema with one property, **name**, which will be a String. The next step is compiling our schema into a Model.
 
 ```js
 const Kitten = mongoose.model("Kitten", kittySchema);
 ```
 
-A model is a class with which we construct documents. In this case, each document will be a kitten with properties and behaviors as declared in our schema. Let's create a kitten document representing the little guy we just met on the sidewalk outside:
+A model is a class with which we construct documents. Each document will be a kitten with properties and behaviors as declared in our schema. Let's create a kitten document representing the little guy we just met on the sidewalk outside:
 
-### Create a new instance from Model
+### Create a new instance from a Model
 
 ```js
 const silence = new Kitten({ name: "Silence" });
 console.log(silence.name); // 'Silence'
 ```
 
-In other words, a model/class is a blueprint to make instances. These instances inherited all the attributes and methods that were defined in that blueprint including one from the schema made up such model.
+In other words, a model/class is a blueprint for making instances. These instances inherited all the attributes and methods defined in that blueprint, including one from the model's schema.
 
 Kittens can meow, so let's take a look at how to add "speak" functionality to our documents:
 
@@ -104,20 +104,20 @@ const fluffy = new Kitten({ name: "fluffy" });
 fluffy.speak(); // "Meow name is fluffy"
 ```
 
-Notice that fluffy.speak is a document method.
+Notice that `fluffy.speak` is a method.
 
 <br />
 
 ## Saving to MongoDB (Create data)
 
-We have talking kittens! But we still haven't saved anything to MongoDB. Each document can be saved to the database by calling its save method. The first argument to the callback will be an error if any occurred.
+We have talking kittens! Each document can be saved to the database by calling its save method. The first argument to the callback will be an error if any occurs. But we still haven't saved anything to MongoDB.
 
 ```js
 await fluffy.save();
 fluffy.speak();
 ```
 
-Notice that fluffy.save is a document method.
+Notice that `fluffy.save` is a method.
 
 <br />
 
@@ -125,16 +125,16 @@ Notice that fluffy.save is a document method.
 
 ### Find many that match
 
-Say time goes by and we want to display all the kittens we've seen. We can access all of the kitten documents through our Kitten model.
+Say time goes by, and we want to display all the kittens we've seen. We can access all of the kitten documents through our Kitten model.
 
 ```js
 const found = await Kitten.find({});
 console.log(found);
 ```
 
-Notice that Kitten.find is a Model method.
+Notice that `Kitten.find` is a Model method.
 
-We just logged all of the kittens in our DB to the console. If we want to filter our kittens by name, Mongoose supports MongoDB rich querying syntax.
+We just logged all of the kittens in our DB to the console. Mongoose supports MongoDB rich querying syntax if we want to filter our kittens by name.
 
 ```js
 //This /^fluff/ regex pattern means : match any string that start with 'fluff'. eg: fluffy, fluffo, fluffloremip, fluff lorem...
@@ -162,7 +162,7 @@ const found = await Kitten.findById("target_id");
 
 There are many ways to edit data in MongoDB. They all share one common pattern we need to tell MongoDB exactly which data we are editing. Thus, in these updating operations, we must locate the data first and then change it.
 
-### Model methods with Model.findOneAndUpdate and Model.findByIdAndUpdate
+### Model methods with `Model.findOneAndUpdate` and `Model.findByIdAndUpdate`
 
 Finds a matching document, updates it according to the update arg, passes any options, and returns the found document (if any) to the callback. The query executes if a callback is passed.
 
@@ -174,7 +174,7 @@ const found = await Kitten.findByIdAndUpdate(
 );
 ```
 
-Issues a mongodb findAndModify update command by a document's \_id field. `findByIdAndUpdate(id, ...)` is equivalent to `findOneAndUpdate({ _id: id }, ...)`. FindOneAnd will allow us to find with other condition as well
+Issues a MongoDB findAndModify update command by a document's \_id field. `findByIdAndUpdate(id, ...)` is equivalent to `findOneAndUpdate({ _id: id }, ...)`. FindOneAnd will allow us to find other conditions as well.
 
 ```js
 const found = await Kitten.findOneAndUpdate(
@@ -186,7 +186,7 @@ const found = await Kitten.findOneAndUpdate(
 
 The option `{new: true}` requires MongoDB to return with the updated document. By default, this method returns the found document instead.
 
-- Mutate the document directly then use the document.save() method, given that you have found the document.
+- Mutate the document directly, then use the document.save() method, given that you have found the document.
 
 ```js
 const found = await Kitten.findOne({ name: "target" });
@@ -208,8 +208,8 @@ await Kitten.findOneAndDelete({ name: "delete_target" });
 ```
 
 Permanently removing data from our database adds a lot of complexity.
-The impact of deleting 1 piece of data will rupture all other pieces that are connected to it. Completely accounting for all these impacts is a must and a difficult one too. In addition, hard delete will eliminate the possibility of recovery in the future.
-In the end, data is the new gold. As for gold, we should not throw it away.
+The impact of deleting 1 piece of data will rupture all other pieces that are connected to it. In addition, hard delete will eliminate the possibility of recovery in the future. Accounting for all these impacts is a must and a difficult one too.
+In the end, data is the new gold. As for gold, we should keep it.
 
 ### Soft delete
 
@@ -225,7 +225,7 @@ const kittySchema = new mongoose.Schema({
 });
 ```
 
-#### Delete by update flag
+#### Delete by updating flag
 
 ```js
 await Kitten.findOneAndUpdate({ name: "delete_target" }, { isDeleted: true });
@@ -245,7 +245,7 @@ As our project grows, implementing this soft delete in every Read operation will
 
 Congratulations
 
-That's the end of our quick start. We created a schema, added a custom document method, and saved, queried, updated, and deleted kittens in MongoDB using Mongoose. Head over to the guide, or API docs for more.
+That's the end of our quick start. We created a schema, added a custom document method, and saved, queried, updated, and deleted kittens in MongoDB using Mongoose. Head over to the guide or API docs for more.
 
 <br />
 <br />
