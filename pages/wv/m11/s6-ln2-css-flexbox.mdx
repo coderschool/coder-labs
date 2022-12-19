@@ -14,9 +14,9 @@
 
 ### Why use Flexbox?
 
-Flexbox is here to provide a consistent layout on different screen sizes as your users' screen would varied from mobile to desktop, and ect.
+Flexbox is here to provide a consistent layout on different screen sizes as your users' screens would vary from mobile to desktop, etc.
 
-That means it allows items to stretch or shrink inside their containers, preventing wasted space and overflow. It's a real plus for making layouts fit a variety of viewport sizes.
+Flexbox allows items to stretch or shrink inside their containers, preventing wasted space and overflow. It's a real plus for making layouts fit various viewport sizes.
 
 Other advantages:
 
@@ -27,18 +27,18 @@ Other advantages:
 ### Getting to know Flexbox
 
 Flexbox begins with the `display` property.
-By applying `display: flex` to an element, you turns it into a **flex container**, and its direct children into **flex items**.
+By applying `display: flex` to an element, you turn it into a **flex container**, and its direct children into **flex items**.
 
 By default, flex items **align side by side, left to right, all in one row**.
 The flex container fills the available width like a block element, but the flex items may not necessarily fill the width of their flex container. The flex items are all the same height, determined naturally by their contents.
 
-Because flexbox layout is defined in terms of the main axis and cross axis, therefore, we use the terms `start` and `end` in reference to the axes. There is no `left` and `right` or `top` and `bottom` in flexbox.
+Because Flexbox layout is defined in terms of the main axis and cross axis, we use the terms `start` and `end` in reference to the axes. There is no `left` and `right` or `top` and `bottom` in Flexbox.
 
 ## <img style={{ width: "500px" }} src="https://i.imgur.com/U2VmvzO.png" />
 
 References:
 
-> ✅ Get to know flexbox with this game: [Flexbox Froggy](https://flexboxfroggy.com/) <br/>
+> ✅ Get to know Flexbox with this game: [Flexbox Froggy](https://flexboxfroggy.com/) <br/>
 > ✅ The ultimate cheatsheet: [Flexbox Cheatsheer](https://darekkay.com/flexbox-cheatsheet/) <br/>
 > ✅ The complete guide: [Complete Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
@@ -114,9 +114,9 @@ References:
 
 > - To kickstart the flex system
 
-> - Apply flex on the container so that you can "control" it's children.
+> - Apply flex on the container so that you can "control" its children.
 
-> - See default mode - where flex items are align side by side, left to right, all in one row.
+> - See default mode - where flex items are aligned side by side, left to right, all in one row.
 
 ```html index.html focus=45:47
 <style>
@@ -258,7 +258,7 @@ References:
 
 `flex-direction: column-reverse`
 
-> - Flex items are laying out in vertical column but in a reversed order compared to its HTML structure.
+> - Flex items are laid out in a vertical column but in a reversed order compared to its HTML structure.
 
 ```html index.html focus=46,49:51
 <style>
@@ -325,7 +325,7 @@ References:
 
 `flex-direction: row` (default)
 
-> - Flex items are laying out in horizontal rows - which is also the flex default mode.
+> - Flex items are laid out in horizontal rows - which is also the flex default mode.
 
 ```html index.html focus=46:49
 <style>
@@ -390,7 +390,7 @@ References:
 
 `flex-direction: row-reverse`
 
-> - Flex items are laying out in vertical column but in a reversed order compared to its HTML structure.
+> - Flex items are laid out in a vertical column but in a reversed order compared to its HTML structure.
 
 ```html index.html focus=46,49:51
 <style>
@@ -533,7 +533,7 @@ References:
 
 `flex-wrap: nowrap` (default)
 
-> - When wrapping is disabled, flex items squish if there is not enough room. If they can't squish any further, they may get cut off.
+> - When wrapping is disabled, flex items squish if there is insufficient room. If they can't squish any further, they may get cut off.
 > - Container width: 200px
 
 ```html index.html focus=40,43:46
@@ -670,8 +670,8 @@ References:
 
 `flex-wrap: wrap-reverse`
 
-> - The flex items break into multiple lines to fit inside the container but in a reversed order compared to it's HTML structure
-> - Let's also resize the container to see how container's size effect the way items break.
+> - The flex items break into multiple lines to fit inside the container but in a reversed order compared to its HTML structure
+> - Let's also resize the container to see how the container's size affects how items break.
 > - Container width: 250px
 
 ```html index.html focus=40,43:45
@@ -741,7 +741,7 @@ References:
 
 ### 3️⃣ `justify-content`
 
-When you want distributes space between and around the child items along the main-axis of a flex container.
+When you want to distribute space between and around child items along the flex container's main axis.
 
 🚩 Beware that using `justify-content` along with `flex-direction: column` and `flex-direction: row` would produce different outputs.
 
@@ -1257,7 +1257,7 @@ Let's add container height to see the effect.
 
 `align-items: stretch` (default)
 
-> 🚩 Beware that `stretch` only applied if child elements themselves don't have fixed `width` and `height`.
+> 🚩 Beware that `stretch` is only applied if child elements don't have fixed `width` and `height`.
 
 ```html index.html focus=32,37:39
 <style>
@@ -1313,7 +1313,7 @@ Let's add container height to see the effect.
 `align-items: baseline`
 
 > - Items are aligned such as their baselines align.
-> - What is baseline? [Answer](https://developer.mozilla.org/en-US/docs/Glossary/baseline)
+> - What is the baseline? [Answer](https://developer.mozilla.org/en-US/docs/Glossary/baseline)
 
 <img style={{ width: "500px" }} src="https://i.imgur.com/lZgGSsU.png" />
 
@@ -1390,7 +1390,7 @@ Let's add container height to see the effect.
 
 This property only takes effect on multi-line flexible containers, where flex-wrap is set to either wrap or wrap-reverse).
 
-A single-line flexible container (i.e. where flex-wrap is set to its default value, no-wrap) will not reflect align-content.
+A single-line flexible container (i.e., where flex-wrap is set to its default value, no-wrap) will not reflect align-content.
 
 <CH.Scrollycoding preset="https://codesandbox.io/s/flexbox-2uownl">
 
@@ -1817,7 +1817,7 @@ A single-line flexible container (i.e. where flex-wrap is set to its default val
 
 ### 1️⃣ `flex: flex-grow flex-shrink flex-basis`
 
-> - This is the short hand for `flex-grow`, `flex-shrink` and `flex-basis` combined. It is recommended that you use this shorthand property rather than set the individual properties.
+> - This is the shorthand for `flex-grow`, `flex-shrink`, and `flex-basis` combined. You should use this shorthand property rather than set the individual properties.
 > - For the `flex-grow` and `flex-shrink` properties, the values 1 and 0 work like on/off switches, where 1 "turns on" or allows an item to grow or shrink, and 0 prevents it.
 > - The `flex-basis` property sets the starting dimensions, either to a specific size or `auto` - a size based on the contents.
 
@@ -1825,7 +1825,7 @@ A single-line flexible container (i.e. where flex-wrap is set to its default val
 
 > **Grow:** `flex: 0 1 auto`
 
-> - `flex-grow` set to 0 to prevent flex items to grow or expanse.
+> - `flex-grow` set to 0 to prevent flex items from growing or expanding.
 
 ```html index.html focus=20:41,43,50
 <style>
@@ -1942,7 +1942,7 @@ A single-line flexible container (i.e. where flex-wrap is set to its default val
 
 > **Grow:** `flex: 3 1 auto`
 
-> - `flex-grow` set to 1 for the applied flex item to **grows 3 times** bigger than the others.
+> - `flex-grow` set to 1 for the applied flex item to **grow 3 times** bigger than the others.
 
 ```html index.html focus=20:41,43,50
 <style>
@@ -2001,15 +2001,15 @@ A single-line flexible container (i.e. where flex-wrap is set to its default val
 > **Shrink:** `flex: 1 3 auto`
 
 > - By default, the `flex-shrink` value is set to `1`, which means if you do nothing, items shrink to fit the container.
-> - An item with a `flex-shrink` of 3 will shrink 3 times than others.
+> - An item with a `flex-shrink` of 3 will shrink 3 times more than others.
 > - When `flex-shrink` is 0, items are not permitted to shrink.
-> - Nagative value for `flex-shrink` is invalid.
+> - Negative value for `flex-shrink` is invalid.
 
 > Question❓:
 >
-> - Other boxes have the style of `flex: 1 1 100px;` means we allow them to grow and shrink with the default size of 100px. What happen if shrink is set to `0`?
-> - Box-three's the style of `flex: 1 3 100px;` means we allow it to grow and shrink 3 times smaller than other boxes. What happen if shrink is set to `1`?
-> - All boxes have the same basis value of 100px. What happen if basis value is `auto?`
+> - Other boxes have the style of `flex: 1 1 100px;` which means we allow them to grow and shrink with the default size of 100px. What happens if shrink is set to `0`?
+> - Box-three's style of `flex: 1 3 100px;` means we allow it to grow and shrink 3 times smaller than other boxes. What happens if shrink is set to `1`?
+> - All boxes have the same basis value of 100px. What happens if the basis value is `auto?`
 
 ```html index.html focus=20:41,43,50
 <style>
@@ -2067,7 +2067,7 @@ A single-line flexible container (i.e. where flex-wrap is set to its default val
 
 > **Shrink:** `flex: 1 2 auto`
 
-> - An item with a flex-shrink of 2 will shrink twice as fast as if it were set to 1.
+> - An item with a flex-shrink of 2 will shrink twice as fast as if set to 1.
 
 ```html index.html focus=20:41,43,50
 <style>
@@ -2126,10 +2126,10 @@ A single-line flexible container (i.e. where flex-wrap is set to its default val
 > **Basis:** `flex: 0 1 auto`
 
 > - `flex-basis` defines the default size of an element before the remaining space is distributed.
-> - It can be a keyword - `auto` takes width and height of the flex item.
-> - If item has no width and height, `auto` will take the content size.
+> - It can be a keyword - `auto` takes the width and height of the flex item.
+> - If an item has no width and height, `auto` will take the content size.
 
-> > Example: `flex: 0 1 auto;` means `flex-basis` sets the flex items' size to it's content size (number 1,2,3,4,5) as individual item doesn't have fixed width and height.
+> > Example: `flex: 0 1 auto;` means `flex-basis` sets the flex items' size to it's content size (number 1,2,3,4,5) as the individual item doesn't have fixed width and height.
 
 ```html index.html focus=20:41,43,50
 <style>

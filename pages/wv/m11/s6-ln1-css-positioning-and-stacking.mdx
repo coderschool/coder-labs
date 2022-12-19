@@ -25,7 +25,7 @@
 
   > _**Note**: Negative values are acceptable and move the element in the opposite direction of positive values. For example, a negative value for `top` would have the effect of moving the element up._
 
-- The first step to position your element Top, Left, Right, Bottom : xPx is to defined its position type (`static` | `relative` | `absolute` | `fixed` | `sticky`). As it will be the **anchor** to start moving your element from.
+- The first step to position your element Top, Left, Right, Bottom is to defined its position type (`static` | `relative` | `absolute` | `fixed` | `sticky`). As it will be the **anchor** to start moving your element from.
 
 ### Examples:
 
@@ -79,7 +79,7 @@ _(👀 eyes on the yellow box)_
 </style>
 <div id="example-element-container">
   <p>
-    In this demo you can control the <code>position</code> property for the
+    In this demo, you can control the <code>position</code> property for the
     yellow box.
   </p>
   <div class="box"></div>
@@ -94,7 +94,7 @@ _(👀 eyes on the yellow box)_
 
 - **Relative**: Relative positioning moves the element box relatively to its original position in the flow.
 
-  - This simply means, all relative position elements will have an **anchor** which place at its original static place.
+  - This simply means, all relative position elements will have an **anchor** which places at its original static place.
     And whenever we move a `position:relative` element, we are moving it relatively to its anchor.
 
   - In this demo, we are moving the yellow box 40px from the top of its anchor top, and left 40px from it anchor left.
@@ -151,7 +151,7 @@ _(👀 eyes on the yellow box)_
 </style>
 <div id="example-element-container">
   <p>
-    In this demo you can control the <code>position</code> property for the
+    In this demo, you can control the <code>position</code> property for the
     yellow box.
   </p>
   <div class="box"></div>
@@ -172,14 +172,14 @@ _(👀 eyes on the yellow box)_
 
 {/* id:3 */}
 
-- **Absolute**: The element is positioned base on it first non-static ancestor element.
+- **Absolute**: The element is positioned based on it first non-static ancestor element.
 
   - This means it will find the closet non-static wrapper to be it **anchor**.
-    Then like relative, it will be move base on it anchor.
+    Then like a relative, it will be move base on its anchor.
 
   - Noted that the yellow box is the child of `div id="example-element-container"` which is a static position element.
 
-  - It will then looking out to higher ancestor (wrapper) and found the whole HTML document. Hence the HTML document is its anchor.
+  - It will then look out to a higher ancestor (wrapper) and find the whole HTML document. Hence the HTML document is its anchor.
 
   - Let's move the box and see where it is compared to the dashed anchor.
 
@@ -229,7 +229,7 @@ _(👀 eyes on the yellow box)_
 </style>
 <div id="example-element-container">
   <p>
-    In this demo you can control the <code>position</code> property for the
+    In this demo, you can control the <code>position</code> property for the
     yellow box.
   </p>
   <div class="box"></div>
@@ -246,8 +246,8 @@ _(👀 eyes on the yellow box)_
 
 {/* id:4 */}
 
-- **Sticky:** Well, it stick! It will set an anchor on where it will not move pass as the user scroll.
-  - Srcoll to try yourself
+- **Sticky:** Well, it sticks! It will set an anchor that will not move past as the user scrolls.
+  - Scroll to try yourself
 
 ```html index.html focus=53
 <style>
@@ -291,7 +291,7 @@ _(👀 eyes on the yellow box)_
 </style>
 <div id="example-element-container">
   <p>
-    In this demo you can control the <code>position</code> property for the
+    In this demo, you can control the <code>position</code> property for the
     yellow box.
   </p>
   <div

@@ -124,9 +124,9 @@ If conflicting declarations can't be resolved based on their origin, the browser
 </div>
 <CH.Scrollycoding preset="https://codesandbox.io/s/intro-to-css-x1yo7u">
 
-> - ID has highest priority. If a selector has more **IDs**, it wins (that is, it's more specific).
+> - ID has the highest priority. If a selector has more **IDs**, it wins (that is, it's more specific).
 
-> - Example: the `.second` style is not applied because class selector has lower priority than ID `#first`.
+> - Example: the `.second` style is not applied because the class selector has lower priority than ID `#first`.
 
 ```html index.html
 <div>
@@ -168,7 +168,7 @@ If conflicting declarations can't be resolved based on their origin, the browser
 
 > - If that results in a tie, the selector with the most **tag names** wins.
 
-> - Example: Both declaration has the same amount of ids and classes, but `color:red` wins as it has more tag name than the other.
+> - Example: Both declarations has the same amount of ids and classes, but `color:red` wins as it has more tag name than the other.
 
 ```html index.html
 <div>
@@ -189,15 +189,15 @@ If conflicting declarations can't be resolved based on their origin, the browser
 
 #### 4. Pseudo-class selectors
 
-> - For example: `:hover` and attribute selectors (for example, `[type="input"]`) each have the same specificity as a class selector.
+> - For example: `:hover` and attribute selectors (for example, `[type="input"]`) each has the same specificity as a class selector.
 
 #### 5. The universal selector (\*) and combinators (>, +, ~) have no effect on specificity.
 
 > - If you add a declaration to your CSS and it seems to have no effect, often it's because a more specific rule is overriding it.
 
-#### 6. The order of CSS rules matter:
+#### 6. The order of CSS rules matters:
 
-> - When two rules apply that have equal specificity the one that comes last in the CSS is the one that will be used. This listing shows styles for links on a page in the "correct" order.
+> - When two rules apply that have equal specificity, the one that comes last in the CSS is the one that will be used. This listing shows styles for links on a page in the "correct" order.
 
 <br />
 <br />
