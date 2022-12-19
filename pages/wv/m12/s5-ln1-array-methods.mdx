@@ -11,13 +11,13 @@
 
 ### Array
 
-We have learned about array in the previous lesson. Can you once tell in your word what is an array in Javascript again?
+We have learned about array in the previous lesson. Can you once tell in your word what an array is in Javascript again?
 
 - JavaScript array is a data type specifically for storing **sequences of values**. An array is a special variable, which can hold more than one value at a time.
 
 ### Methods
 
-**Methods** are **functions** that allow you to manipulate the value of a particular data type or class.
+**Methods** are **functions** that allows you to manipulate the value of a particular data type or class.
 
 JavaScript comes with several built-in data types(\*) that **each have their own methods**, that allow you to interact with them in certain ways.
 
@@ -26,7 +26,7 @@ Methods allow you to perform these actions below and manipulate your values.
 For example:
 
 - Add or remove an item from an array.
-- Or inspect the properties on an object.
+- Or inspect the properties of an object.
 
 For example, methods of
 
@@ -46,15 +46,15 @@ Loop through an existing array and apply a callback function to each element tha
 
 WAIT. Can’t we already iterate through arrays with a `for` loop?! Yes, we can often accomplish the same thing using a `for` loop, but the array iteration methods do provide some good benefits!
 
-There are occasional times when it makes more sense to use a for loop over something like a forEach. We'll discuss more about this later.
+There are occasional times when it makes more sense to use a for loop over something like a forEach. We'll discuss this more later.
 
 We'll focus on these methods:
 
 - `forEach(cb)` - Calls the callback function for every element, does not return anything.
 - `find(cb)` - Filter elements through the function, return first values that make the function return true.
-- `filter(cb)` - Filter elements through the function, return all values that make the function return true.
-- `map(cb)` - Creates a new array from results of calling func for every element.
-- `reduce(cb, initialValue)` - Calculate a single value over the array by calling func for each element and passing an intermediate result between the calls.
+- `filter(cb)` - Filter elements through the function, and return all values that make the function return true.
+- `map(cb)` - Creates a new array from the results of calling function for every element.
+- `reduce(cb, initialValue)` - Calculate a single value over the array by calling function for each element and passing an intermediate result between the calls.
 
 #### Others methods
 
@@ -65,23 +65,23 @@ We'll focus on these methods:
 - `slice()` – Create a shallow copy of an array.
 - `splice()` – Add, update, and remove elements in an array.
 - `concat()` - Merges one or more arrays and returns a merged array.
-- `sort()` - Sorts the array in-place, then returns it.
-- `reverse()` - Reverses the array in-place, then returns it.
+- `sort()` - Sorts the array in place, then returns it.
+- `reverse()` - Reverses the array in place, then returns it.
 
 #### (\*) Build-in data types:
 
 - Primitive types: string, number, boolean, null, undefined
-- Composite types: object, array and function (which are all object types)
+- Composite types: object, array, and function (which are all object types)
 
 <br />
 <br />
 ## Callback Functions
 
-Before jump into the array methods, let's talk about Callback function - a type of function that we mostly use in every array methods.
+Before jumping into the array methods, let's talk about the Callback function - a type of function that we mostly use in every array methods.
 
 A callback function is **a function passed into another function as an argument**, which is then invoked inside the outer function to complete some kind of routine or action.
 
-An example of callback functions is the Event Listener function that you pass in the `addEventListener()` function.
+An example of a callback function is the Event Listener function that you pass in the `addEventListener()` function.
 
 Another example is in `setTimeout()` and `setInterval()`:
 
@@ -118,7 +118,7 @@ setTimeout(() => {
   - `setTimeout(sayHi(), 1000); // wrong`
   - That doesn’t work, because `setTimeout` expects a reference to a function. And here `sayHi()` runs the function, and the result of its execution is passed to `setTimeout`. In our case the result of `sayHi()` is `undefined` (the function returns nothing), so nothing is scheduled.
 - The callback function stays in memory until the scheduler calls it or until `clearInterval` is called. So when we don’t need the scheduled function anymore, it’s better to cancel it.
-- We will be using callback functions in our array methods. Meaning, for every iteration of the method loop, the function in argument will be call back to execute
+- We will be using callback functions in our array methods. Meaning, for every iteration of the method loop, the function in the argument will be called back to execute.
 
 <br />
 <br />
@@ -189,7 +189,7 @@ The result of the function (if it returns any) is thrown away and ignored.
 
 #### Converting a for loop to forEach:
 
-We can often achieve the same result with forEach by using for loop. But there some benefit over it. It can be say that forEach is easier to read with a lower chance of accidental errors.
+We often achieve the same result with `forEach` by using for loop. But it has some benefits. `forEach` is easier to read with a lower chance of accidental errors.
 
 Example:
 
@@ -247,7 +247,7 @@ shrimp
 coconut cream
 ```
 
-Having those two i and j variable add a lot confusion to your code.
+Having those two i and j variable add a lot of confusion to your code.
 Here is the result using forEach instead:
 
 ```javascript
@@ -268,7 +268,7 @@ foodArray.forEach((food) => {
 });
 ```
 
-Read more about other reason why we use one over other [here](https://alligator.io/js/foreach-vs-for-loops/).
+Read more about why we use one over the other [here](https://alligator.io/js/foreach-vs-for-loops/).
 
 <br />
 
@@ -277,7 +277,7 @@ Read more about other reason why we use one over other [here](https://alligator.
 <br />
 ### find()
 
-Imagine we have an array of objects. How do we find an object with the specific condition?
+Imagine we have an array of objects. How do we find an object with a specific condition?
 
 Here the [array.find(cb)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method comes in handy.
 
@@ -285,12 +285,12 @@ Here the [array.find(cb)](https://developer.mozilla.org/en-US/docs/Web/JavaScrip
 
 ```javascript
 let result = array.find(function (item, index, array) {
-  // if true is returned, item is returned and iteration is stopped
+  // if true is returned, the item is returned and iteration is stopped
   // for falsy scenario returns undefined
 });
 ```
 
-Example: find an object user in the users array that has the id equal to 1
+Example: find an object user in the users' array that has the id equal to 1
 
 ```javascript
 let users = [
@@ -313,10 +313,10 @@ console.log(user); // { id: 1, name: "John" }
 
 #### Return value:
 
-- If the `callbackFunction` return true, the `find()` method will returns the **value of first element** in the provided array that match with the provided function
-- If the `callbackFunction` return false, `undefined` is returned
+- If the `callbackFunction` returns true, the `find()` method will returns the **value of first element** in the provided array that matches with the provided function
+- If the `callbackFunction` returns false, `undefined` is returned
 
-In real life arrays of objects is a common thing, so the `find()` method is very useful.
+In real life, arrays of objects is a common thing, so the `find()` method is very useful.
 
 The [array.findIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) method is essentially the same, but it returns the index where the element was found instead of the element itself and -1 is returned when nothing is found.
 
@@ -342,7 +342,7 @@ let results = array.filter(function (element, index, array) {
 });
 ```
 
-Example: find all the object users that has the `id` lower than 3
+Example: find all the object users that have the `id` lower than 3
 
 ```javascript
 let users = [
@@ -378,8 +378,8 @@ Result:
 #### Return value:
 
 - Create a **new array**
-- If the `callbackFunction` return true, the **element is pushed** to that new array and the iteration continues till the end of the filtered array
-- If the `callbackFunction` return false, **empty array** is returned
+- If the `callbackFunction` returns true, the **element is pushed** to that new array, and the iteration continues till the end of the filtered array
+- If the `callbackFunction` returns false, **empty array** is returned
 
 <br />
 
@@ -449,7 +449,7 @@ let result = array.reduce((sum, current) => sum + current);
 console.log(result); // 15
 ```
 
-This callback Function invoke 4 times because there is **no** `initialValue`.
+This callback Function invokes 4 times because there is **no** `initialValue`.
 
 Therefore the accumulator is initialized to the first value in the array.
 ![comparison array methods](../../assets/wv/m12/reduce-no-initialValue.png)
@@ -474,13 +474,13 @@ This callback Function invoke 4 times because there is `initialValue`. Therefore
   - `element`: The current element being processed in the array
   - `index` (optional): The index of `element` in the array
   - `array` (optional): The array ` map()` was called upon
-- `initialValue` (optional): A value to which accumulator is initialized the first time the callback is called.
+- `initialValue` (optional): A value to which the accumulator is initialized the first time the callback is called.
   - If `initialValue` is specified, that also causes `element` to be initialized to the first value in the array.
-  - If `initialValue` is not specified, accumulator is initialized to the first value in the array, and `element` is initialized to the second value in the array.
+  - If `initialValue` is not specified, the accumulator is initialized to the first value in the array, and `element` is initialized to the second value in the array.
 
 #### Return value:
 
-**The value** results from running the `callbackFunction` through entire array.
+**The value** results from running the `callbackFunction` through the entire array.
 
 **Another example**: sum of value in an object array
 
@@ -539,13 +539,13 @@ The order became `1, 15, 2`, because the items are **sorted as strings** by defa
 
 #### With compareFunction
 
-CompareFunction take two arguments: firstElement and secondElement for comparison.
+CompareFunction takes two arguments: firstElement and secondElement for comparison.
 The value return from the compareFunction decides the order of elements in the array.
-The compare function should return a negative, zero, or positive value
+The compare function should return a negative, zero, or positive value.
 
 ![comparison array methods](../../assets/wv/m12/sort-order.png)
 
-- Sort a **list of objects** base on one of the attributes.
+- Sort a **list of objects** based on one of the attributes.
 
   Example:
 
@@ -608,7 +608,7 @@ The compare function should return a negative, zero, or positive value
   - If there is no `compareFunction`:
     - The array elements are converted to strings
     - Then sorted according to each character's Unicode code point value
-  - A function that defines the sort order. This function take two arguments:
+  - A function that defines the sort order. This function takes two arguments:
     - `firstElement`: the first element for comparison
     - `secondElement`: the second element for comparison
 
@@ -686,7 +686,7 @@ console.log(fruitString); //Mango,Orange,Apple
 <br />
 ### join()
 
-Also a method "join" array to string, but this time, you can specify the separator
+Also, a method "join" array to string, but this time, you can specify the separator.
 
 ##### Syntax:
 
@@ -705,7 +705,7 @@ console.log(fruitString); //Mango-Orange-Apple
 ##### Return value:
 
 - A string of array values (with specified separator)
-- `arrayl.length === 0` , return empty string
+- `arrayl.length === 0` , return an empty string
 
 **Transform the array:**
 
@@ -716,7 +716,7 @@ console.log(fruitString); //Mango-Orange-Apple
 <br />
 ### push()
 
-A method that adds one or more elements to the end of an array and return a length of the array
+A method that adds one or more elements to the end of an array and returns the length of the array
 
 ##### Syntax:
 
@@ -794,7 +794,7 @@ console.log(fruits); // [ 'Mango', 'Orange', 'Avocado' ]
 <br />
 #### shift()
 
-`shift()` is a method just like `pop()` but instead of removing the last element from an array, `shift()` remove the first element. Read more about shift [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+`shift()` is a method just like `pop()` but instead of removing the last element from an array, `shift()` removes the first element. Read more about shift [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 
 <br />
 
@@ -803,7 +803,7 @@ console.log(fruits); // [ 'Mango', 'Orange', 'Avocado' ]
 <br />
 ### slice()
 
-- A method that return a shallow copy of a portion of an array into a **new array** selected from `startIndex` to `endIndex` (end not included).
+- A method that returns a shallow copy of a portion of an array into a **new array** selected from `startIndex` to `endIndex` (end not included).
 - `startIndex` and `endIndex` represent the index of items in that array.
 - The original array will **not be modified**.
 
@@ -838,7 +838,7 @@ console.log(sliceFruit4); //[ 'Avocado' ]
 
 ##### Return value:
 
-- Create a new array that contain the extracted elements
+- Create a new array that contains the extracted elements
 
 <br />
 
@@ -847,7 +847,7 @@ console.log(sliceFruit4); //[ 'Avocado' ]
 <br />
 ### splice()
 
-A method modify the contents of an array by
+A method modifies the contents of an array by
 
 - removing
 - replacing existing elements
@@ -890,7 +890,7 @@ console.log(fruits); // [ 'Mango', 'Apple', 'Lychee', 'Lemon' ]
 <br />
 ### concat()
 
-A method use to merge two or more arrays and return a new array
+A method uses to merge two or more arrays and return a new array
 
 ##### Syntax:
 
@@ -936,7 +936,7 @@ console.log(addSingleFruit); //[ 'Mango', 'Orange', 'Strawberry', 'Coconut', 'Le
 
 #### split()
 
-- A method method divides a String into an _ordered list of substrings_
+- A method divides a String into an _ordered list of substrings_
 - Then puts these substrings into an array, and returns the array.
 - The division is done by searching for a **pattern**;
 - The pattern is provided as the first **parameter** in the method's call.
@@ -1028,7 +1028,7 @@ const stringArray = [...randomString]; //[ 'H','e','l','l','o',' ','W','o','r','
 <br />
 ### Convert string to array:
 
-There are 3 methods we can use here
+There are 3 methods we can use here.
 
 #### Object.keys()
 

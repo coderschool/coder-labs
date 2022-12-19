@@ -2,7 +2,10 @@
   src="https://i.imgur.com/dpd20EG.png"
   style={{ width: "60px", float: "right" }}
 />
-# Question 1:
+
+# Assignment Solutions - ES6
+
+## Question 1:
 
 ```js
 What is the error after running these codes:
@@ -20,13 +23,17 @@ C. country is not defined
 D. undefined
 ```
 
-## Answer:
+### Answer:
 
-```
- D. undefned
+```js
+// D. undefined
 ```
 
-# Question 2:
+---
+
+<br />
+
+## Question 2:
 
 ```js
 Choose the option(s) that will return 15 Le Thanh Ton, district 1, HCMC, Vietnam
@@ -52,13 +59,18 @@ C. const { city, country, address.number, address.street, address.district } = o
 D. const obj = { city, country, address:{number, street, district}}
 ```
 
-## Answer:
+### Answer:
 
-```
-A. const  city, country, address:{number, street, district}} = obj
+```js
+// A.
+const city, country, address:{number, street, district}} = obj
 ```
 
-# Question 3:
+---
+
+<br />
+
+## Question 3:
 
 ```js
 Add in a line of code so that getFoodItems().mango returns "mango".
@@ -88,24 +100,27 @@ D. const [[], [mango]] = food
 
 ```
 
-## Answer:
-
-```
-A. const [[],[apple, mango]] = food
-B. const [,[, mango]] = food
-C. const [,[, mango, orange]] = food
-
-```
-
-# Question 4:
+### Answer:
 
 ```js
+// A, B, C
+const [[], [apple, mango]] = food;
+const [, [, mango]] = food;
+const [, [, mango, orange]] = food;
+```
 
+---
+
+<br />
+
+## Question 4:
+
+```js
 Which of the options below will return true?
-function restParams(first,...rest)
-{
-console.log(rest);
-return rest[0] === 1 && rest[1] === 2;
+
+function restParams(first,...rest) {
+  console.log(rest);
+  return rest[0] === 1 && rest[1] === 2;
 }
 
 A. restParams(0, 1, 2)
@@ -115,51 +130,53 @@ D. restParams(1, 2, 3)
 
 ```
 
-## Answer:
-
-```
-A. restParams(0, 1, 2)
-
-```
-
-# Question 5:
+### Answer:
 
 ```js
+// A. restParams(0, 1, 2)
+```
 
+---
+
+<br />
+
+## Question 5:
+
+```js
 Which of the options for the value of obj below will make isAdult(obj) return true?
 
-function isAdult({name, address, ...rest})
-{
-return rest.age >= 18;
+function isAdult({name, address, ...rest}) {
+  return rest.age >= 18;
 }
 
 A. { name : "Jon", address : "Earth", age : 30 }
 B. { age : 30, address : "Earth", name : "Jon" }
 C. { rest: { age : 30 } }
 D. { age: 30 }
-
 ```
 
-## Answer:
-
-```
-A. { name : "Jon", address : "Earth", age : 30 }
-B. { age : 30, address : "Earth", name : "Jon" }
-D. { age: 30 }
-
-```
-
-# Question 6:
+### Answer:
 
 ```js
+// A. { name : "Jon", address : "Earth", age : 30 }
+// B. { age : 30, address : "Earth", name : "Jon" }
+// D. { age: 30 }
+```
 
+---
+
+<br />
+
+## Question 6:
+
+```js
 Join the arrays with one of the options below. The expected result is [ 0, 1, 2, 3, 4, 5, 6].
 
-function concatenateArray(){
-const arr1 = [0,1,2,3];
-const arr2 = [4,5,6];
-//YOUR CODE HERE
-return result;
+function concatenateArray() {
+  const arr1 = [0,1,2,3];
+  const arr2 = [4,5,6];
+  //YOUR CODE HERE
+  return result;
 }
 
 A. const result = arr1 + arr2
@@ -169,14 +186,18 @@ D. const result = [arr1, ...arr2]
 
 ```
 
-## Answer:
+### Answer:
 
 ```
 B. const result = [...arr1, ...arr2]
 
 ```
 
-# Question 7:
+---
+
+<br />
+
+## Question 7:
 
 ```js
 
@@ -186,12 +207,12 @@ Note that the only difference is their first names and it must stay that way.
 Note: Choose all that applies.
 
 const personA = {
-firstName:"Bran",
-lastName: "Stark",
-gender:"male",
-house:"Stark",
-father:"Eddard Stark",
-mother: "Catelyn Tully"
+  firstName:"Bran",
+  lastName: "Stark",
+  gender:"male",
+  house:"Stark",
+  father:"Eddard Stark",
+  mother: "Catelyn Tully"
 }
 
 A. const personB = { ...personA, firstName: "Robb"}
@@ -201,12 +222,11 @@ D. const personB = { firstName: "Robb", ...personA }
 
 ```
 
-## Answer:
+### Answer:
 
-```
-A. const personB = { ...personA, firstName: "Robb"}
-C. const personB = {...personA}; personB.firstName = "Robb"
-
+```js
+// A. const personB = { ...personA, firstName: "Robb"}
+// C. const personB = {...personA}; personB.firstName = "Robb"
 ```
 
 <br />
