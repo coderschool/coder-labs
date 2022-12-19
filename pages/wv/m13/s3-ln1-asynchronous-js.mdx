@@ -21,10 +21,10 @@ console.log(promise);
 // Promise { <pending> }
 ```
 
-The function passed to `new Promise` is called the **executor**. When `new Promise` is created, the executor runs automatically. Its arguments `resolve` and `reject` are callbacks provided by JavaScript itself. Our code is only inside the executor. When the executor obtains the result, be it soon or late, doesn’t matter, it should call one of these callbacks:
+The function passed to `new Promise` is called the **executor**. When `new Promise` is created, the executor runs automatically. Its arguments `resolve` and `reject` are callbacks provided by JavaScript itself. Our code is only inside the executor. When the executor obtains the result, be it sooner or later, doesn’t matter, it should call one of these callbacks:
 
 - `resolve(value)`: if the job finished successfully, with result value.
-- `reject(error)`: if an error occurred, error is the error object.
+- `reject(error)`: if an error occurred, `error` is the error object.
 
 **Consumers: then, catch, finally**
 
@@ -83,7 +83,7 @@ let promise = new Promise(function (resolve, reject) {
 promise.catch(console.log); // shows "Error: Whoops!" after 1 second
 ```
 
-The call `.finally(cb)` means that the function `cb` (callback) always runs when the promise is settled (resolve or reject). `finally` is good handler for performing cleanup.
+The call `.finally(cb)` means that the function `cb` (callback) always runs when the promise is settled (resolve or reject). `finally` is a good handler for performing cleanup.
 
 ## Async/await
 
@@ -119,7 +119,7 @@ async function f() {
 f();
 ```
 
-The function execution “pauses” at the line (\*) and resumes when the promise settles, with result becoming its result. So the code above shows “done!” in one second.
+The function execution “pauses” at the line (\*) and resumes when the promise settles, with `result` becoming its result. So the code above shows “done!” in one second.
 
 Let’s emphasize: await literally suspends the function execution until the promise settles, and then resumes it with the promise result. That doesn’t cost any CPU resources, because the JavaScript engine can do other jobs in the meantime: execute other scripts, handle events, etc.
 
@@ -163,7 +163,7 @@ let promise = fetch(url, [options]);
 
 `fetch()` return a `promise` which resolves with an object of the built-in [Response](https://fetch.spec.whatwg.org/#response-class) class as soon as the server responds with headers.
 
-To the the response body, we need to use an additional method call
+To the response body, we need to use an additional method call.
 
 ```javascript
 let response = await fetch(url);
@@ -216,7 +216,7 @@ The `await` keyword before a promise makes JavaScript wait until that promise se
 - If it’s an error, the exception is generated — same as if `throw error` were called at that very place.
 - Otherwise, it returns the result.
 
-Together they provide a great framework to write asynchronous code that is easy to both read and write.
+Together they provide a great framework for writing asynchronous code that is easy to both read and write.
 
 With `async/await` we rarely need to write`promise.then/catch`, but we still shouldn’t forget that they are based on promises, because sometimes (e.g. in the outermost scope) we have to use these methods. Also `Promise.all` is nice when we are waiting for many tasks simultaneously.
 

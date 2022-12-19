@@ -10,29 +10,29 @@
 
 ## Intro
 
-Let's read the requirements of the app in the `README.md` of [this assignment](https://codesandbox.io/s/holidates-m5ryd)
+Let's read the requirements of the app in the `README.md` of [this assignment](https://codesandbox.io/s/holidates-m5ryd).
 
-Now let have a walk through for the first part of the app: Render list of countries
+Now let's have a walk-through for the first part of the app: Render a list of countries.
 
-The API we are going to use is [Holiday API](https://holidayapi.com/)
+The API we are going to use is [Holiday API](https://holidayapi.com/).
 
 ## Get the API KEY
 
-This work flow below will help you to get the API KEY [here](https://scribehow.com/shared/Holidayapi_Workflow___pESClYFSimE_s3wy4DfgQ)
+This workflow below will help you to get the API KEY [here](https://scribehow.com/shared/Holidayapi_Workflow___pESClYFSimE_s3wy4DfgQ).
 
-Create a new variable called `API_KEY` that holds the KEY from holiday API
+Create a new variable called `API_KEY` that holds the KEY from the holiday API.
 
-In `script.js`
+In `script.js`:
 
 ```js
 const API_KEY = "3c1cd2cf-20e8-4754-a2e3-97be772752b4";
 ```
 
-> Note: the API KEY in the code snippet is the fake one, you have to follow those steps above to get your own KEY
+> Note: the API KEY in the code snippet is the fake one; you have to follow those steps above to get your own KEY
 
 ## Handle the event `click`
 
-In our website, we've already had the button `Render Countries list` that will help to render the list of countries (from the API) after being clicked.
+On our website, we've already had the button `Render Countries list` that will help to render the list of countries (from the API) after being clicked.
 
 Now we need to find that button element, then add a handler function that will be invoked whenever we click the button.
 
@@ -50,13 +50,13 @@ With the API KEY, we are now able to fetch data from Holiday API. But first, let
 
 ![list of countries](../../assets/wv/m13/holidates-0.png)
 
-"Retrieves a list countries with states and provinces."
+"Retrieves a list of countries with states and provinces."
 
-This is what we want. So based on the documentation, the url is `https://holidayapi.com/v1/countries`.
+This is what we want. So based on the documentation, the URL is `https://holidayapi.com/v1/countries`.
 
 Also notice that, there is a "Required Request Parameters", which is the API KEY.
 
-Now base on that, let's create a `getCountries` function that returns the data we need.
+Now based on that, let's create a `getCountries` function that returns the data we need.
 
 In `script.js`
 
@@ -79,15 +79,15 @@ const getCountries = async () => {
 
 Feel free to read and add more optional queries to retrieve the specific data that you want.
 
-## Render list of countries
+## Render a list of countries
 
 Create a function `renderCountries` that:
 
-1. Fetch all the countries by using function `getCountries`
+1. Fetch all the countries by using the function `getCountries`
 2. Find the element with the id `countries-list`
 3. Take out the `ul` element
 4. Delete the sample inside `ul` element
-5. Loop through the list of countries, create new `li` for each of them. Then append them to the `ul` element
+5. Loop through the list of countries, and create new `li` for each of them. Then append them to the `ul` element
 
 ```javascript
 const renderCountries = async () => {
@@ -123,7 +123,7 @@ const renderCountries = async () => {
 };
 ```
 
-Now let combine them all, fire the function `renderCountries` whenever we click the button `Render Country List`
+Now let's combine them all, fire the function `renderCountries` whenever we click the button `Render Country List`
 
 In `script.js`
 
@@ -156,7 +156,7 @@ document.getElementById("countries-list-btn").addEventListener("click", () => {
 
 ## Next Steps
 
-By now, you are able to handle event, fetch data and render it to the screen the list of countries. It's your turn to continue on the story.
+By now, you can handle events, fetch data, and render the list of countries to the screen. It's your turn to continue on the story.
 
 [Link README](https://codesandbox.io/s/holidates-m5ryd)
 

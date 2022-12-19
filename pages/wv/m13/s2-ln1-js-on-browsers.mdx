@@ -12,7 +12,7 @@
 
 In this session, we will learn JS as a way to add interactivity to a page. Whereas the "structural" layer of a page is the HTML markup, and the "presentational" layer of a page is made up of CSS, the third "behavioral" layer is made up of JavaScript.
 
-All of the elements, attributes, and text on a web page can be accessed by scripts using the DOM (Document Objet Model).
+All of the elements, attributes, and text on a web page can be accessed by scripts using the DOM (Document Object Model).
 
 ## Adding JavaScript to a page
 
@@ -32,7 +32,7 @@ As with CSS, you can embed a script right in a document or keep it in an externa
 
 As with CSS, we prefer external scripts.
 
-**Script placement**: For most scripts, the end of the document, just before the `&lt;/body&gt;` tag, is the prefered placement because the browser will be done parsing the document and its DOM structure.
+**Script placement**: For most scripts, the end of the document, just before the `&lt;/body&gt;` tag, is the preferred placement because the browser will be done parsing the document and its DOM structure.
 
 ## Document Object Model (DOM)
 
@@ -77,7 +77,7 @@ Methods for accessing nodes in the document:
 var paragraphs = document.getElementsByTagName("p");
 ```
 
-Then `paragraphs` is a collection of nodes or node list. `paragraphs[0]` is a reference to the first paragraph in the document, `paragraphs[1]` refers to the second, and so on.
+Then `paragraphs` is a collection of nodes. `paragraphs[0]` is a reference to the first paragraph in the document, `paragraphs[1]` refers to the second, and so on.
 
 **getElementById()**
 
@@ -112,7 +112,7 @@ var textInput = document.querySelectorAll("input[type='text']");
 
 ### Accessing an attribute value
 
-To get the value of an attribute attached to an element node, we call **getAttribute()`** with a single argument: the attribute nae.
+To get the value of an attribute attached to an element node, we call **getAttribute()`** with a single argument: the attribute name.
 
 ```html
 <img src="photo.jpg" alt="another cat" id="cat-photo" />
@@ -125,7 +125,7 @@ alert(catImage.getAttribute("src")); // Alerts "photo.jpg".
 
 ### Manipulating Nodes
 
-Once we’ve accessed a node by using one of the methods discussed previously, the DOM gives us several built-in methods for manipulating those elements, their attributes, and their contents.
+Once we’ve accessed a node using one of the previously discussed methods, the DOM gives us several built-in methods for manipulating those elements, their attributes, and their contents.
 
 **setAttribute()**
 
@@ -255,7 +255,7 @@ parentDiv.removeChild(removeMe);
 
 ## Events
 
-An event is an action that can be detected with JavaScript, such as when user clicks an element or just moves the mouse over it. There are 3 ways to register event handlers for a DOM element.
+An event is an action that can be detected with JavaScript, such as when the user clicks an element or just moves the mouse over it. There are 3 ways to register event handlers for a DOM element.
 
 - As an HTML attribute
 

@@ -34,7 +34,7 @@ Demo:
 
 **Optional**:
 
-- Add the ability to chaining operations (e.g. `1 + 2 + 3 - 4`) and display the result after each operation (check the demo).
+- Add the ability to chain operations (e.g. `1 + 2 + 3 - 4`) and display the result after each operation (check the demo).
 - Make the calculator work properly when you click any operator twice (or more). For example, you click `1` then `+`, then `2`, then `+`, then `+` again.
 - Soft reset the calculator when there's an error (e.g. NaN) so that we can use the calculator again by clicking any number without having to refresh the page.
 - Make the DEL button work as expected.
@@ -42,7 +42,7 @@ Demo:
 
 ### Submission:
 
-You can work on an online editor like [CodeSandbox](https://codesandbox.io/) or work locally with Visual Studio Code then push to Github. Then submit the project link to CoderSchool.
+You can work on an online editor like [CodeSandbox](https://codesandbox.io/) or work locally with Visual Studio Code, then push it to Github. Then submit the project link to CoderSchool.
 
 ## UI: Specifications
 
@@ -96,7 +96,7 @@ body {
 
 ![cal png 1](../../assets/wv/m13/cal-1.png)
 
-Notice that in the design, the calculator is centered in the middle of the page. Let's move our "calculator" there. But before you do, if you inspect, you will see the real body is only this tall and has some weird margin:
+Notice that in the design, the calculator is centered in the middle of the page. Let's move our "calculator" there. But before you do, if you inspect, you will see the real body is only this tall and has some weird margins:
 ![cal png 2](../../assets/wv/m13/cal-2.png)
 
 We cannot center the "calculator" vertically if there's no height space, so we need to increase this height to the maximum available to us.
@@ -111,15 +111,15 @@ Now you can center the "calculator" vertically and horizontally with flexbox.
 
 - Center the calculator with flexbox.
 
-Notice that there's scrollbar which we don't want. Check what element is pushing the body to exceed the height of the browser.
+Notice that there's a scrollbar which we don't want. Check what element is pushing the body to exceed the height of the browser.
 
 - Get rid of the scrollbar.
 
-When you're done, we can move on to the creating and styling the calculator!
+We can move on to creating and styling the calculator when you're done!
 
 ## UI: Responsiveness
 
-When we develop a website, we need to especially take responsiveness into consideration too because most users will use their mobile devices to access your website/app.
+When we develop a website, we need to consider responsiveness because most users will use their mobile devices to access your website/app.
 
 If you set a fixed width of 400px, on mobile devices with a screen size of less than 400px, the devices won't be able to display the full page/app and there will be a vertical scroll, which negatively affects the experience of the users. Therefore we should avoid this.
 
@@ -135,7 +135,7 @@ Check it out! Now the website is truly responsive![cal 3](../../assets/wv/m13/ca
 
 Next, let's add the buttons. we can divide the buttons into rows. Each row consists of a maximum of 4 buttons.
 
-- Use flexbox to make each of the button occupy 25% width of the button area (including margin/padding).
+- Use flexbox to make each of the buttons occupy 25% width of the button area (including margin/padding).
 
 Hint: Use `flex-basis`. As `flex-basis` doesn't take margin into account, it's best to wrap each button in a `button-wrapper` div so we can make this div exactly 25%. Try it with and without the button wrapper div to see.
 
@@ -249,7 +249,7 @@ let num2 = "";
 let operator = null;
 ```
 
-The reason `num1` and `num2` are empty strings is because when we input `1` then `2`, we want `12` not `3`, and `string` is perfect for this, unlike `number`.
+The reason `num1` and `num2` are empty strings is that when we input `1` then `2`, we want `12` not `3`, and `string` is perfect for this, unlike `number`.
 
 As for operator, it doesn't have to be `null`. We just need to be able to tell whether or not the user have selected an operator and which one they selected.
 
