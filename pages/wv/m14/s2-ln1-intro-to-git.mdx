@@ -5,9 +5,9 @@
 
 # Intro to Git & Github
 
-Github, in a nutshell, is the way to share files with other people collaboratively without overwriting other people’s stuff. Github is sort of a community, and there are a lot of open-source projects, which means the project’s code is available to look at. Github is a web-based platform, and it bases on a technology called Git, G-I-T.
+GitHub, in a nutshell, is the way to share files with other people collaboratively without overwriting other people’s stuff. GitHub is sort of a community, and there are many open-source projects, meaning the project’s code is available to look at. GitHub is a web-based platform based on a technology called Git, G-I-T.
 
-Git is a piece of software called version control. It is a fancy way of saying Keeps track of changes to code. Git has a lot of other features that are useful for software developers. So if you’re programming, eventually you have to learn Git at some point.
+Git is a piece of software called version control. It is a fancy way of saying it Keeps track of code changes. Git has a lot of other features that are useful for software developers. So if you’re programming, eventually, you have to learn Git at some point.
 
 **Learn Git with visualization:** [https://learngitbranching.js.org/](https://learngitbranching.js.org/)
 
@@ -29,7 +29,7 @@ git init
 
 > Why do we need to turn a folder into a git repository?
 
-> - Turning a normal folder into a git repo will help us keep track of changes happened between files within the folder. We can see a history of changes amongst many developers who are working on the same repo.
+> -Turning a regular folder into a git repo will help us keep track of changes between files within the folder. We can see a history of differences amongst many developers working on the same repo.
 
 > > <img style={{ width: "600px" }} src="https://i.imgur.com/undHVSv.png" />
 
@@ -39,13 +39,13 @@ git init
 
 ---
 
-**2. A helpful command, to see what’s currently going on in the git repo**
+**2. A helpful command to see what’s currently going on in the git repo**
 
 > What `git status` show us?
 >
-> - What branch we are in: `On branch master`
+> - What branch are we in: `On branch master`
 > - What commits we have made: `No commits yet`
-> - What files that have been created but havent been added or committed: `Untracked files`
+> - What files have been created but haven't been added or committed: `Untracked files`
 
 > > <img style={{ width: "600px" }} src="https://i.imgur.com/WZVHWgG.png" />
 
@@ -55,15 +55,15 @@ git status
 
 ---
 
-**3. Adds a file to “staging area”.**
+**3. Adds a file to the “staging area”.**
 
-> Which means telling git to include the file in the next time it saves a version of the repo. `git add .` to add all changed files.
+> This means telling git to include the file in the next time it saves a repo version. `git add .` to add all changed files.
 >
-> - After, adding the `example.txt` file, let's `git status` to check what changes have been made.
+> - After adding the `example.txt` file, let's `git status` to check what changes have been made.
 
 > > <img style={{ width: "600px" }} src="https://i.imgur.com/fOAVJLr.png" />
 
-> - Or you can just `git add .` to add all the files have been created.
+> - Or you can `git add .` to add all the files that have been created.
 
 > > <img style={{ width: "600px" }} src="https://i.imgur.com/Fgfw8wp.png" />
 
@@ -76,11 +76,11 @@ git add .
 
 **4. Saves the version of the repository with a message.**
 
-> After, the file is added, let's `commit` that changes to the repo. Why do you need to [commit](https://www.w3schools.com/git/git_commit.asp#:~:text=Adding%20commits%20keep%20track%20of,should%20always%20include%20a%20message.)?
+> After the file is added, let's `commit` that changes to the repo. Why do you need to [commit](https://www.w3schools.com/git/git_commit.asp#:~:text=Adding%20commits%20keep%20track%20of,should%20always%20include%20a%20message.)?
 >
-> - Most of the time, when you made changes in a file, it's a good practice to left a message on what have been done. Especially, when you are working with a team of developers.
-> - After commit, let's check again with `git status`
-> - `nothing to commit` shows how all your changes have been committed and ready for other teammates to read.
+> - Most of the time, when you make changes in a file, it's a good practice to left a message on what has been done. Especially when you are working with a team of developers.
+> - After commit, let's check again with `git status`.
+> - `nothing to commit` shows how all your changes have been committed and are ready for other teammates to read.
 
 > > <img style={{ width: "600px" }} src="https://i.imgur.com/VWjUo68.png" />
 
@@ -92,7 +92,7 @@ git commit -m "Your message here"
 
 **5. To see all the actions you have done**
 
-> To see all the version that you have saved and you can see the commit message is a very good indicator or reminder of what was changed in a particular version. So make sure you use good commit messages.
+> To see all the versions you have saved, you can see that the commit message is a very good indicator or reminder of what was changed in a particular version. So make sure you use good commit messages.
 
 > - After `git log`, you will be taken to a different view.
 > - To exit this viewport : `:q`
@@ -131,7 +131,7 @@ git reset --hard <commit>
 <br />
 ## Working with branches
 
-Branch is a version of the repository. Each branch has its own commit history and current version.
+A branch is a version of the repository. Each branch has its own commit history and current version.
 
 <CH.Spotlight>
 
@@ -189,7 +189,7 @@ git merge <branch_name>
 <br />
 <br />
 <br />
-## Working with online remote repository
+## Working with online remote repositories
 
 <CH.Spotlight>
 
@@ -211,9 +211,9 @@ git clone <url>
 
 ---
 
-**2. Pushes the changes I made on my computer up to the Github repo**
+**2. Pushes the changes I made on my computer up to the GitHub repo**
 
-> - After making changes to the file, let's push to the remote repo so everybody could clone, read and fix your code.
+> - After making changes to the file, let's push to the remote repo so everybody can clone, read and fix your code.
 > - `origin`: the remote you want to push to.
 > - `main`: name of the branch you want to push to.
 > - If the branch is up-to-date and there is nothing else to push.
@@ -226,9 +226,9 @@ git push -u origin main
 
 ---
 
-**3. Is opposite of git push, pull the most recent version of the online repository.**
+**3. Is the opposite of git push, pull the most recent version of the online repository.**
 
-> - There will be more than one developer working on repo, remember to `pull` every now and then so that you can see the updates from other teammates.
+> - There will be more than one developer working on the repo, remember to `pull` every now and then so that you can see the updates from other teammates.
 
 > > <img style={{ width: "600px" }} src="https://i.imgur.com/34fd5PB.png" />
 
