@@ -238,10 +238,10 @@ const randomData = ["hello", true, 100, denver, [1, 2, 3]];
 `for` loops are commonly used to iterate over the items in an array. To do this, we use the property length and call it on the variable associated with the array we want to iterate over. This property returns the length of, or the number of elements in, an array.
 
 ```js
-var fruits = ["apples", "oranges", "bananas"];
+const fruits = ["apples", "oranges", "bananas"];
 
 function listFruits() {
-  for (var i = 0; i < fruits.length; i++) {
+  for (let i = 0; i < fruits.length; i++) {
     console.log("I have some " + fruits[i]);
   }
 }

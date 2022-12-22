@@ -74,7 +74,7 @@ Methods for accessing nodes in the document:
 **getElementsByTagName()**
 
 ```javascript
-var paragraphs = document.getElementsByTagName("p");
+const paragraphs = document.getElementsByTagName("p");
 ```
 
 Then `paragraphs` is a collection of nodes. `paragraphs[0]` is a reference to the first paragraph in the document, `paragraphs[1]` refers to the second, and so on.
@@ -86,7 +86,7 @@ Then `paragraphs` is a collection of nodes. `paragraphs[0]` is a reference to th
 ```
 
 ```javascript
-var photo = document.getElementById("cat-photo");
+const photo = document.getElementById("cat-photo");
 ```
 
 This method returns a single element based on that element’s ID.
@@ -94,7 +94,7 @@ This method returns a single element based on that element’s ID.
 **getElementsByClassName()**
 
 ```javascript
-var firstColumn = document.getElementsByClassName("column-a");
+const firstColumn = document.getElementsByClassName("column-a");
 ```
 
 Like `getElementsByTagName()`, this returns a node list that we can reference by index or loop through one at a time.
@@ -104,8 +104,8 @@ Like `getElementsByTagName()`, this returns a node list that we can reference by
 `querySelectorAll()` allows you to access nodes of the DOM based on a CSS-style selector.
 
 ```javascript
-var sidebarPara = document.querySelectorAll(".sidebar p");
-var textInput = document.querySelectorAll("input[type='text']");
+const sidebarPara = document.querySelectorAll(".sidebar p");
+const textInput = document.querySelectorAll("input[type='text']");
 ```
 
 `querySelectorAll()` returns a nodeList, even if the selector matches only a single element.
@@ -119,7 +119,7 @@ To get the value of an attribute attached to an element node, we call **getAttri
 ```
 
 ```javascript
-var catImage = document.getElementById("cat-photo");
+const catImage = document.getElementById("cat-photo");
 alert(catImage.getAttribute("src")); // Alerts "photo.jpg".
 ```
 
@@ -130,7 +130,7 @@ Once we’ve accessed a node using one of the previously discussed methods, the 
 **setAttribute()**
 
 ```javascript
-var catImage = document.getElementById("cat-photo");
+const catImage = document.getElementById("cat-photo");
 catImage.setAttribute("src", "another_cat.jpg");
 ```
 
@@ -141,7 +141,7 @@ This method requires two arguments: the attribute to be changed and the new valu
 `innerHTML` gives us a simple method for accessing and changing the text and markup inside an element.
 
 ```javascript
-var introDiv = document.getElementsByClassName("intro");
+const introDiv = document.getElementsByClassName("intro");
 introDiv[0].innerHTML = "<p>This is our intro text</p>";
 ```
 
@@ -163,7 +163,7 @@ The DOM also allows developers to change the document structure itself by adding
 **createElement()**
 
 ```javascript
-var newDiv = document.createElement("div");
+const newDiv = document.createElement("div");
 ```
 
 This function accepts a single argument: the element to be created. Once we create an element in this way, that new element remains floating in the JavaScript ether until we add it to the document. Think of it as creating a reference to a new element that lives purely in memory
@@ -173,7 +173,7 @@ This function accepts a single argument: the element to be created. Once we crea
 If we want to enter text into either an element we’ve created or an existing element on the page, we can call the createTextNode() method. This creates a reference to the new text node that we can store in a variable and add to the page when the time comes.
 
 ```javascript
-var ourText = document.createTextNode("This is our text.");
+const ourText = document.createTextNode("This is our text.");
 ```
 
 **appendChild()**
@@ -185,9 +185,9 @@ This method takes a single argument: the node you want to add to the DOM. You ca
 ```
 
 ```javascript
-var ourDiv = document.getElementById("our-div");
-var newParagraph = document.createElement("p");
-var copy = document.createTextNode("Hello, world!");
+const ourDiv = document.getElementById("our-div");
+const newParagraph = document.createElement("p");
+const copy = document.createTextNode("Hello, world!");
 
 newParagraph.appendChild(copy);
 ourDiv.appendChild(newParagraph);
@@ -204,10 +204,10 @@ The insertBefore() method, as you might guess, inserts an element before another
 ```
 
 ```javascript
-var ourDiv = document.getElementById("our-div");
-var para = document.getElementById("our-paragraph");
-var newHeading = document.createElement("h1");
-var headingText = document.createTextNode("A new heading");
+const ourDiv = document.getElementById("our-div");
+const para = document.getElementById("our-paragraph");
+const newHeading = document.createElement("h1");
+const headingText = document.createTextNode("A new heading");
 newHeading.appendChild(headingText); // Add our new text node to the new heading
 
 ourDiv.insertBefore(newHeading, para);
@@ -222,11 +222,11 @@ The `replaceChild()` method replaces one node with another and takes two argumen
 ```
 
 ```javascript
-var ourDiv = document.getElementById("our-div");
-var swapMe = document.getElementById("swap-me");
+const ourDiv = document.getElementById("our-div");
+const swapMe = document.getElementById("swap-me");
 
 // Create a new image element
-var newImg = document.createElement("img");
+const newImg = document.createElement("img");
 // Give the new image a "src" attribute
 ourDiv.replaceChild(newImg, swapMe);
 newImg.setAttribute("src", "path/to/image.jpg");
@@ -247,8 +247,8 @@ The method is always called on the parent element of the element to be removed (
 ```
 
 ```javascript
-var parentDiv = document.getElementById("parent");
-var removeMe = document.getElementById("remove-me");
+const parentDiv = document.getElementById("parent");
+const removeMe = document.getElementById("remove-me");
 // Removes the div with the id "remove-me" from the page.
 parentDiv.removeChild(removeMe);
 ```
