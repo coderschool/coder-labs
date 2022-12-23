@@ -10,7 +10,7 @@
 
 ## Express
 
-It's time to build a backend. We'll do so by using a NPM package named [Express](https://expressjs.com/).
+It's time to build a backend. We'll do so by using a NPM package named <a href="https://expressjs.com/" target="_blank">Express</a>.
 
 ### Web Applications
 
@@ -84,7 +84,7 @@ app.use("/news", indexRouter);
 
 CORS is a node.js package for providing a Connect / Express middleware that can be used to enable CORS with various options
 It helps us disable CORS error.
-Readmore [here](https://github.com/expressjs/cors#:~:text=CORS%20is%20a%20node.js%20package%20for%20providing%20a,with%20various%20options.%20Follow%20me%20%28%40troygoode%29%20on%20Twitter%21)
+Readmore <a href="https://github.com/expressjs/cors#:~:text=CORS%20is%20a%20node.js%20package%20for%20providing%20a,with%20various%20options.%20Follow%20me%20%28%40troygoode%29%20on%20Twitter%21" target="_blank">here</a>
 
 ### Morgan Logger
 
@@ -94,7 +94,7 @@ Morgan is an HTTP request logger middleware for node.js
 Create a new morgan logger middleware function using the given format and options. The format argument may be a string of a predefined name (see below for the names), a string of a format string, or a function that will produce a log entry.
 
 The format function will be called with three arguments `tokens`, `req`, and `res`, where `tokens` is an object with all defined tokens, req is the HTTP request, and res is the HTTP response. The function is expected to return a string that will be the logline or undefined/null to skip logging.
-Readmore [here](https://www.npmjs.com/package/morgan)
+Readmore <a href="https://www.npmjs.com/package/morgan" target="_blank">here</a>
 
 ### Path
 
@@ -105,13 +105,13 @@ For example, different operating systems will have different syntaxes to navigat
 - Window: ~\FolderA\FolderB\text.txt
 - Linux: ~/FolderA/FolderB/text.txt
 
-Readmore [here](https://javascript.plainenglish.io/path-module-in-node-js-46a244a9e47b)
+Readmore <a href="https://javascript.plainenglish.io/path-module-in-node-js-46a244a9e47b" target="_blank">here</a>
 
 ### Cookie parser
 
 This module help exposes the cookies sent along with client request. Which may use to help authorization, cache, ...
 Parse Cookie header and populate `req.cookies` with an object keyed by the cookie names. Optionally you may enable signed cookie support by passing a secret string, which assigns `req.secret` so it may be used by other middleware.
-Readmore [here](http://expressjs.com/en/resources/middleware/cookie-parser.html)
+Readmore <a href="http://expressjs.com/en/resources/middleware/cookie-parser.html" target="_blank">here</a>
 
 ## Express API Routes management
 
@@ -146,7 +146,7 @@ Since we are working with multiple files in our codebase, we must understand how
 
 ### Flowchart: Execution
 
-Here is [A flow chart on how Express file work](https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing) that may help us to visualize the process of the files
+Here is <a href="https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing" target="_blank">A flow chart on how Express file work</a> that may help us to visualize the process of the files
 
 <br />
 
@@ -212,7 +212,7 @@ So it doesn't really matter if your "main" handler (the one that returns 200) wa
 
 Remember that node is async, so it can't know when the first handler's callback has finished. You have to tell it by calling next().
 
-Again here is [A flow chart on how Express file work](https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing) that may help us to visualize the process of the files
+Again here is <a href="https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing" target="_blank">A flow chart on how Express file work</a> that may help us to visualize the process of the files
 
 ### Error handling
 
@@ -228,7 +228,7 @@ app.use((err, req, res, next) => {
 An error handling middleware of express will have 4 arguments.
 Notice that the `err` argument carries the `Error` object passed by the method before it.
 
-We will once again use this [flow chart on how Express file work](https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing) to understand the logic of **Error handling**
+We will once again use this <a href="https://drive.google.com/file/d/1DYozhpx0zwEcNKEyKSHvroJduUQ4-9Yb/view?usp=sharing" target="_blank">flow chart on how Express file work</a> to understand the logic of **Error handling**
 
 ### The magic control Try-catch(err)-next(err)
 
@@ -283,11 +283,11 @@ try {
 
 Hey there, travelers! If you want to learn everything about Express and RestfulAPI that has not been covered (lots of it), check out the links below to better understand the concepts.
 
-- [Routes](https://en.wikipedia.org/wiki/Routing): Different URL endpoints used to produce different behavior. Usually CRUDing a resource
-- [Query String/Parameters](https://en.wikipedia.org/wiki/Query_string): String sent by client to tell the server what it wants
-- [req](http://expressjs.com/en/api.html#req): Object passed to handler containing information about the request
-- [res](http://expressjs.com/en/api.html#res): Object passed to handler allowing handler to send a response
-- [HTTP Verbs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods): Predefined verbs used when making REST requests
+- <a href="https://en.wikipedia.org/wiki/Routing" target="_blank">Routes</a>: Different URL endpoints used to produce different behavior. Usually CRUDing a resource
+- <a href="https://en.wikipedia.org/wiki/Query_string" target="_blank">Query String/Parameters</a>: String sent by client to tell the server what it wants
+- <a href="http://expressjs.com/en/api.html#req" target="_blank">req</a>: Object passed to handler containing information about the request
+- <a href="http://expressjs.com/en/api.html#res" target="_blank">res</a>: Object passed to handler allowing handler to send a response
+- <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="_blank">HTTP Verbs</a>: Predefined verbs used when making REST requests
 
 <br />
 <br />

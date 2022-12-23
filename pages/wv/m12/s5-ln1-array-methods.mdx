@@ -30,11 +30,11 @@ For example:
 
 For example, methods of
 
-- **String**: [trim()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim), [split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split), [repeat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat)
+- **String**: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim" target="_blank">trim()</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split" target="_blank">split()</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat" target="_blank">repeat()</a>
 
-- **Object**: [keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), [assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+- **Object**: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys" target="_blank">keys()</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank">assign()</a>
 
-- **Array**: [pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), [push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- **Array**: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" target="_blank">pop()</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank">push()</a>
 
 ### Array methods
 
@@ -128,7 +128,7 @@ Array iteration methods perform some operation on **each element** of array.
 
 ### forEach()
 
-The [`array.forEach(callbackFunction)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method allows to run a function for every element of the array. The provided function is user defined, it can perform any kind of operation on array.
+The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank">`array.forEach(callbackFunction)`</a> method allows to run a function for every element of the array. The provided function is user defined, it can perform any kind of operation on array.
 
 #### Syntax:
 
@@ -268,7 +268,7 @@ foodArray.forEach((food) => {
 });
 ```
 
-Read more about why we use one over the other [here](https://alligator.io/js/foreach-vs-for-loops/).
+Read more about why we use one over the other <a href="https://alligator.io/js/foreach-vs-for-loops/" target="_blank">here</a>.
 
 <br />
 
@@ -279,7 +279,7 @@ Read more about why we use one over the other [here](https://alligator.io/js/for
 
 Imagine we have an array of objects. How do we find an object with a specific condition?
 
-Here the [array.find(cb)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) method comes in handy.
+Here the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find" target="_blank">array.find(cb)</a> method comes in handy.
 
 #### Syntax
 
@@ -318,7 +318,7 @@ console.log(user); // { id: 1, name: "John" }
 
 In real life, arrays of objects is a common thing, so the `find()` method is very useful.
 
-The [array.findIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) method is essentially the same, but it returns the index where the element was found instead of the element itself and -1 is returned when nothing is found.
+The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex" target="_blank">array.findIndex()</a> method is essentially the same, but it returns the index where the element was found instead of the element itself and -1 is returned when nothing is found.
 
 <br />
 
@@ -329,7 +329,7 @@ The [array.findIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 
 The `find()` method looks for a _single (first) element_ that makes the function return true.
 
-If there may be many, we can use [array.filter(cb)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
+If there may be many, we can use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank">array.filter(cb)</a>.
 
 The syntax is similar to `find()`, but `filter()` returns **an array of all matching elements**:
 
@@ -388,7 +388,7 @@ Result:
 <br />
 ### map()
 
-The [array.map(cb)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method is one of the most useful and often used.
+The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank">array.map(cb)</a> method is one of the most useful and often used.
 
 It calls the function for each element of the array and returns the array of results.
 
@@ -427,7 +427,7 @@ console.log(lengths); // [5, 6, 6]
 <br />
 ### reduce()
 
-The method [array.reduce(cb)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) is used to calculate a single value based on the array.
+The method <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce" target="_blank">array.reduce(cb)</a> is used to calculate a single value based on the array.
 
 #### Syntax
 
@@ -498,7 +498,7 @@ let totalPrice = cart.reduce(
 console.log(totalPrice); // $13.3
 ```
 
-The method [array.reduceRight()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) does the same, but goes from right to left.
+The method <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight" target="_blank">array.reduceRight()</a> does the same, but goes from right to left.
 
 <br />
 
@@ -511,7 +511,7 @@ The method [array.reduceRight()](https://developer.mozilla.org/en-US/docs/Web/Ja
 
 ### sort()
 
-The call to [array.sort(compareFunction)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) sorts the array in place, changing its element order.
+The call to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank">array.sort(compareFunction)</a> sorts the array in place, changing its element order.
 
 It also returns the sorted array, but the returned value is usually ignored, as array itself is modified.
 
@@ -754,7 +754,7 @@ console.log(fruits); //[ 'Mango', 'Orange', 'Avocado', 'Lemon', 'Lychee' ]
 <br />
 #### unshift()
 
-`unshift()` is a method just like `push()` but instead of adding an element to the end of an array, `unshift()` add an element to the beginning of an array. Read more about shift [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
+`unshift()` is a method just like `push()` but instead of adding an element to the end of an array, `unshift()` add an element to the beginning of an array. Read more about shift <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift" target="_blank">here</a>
 
 <br />
 
@@ -794,7 +794,7 @@ console.log(fruits); // [ 'Mango', 'Orange', 'Avocado' ]
 <br />
 #### shift()
 
-`shift()` is a method just like `pop()` but instead of removing the last element from an array, `shift()` removes the first element. Read more about shift [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+`shift()` is a method just like `pop()` but instead of removing the last element from an array, `shift()` removes the first element. Read more about shift <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift" target="_blank">here</a>
 
 <br />
 
@@ -1004,7 +1004,7 @@ console.log(stringArray4)[("H", "e", "l")];
 ##### Parameters:
 
 - `separator`: The **pattern** describing where each split should occur.
-  The separator can be a simple string or it can be a [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+  The separator can be a simple string or it can be a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">regular expression</a>.
 - `limit` (optional): A non-negative integer specifying a limit on the number of substrings to be included in the array
 
 ##### Return value:
@@ -1013,7 +1013,7 @@ console.log(stringArray4)[("H", "e", "l")];
 
 #### Spread syntax
 
-This spread syntax allows an iterable such as an array expression or string to be expanded in places. We'll learn more about this later. Read more [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+This spread syntax allows an iterable such as an array expression or string to be expanded in places. We'll learn more about this later. Read more <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank">here</a>
 Example:
 
 ```javascript

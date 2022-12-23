@@ -2,7 +2,7 @@
 
 Welcome to CS content 2.0.
 
-- [Production](https://coder-labs.netlify.app/)
+- <a href="https://coder-labs.netlify.app/" target="_blank">Production</a>
 
 ## File Struture
 
@@ -36,9 +36,9 @@ e.g. `\wv\m11\s1-a1q-basic-html`
 
 ## How to contribute?
 
-- [Required: Issue to Pull Request](https://www.loom.com/share/0e45f18ccdfa4ada9dabb136d5ddecf8)
-- [Beginner: Github Pull Request](https://www.youtube.com/watch?v=8lGpZkjnkt4)
-- [MDX Troubleshoot](https://mdxjs.com/docs/troubleshooting-mdx/)
+- <a href="https://www.loom.com/share/0e45f18ccdfa4ada9dabb136d5ddecf8" target="_blank">Required: Issue to Pull Request</a>
+- <a href="https://www.youtube.com/watch?v=8lGpZkjnkt4" target="_blank">Beginner: Github Pull Request</a>
+- <a href="https://mdxjs.com/docs/troubleshooting-mdx/" target="_blank">MDX Troubleshoot</a>
 
 ### Deployment flow
 

@@ -19,7 +19,7 @@ As your first big project, there will be a lot of detailed instructions that you
 ![Cal demo](../../assets/wv/m13/cal-0.png)
 
 Demo:
-[https://coderschool-calculator.netlify.app/](https://coderschool-calculator.netlify.app/)
+<a href="https://coderschool-calculator.netlify.app/" target="_blank">https://coderschool-calculator.netlify.app/</a>
 
 ### Requirement:
 
@@ -42,11 +42,11 @@ Demo:
 
 ### Submission:
 
-You can work on an online editor like [CodeSandbox](https://codesandbox.io/) or work locally with Visual Studio Code, then push it to Github. Then submit the project link to CoderSchool.
+You can work on an online editor like <a href="https://codesandbox.io/" target="_blank">CodeSandbox</a> or work locally with Visual Studio Code, then push it to Github. Then submit the project link to CoderSchool.
 
 ## UI: Specifications
 
-Download the assets [here](https://docs.coderschool.vn/../../assets/wv/m13/web-virgil/design.zip). We will attempt to follow a design by a UX/UI designer.
+Download the assets <a href="https://docs.coderschool.vn/../../assets/wv/m13/web-virgil/design.zip" target="_blank">here</a>. We will attempt to follow a design by a UX/UI designer.
 
 Each designer may have a different way of presenting the mockup and specifications to you. Sometimes, the design may not be very clear, and as a web developer, we need to be flexible and work with what's given to us. For this exercise, feel free to apply the specifications in your own interpretation.
 
@@ -76,7 +76,7 @@ First, let's create the basic structure of your webpage.
 
 Imagine that this div is your final calculator. Give it a background color and a fixed width and height so we can get a feel of the design. Give the body a background color too. You can (and should) use the colors provided in the specifications.
 
-Add `box-sizing: border-box` to every element to avoid having to deal with overlapping elements and breaking margin and padding ([read more](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)).
+Add `box-sizing: border-box` to every element to avoid having to deal with overlapping elements and breaking margin and padding (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)" target="_blank">read more</a>.
 
 ```css
 /* style.css */
@@ -123,7 +123,7 @@ When we develop a website, we need to consider responsiveness because most users
 
 If you set a fixed width of 400px, on mobile devices with a screen size of less than 400px, the devices won't be able to display the full page/app and there will be a vertical scroll, which negatively affects the experience of the users. Therefore we should avoid this.
 
-What we really want is not `width: 400px` but `width: 400px` for screens wider than 400px and `width: 100%` for screens smaller than 400px. While we can use [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), this can be simply done with the combination of `width: 100%` and `max-width: 400px`.
+What we really want is not `width: 400px` but `width: 400px` for screens wider than 400px and `width: 100%` for screens smaller than 400px. While we can use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">media queries</a>, this can be simply done with the combination of `width: 100%` and `max-width: 400px`.
 
 - Remove the fixed width from the previous step.
 - Use `max-width` and `width: 100%` to make the "calculator" responsive.
