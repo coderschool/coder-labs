@@ -1,0 +1,154 @@
+<img
+src="https://i.imgur.com/dpd20EG.png"
+style={{ width: "60px", float: "right" }}
+/>
+
+# Project Planning
+
+> “Let our advance worrying become advance thinking and planning.” - **Winston Churchill**
+
+<br/>
+<div style={{display:"flex",justifyContent:"center"}}><img src="https://f.hubspotusercontent40.net/hubfs/9253440/Blog%20Images/strategic-planning-a-group-works-at-a-table.jpg" width="50%"/></div>
+<br/>
+
+After researching and idea-generating, you already have in mind your dream application. However, hold your horse buddy 🐴 ✋, the next step is NOT to code!
+
+Because the magnitude of a project is not decided by the size of your dream but rather based on how many resources you have. In this case, they are your time and support that you have. One can not build Facebook in 2 weeks. However, we can still aim for something cool. 
+
+As we don't want to ship an app only after it is _"perfect"_, we want to ship the MVP (Minimum Viable Product) and keep developing from that foundation.
+
+🚩 So keep in mind, **Time** and **Core features**
+
+Hence, **Project Planning** - breaks down many of the most essential features needed for the app within the corresponding time.  
+You are given only **4 weeks** to ship this masterpiece. Please follow this suggested checklist or tailor a more suitable and specific one for yourself.
+
+> **So, how to define core features ⚙️?**
+> 
+> What to prioritize in a huge project where everything seems important?
+
+<br/>
+
+## From MVP to Masterpiece
+
+1️⃣ First off, all apps start with some fundamental features such as:
+
+-   Users can login/logout with authentication.
+-   Users can see lists of items.
+-   Users can see the information of an item.
+-   Users can search and filter items.
+
+Able to complete the above 4 features meaning your application's foundation has been set for the next cool stuff - which are features that speak up _**the nature of your app**_ ⭐️
+
+2️⃣ The second level, for example, of building an E-commerce app would be the core features such as:
+
+-   Show different pages.
+-   Show different pages for authenticated users, such as sellers and buyers.
+-   Show detailed information about a product.
+-   Show lists of categorized products.
+-   Allow users to add products to the cart.
+-   Allow users to make an order from the cart.
+-   etc.
+
+3️⃣ The third level is where you can flex your creativity with external APIs or any other cool stuff 🎩 you could pull. Let's continue with the E-commerce example:
+
+-   Buyers can see sellers' locations via Google Map API.
+-   Sellers can see shipping schedules via Google Calendar API.
+-   Sellers can track monthly expenses and profits via Accounting API.
+-   etc.
+
+🚩 First - **fundamental features**, second - **core features**, third - **cool stuff**.
+
+Ensure you have the above checklist before diving into the app's frontend or backend. Only after having such clear expected outputs could we compose our inputs.
+
+<br/>
+
+## Case Study
+
+After knowing what we want, what are the steps to actually bring it to life? 🤩 Now, let's turn the checklist of human language into dev language 🤖. Here is a case study of a past learner, Alex. Check out her step-by-step plan to build an E-commerce app.
+
+_Alex wants to build an eCommerce website that sells shoes. Here is what she does:_
+
+<br/>
+
+### 1️⃣ **Working on fundamental features:**
+
+**Frontend**
+
+-   Start up a React App and clean it up.
+-   Create routes like Homepage, Not Found page, Protected Page, Login Page.
+-   Create general layouts and content for all 4 pages.
+-   Create a form component in Login Page.
+-   Create layouts for the Homepage with 3 main components: Product List, Search App Bar, and Pagination.
+
+**Backend**
+
+-   Create an Express server with MongoDB.
+-   Create a User modal with the required information (name, email, role).
+-   Create register/ login API routes for `/users`.
+-   Create routes to CRUD _(Create (POST), Read (GET), Update, Delete)_ users.
+-   Test authentication with Front-end.
+-   Design a Product schema on paper that lists out:
+    -   What information a product should have: Name, Price, Category, Year, Size, Brand, Likes, and Buy times.
+    -   How some attributes could be related to each other.
+    -   What fundamental actions can buyers take with products: Category Filter, Price Filter, Size filter
+    -   Alex uses the dataset she found online (<a href="https://www.kaggle.com/datae" target="_blank">Kaggel</a>), then changes it to match her schema.
+-   Code the Product Schema and creates the Product modal with the required information above.
+-   Create routes to CRUD products. (without any authentication for now)
+
+**Testing**
+
+-   Fetch data from the backend via the `localhost` server and render the UI of all products. At this stage, Alex only expects to `GET` all items; she doesn't need other functions like Update, Create or Delete.
+
+> **Fundamental application has been done ✅**  
+> She could submit this work and get around a 30% score.  
+> ⏰ This took her around 1 week.
+
+<br/>
+
+### 2️⃣ **Working on core features:**
+
+**Frontend**
+
+-   Create a categorized product list and filter function for the Homepage.
+-   Create layouts, content, and components for the User Profile & Account Setting Page - UI without testing.
+-   Create layouts, content, and components for Upload Product Page - UI without testing.
+-   Create layouts, content, and components for Detail Product Page - UI without testing.
+-   Create layouts, content, and components for Cart Page - UI without testing.
+-   Create layouts, content, and components for Complete Buying Page - UI without testing.
+-   Implement users' interaction for each page with API service and Redux.
+
+**Backend**
+
+-   Work on the `/products` CRUD with Authentication. At the same time, testing via Thunder Client.
+-   Deploy the backend.
+
+**Testing**
+
+-   Finally, Alex tests the interaction between the frontend and backend with the Heroku link.
+-   Find-tune the frontend.
+-   Deploy the frontend to Netlify.
+-   Submit the project.
+
+> **Core application has done ✅**  
+> She could submit this work and get around 40% more.  
+> ⏰ This took her around 2 weeks.
+
+<br/>
+
+### 3️⃣ **Working on the cool stuff:**
+
+-   Visually show the location of each seller on the map via the Google Map API
+-   Build the Admin Dashboard for sellers to monitor the expenses and delivery via an Accounting API.
+-   Show the weather in many cities via the Weather API.
+-   Show many inspirational shoe-style images for sellers and buyers via the Style API.
+-   Get advice from the mentor for guidelines and research, and read through the docs by herself.
+
+> **Cool stuff done ✅**  
+> She could submit this work and get around 10% - 40% more depending on the coolness.  
+> ⏰ This took her around 1 week.
+
+Now Alex can work on a video recording where she presents her fantastic web app.
+
+<br/>
+<br/>
+<br/>

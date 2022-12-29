@@ -472,6 +472,27 @@ export const courseWebUnits = [
       },
     ],
   },
+  {
+    id: "wv/m41",
+    title: "Module 4.1",
+    courseUnits: [
+      {
+        id: "wv/m41/s1-ln1-idea-generation",
+        title: "Step 1: Idea Generation",
+        path: "wv/m41/s1-ln1-idea-generation",
+      },
+      {
+        id: "wv/m41/s1-ln2-product-planning",
+        title: "Step 2: Project Planning",
+        path: "wv/m41/s1-ln2-product-planning",
+      },
+      {
+        id: "wv/m41/s2-ln1-project-setup",
+        title: "Step 3: Project Setup",
+        path: "wv/m41/s2-ln1-project-setup",
+      },
+    ],
+  },
 ];
 
 export const courses = [

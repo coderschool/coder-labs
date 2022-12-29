@@ -1,0 +1,324 @@
+<img
+src="https://i.imgur.com/dpd20EG.png"
+style={{ width: "60px", float: "right" }}
+/>
+
+# Project Setup
+
+> “Every adventure requires a first step.” – **The Cheshire Cat**
+
+<br/>
+
+<div style={{display:"flex",justifyContent:"center"}}><img src="https://images.ctfassets.net/l893v89mix1e/4VonfzmBpOmPW1tyswBW5X/bc0904018be0c9cdd3c497dc42293195/Interviewing_homepage_16_9-min.jpeg?w=2560&h=1440&fl=progressive&q=90&fm=jpg" width="50%"/></div>
+
+<br/>
+
+After Project Planning, it's time to kick off the first step of any project - setting up - and most of the time, we will start by drafting the `README.md`.
+
+It contains the What, Why, and How of your application - What problem does the app solve? Why did you build it? How to install and use the app?. Don't worry too much about making it perfect the first time around. Remember, this is your first draft of the map, which you will enhance over time.
+
+🚩 This is intended for new Developers - let's call this the **Fresh Dev <a href="http://readme.md/" target="_blank">README.md</a>**
+
+Let's write a `README` that helps anyone familiar with code reading or not still able to grasp the ins and outs of your application.
+
+> **Get started!**
+> 
+> There are so many ways we can do this, but the standard we suggest would be these 5 headings: **Project Title, Project Description, User Story, API endpoints, and Diagram Relation.**
+
+<br/>
+
+## The Project Title
+
+It describes the whole project in one sentence and helps people understand the main goal and aim of the project.
+
+Remember: short and concise.
+
+Example:  
+👍 Todo List MERN stack  
+👎 My new Todo List with express mongo react and nodejs
+
+<br/>
+
+## The Project Description
+
+-   What problem does your application solve?
+-   What does your application do? What features contribute to solving given issues?
+-   Some of the challenges you faced and features you hope to implement in the future?
+
+⚙️ To continue, let's jump into a learner's work and explore his `README` for a MeSpace site.
+
+<br/>
+
+## User Story
+
+<br/>
+
+### Background
+
+MeSpace is a social network that allows people to join by creating accounts. Each User should provide a name, an email, and a password to create an account.
+
+The email address should not link to any account in the system. After joining MySpace, users can update their profile with Avatar, Company, Job Title, Social Links, and a short description.
+
+Users can write Posts that contain text content and an image. The new posts will be shown on the user profile page, allowing other users to comment. Users can also React with like or dislike on a post or a Comment.
+
+Users can send Friend Requests to other users who have an open relationship with them. Users can accept or decline a friend request. After accepting a friend request, both become friends, and they can see posts from each other.
+
+### Authentication
+
+-   As a user, I can sign in with my email and password.
+-   As a user, I can register for a new account with email and password.
+-   As a user, I can stay signed in after refreshing the page.
+
+### Users
+
+-   As a user, I can see a list of other users so that I can send, accept or decline friend requests.
+-   As a user, I can see my current profile info.
+-   As a user, I can see a specific user's profile given a user ID.
+-   As a user, I can update my profile with Avatar, Company, Job Title, Social Links, and a short description.
+
+### Posts
+
+-   As a user, I can see a list of posts.
+-   As a user, I can create a new post with text content and an image.
+-   As a user, I can edit my posts.
+-   As a user, I can delete my posts.
+
+### Comments
+
+-   As a user, I can see a list of comments on a post.
+-   As a user, I can write comments on a post.
+-   As a user, I can update my comments.
+-   As a user, I can delete my comments.
+
+### Reactions
+
+-   As a user, I can react like or dislike to a post or a comment.
+
+### Friends
+
+-   As a user, I can send a friend request to another user who is not my friend.
+-   As a user, I can see a list of friend requests I have received.
+-   As a user, I can see a list of my friends.
+-   As a user, I can accept or decline a friend request.
+-   As a user, I can cancel a friend request I sent.
+-   As a user, I can unfriend a user in my friend list.
+
+<br/>
+
+## API endpoints
+
+<br/>
+
+### Auth APIs
+
+```
+* @route POST /auth/login
+* @description Log in with username and password
+* @body {email, passsword}
+* @access Public
+```
+
+### Friend APIs
+
+```
+* @route GET /friends/requests/incoming
+* @description Get the list of received pending requests
+* @access Login required
+```
+
+```
+* @route GET /friends/requests/outgoing
+* @description Get the list of sent pending requests
+* @access Login required
+```
+
+```
+* @route GET /friends/
+* @description Get the list of friends
+* @access Login required
+```
+
+```
+* @route POST /friends/requests
+* @description Send a friend request
+* @body {to : User ID}
+* @access Login required
+```
+
+```
+* @route PUT /friends/requests/:userId
+* @description  Accept/Reject a received pending requests
+* @body {status : 'accepted' or 'declined'}
+* @access Login required
+```
+
+```
+* @route DELETE /friends/requests/:userId
+* @description  cancel a friend request
+* @access Login required
+```
+
+```
+* @route DELETE /friends/:userId
+* @description  remove a friend
+* @access Login required
+```
+
+### User APIs
+
+```
+* @route GET /users/page=1?&limit=10
+* @description Get user with pagination
+* @body
+* @access Login required
+```
+
+```
+* @route GET /users/me
+* @description Get current user info
+* @body
+* @access Login required
+```
+
+```
+* @route GET /users/:id
+* @description Get user profile
+* @body
+* @access Login required
+```
+
+```
+* @route POST /users
+* @description Register new user
+* @body {name, email, password}
+* @access Public
+```
+
+```
+* @route PUT /users/:id
+* @description  Update user profile
+* @body {name, avatar, cover, aboutMe, city, country, company, jobtitle, fbLink, instagramLink, linkedInLink, twitterLink}
+* @access Login required
+```
+
+### Post APIs
+
+```
+* @route  GET /posts/:id/comments
+* @description Get comments of a post
+* @body 
+* @access Login required
+```
+
+```
+* @route GET /posts/:id
+* @description Get a single post
+* @body 
+* @access Login required
+```
+
+```
+* @route POST /posts
+* @description Create a new post
+* @body {content, image}
+* @access  Login reuqired
+```
+
+```
+* @route PUT /posts/user/userId? page=1&limit=10
+* @description Get all posts a user can see with pagination 
+* @body
+* @access Login required
+```
+
+```
+* @route PUT /posts/:id
+* @description Update a post
+* @body {content, image}
+* @access Login required
+```
+
+```
+* @route DELETE /posts/:id
+* @description  Delete a post
+* @body 
+* @access Login required
+```
+
+### Comment APIs
+
+```
+* @route GET /comments/:id
+* @description Get details of a comment
+* @body 
+* @access Login required
+```
+
+```
+* @route POST /comments
+* @description Create a new comment
+* @body {content, postId}
+* @access Login required
+```
+
+```
+* @route PUT /comment:id
+* @description Update a comment
+* @body 
+* @access Login required
+```
+
+```
+* @route DELETE comments/:id
+* @description Delete a comment
+* @body 
+* @access Login required
+```
+
+```
+* @route DELETE /comments/:id
+* @description Delete a comment
+* @body 
+* @access Login required
+```
+
+### Reaction APIs
+
+```
+* @route 
+* @description 
+* @body 
+* @access Login required
+```
+
+```
+* @route 
+* @description 
+* @body 
+* @access Login required
+```
+
+<br/>
+
+## Entity Relationship Diagram
+
+![](https://i.imgur.com/5yuP61p.png)
+
+---
+
+## ⭐️ Wrap up
+
+You could also implement these tools and templates for your `README`. Remember that a good `README` is an excellent first impression!
+
+![](https://i.imgur.com/9UuftRV.png)
+
+> **Try these also tools to help you start strong!**  
+> <a href="https://rahuldkjain.github.io/gh-profile-readme-generator/" target="_blank">Readme Generator</a>  
+> <a href="https://www.makeareadme.com/" target="_blank">Readme Template</a>
+
+> **It's your turn!**  
+> Start your project by making a README and then seek your mentor's feedback.
+
+<br/>
+<br/>
+<br/>
