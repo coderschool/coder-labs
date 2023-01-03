@@ -1,0 +1,64 @@
+<img
+src="https://i.imgur.com/dpd20EG.png"
+style={{ width: "60px", float: "right" }}
+/>
+
+<br/>
+
+# Deploy MongoDB to Atlas
+
+To migrate your local data to Atlas, first, we have to export your local data. There are 2 ways to do this : using mongo CLI or using Compass. Let's keep it simple by using the GUI of Compass.
+
+1.  Click export collection. ![export_data1](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/bf87784bdd92ccc3.png)  
+    
+2.  Choose Export Full Collection ![export_data2](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/3d651e156709fa4e.png)  
+    
+3.  Choose all the data fields you want in your cloud server. ![export_data3](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/65547b9eaa0a8324.png)  
+    
+4.  Continue to export it under the `json` format. Make sure the `json` file name matches your collection name. It is a good practice to follow. ![export_data4](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/9bdbde5b7ca908ea.png)  
+    
+
+After signing in <a href="https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/assets/https://bit.ly/3REpPEX" target="_blank">Mongo Atlas</a>, you will be directed to the below site. From now we will start building a cloud server, and connect it to your local database.
+
+1.  Click on Build a Database ![create_cluster1](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/2660e4bb7e374e97.png)  
+    
+2.  Choose the free option for practicing purposes. ![create_cluster2](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/951db6d722e43dfd.png)  
+    
+3.  Select the closest server to Vietnam, in this case - is HongKong. ![create_cluster3](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/24d72f2983106d63.png)  
+    
+4.  You have created a cluster, let's continue to set up your database with `username` and `passsword`. For examples : `username: admin` & `password: admin`**Note:** These are important info, that will be used to connect to your cluster. ❗️ Please jot down and memorize it somewhere. ![create_cluster4](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/39c1f06e17aa5b3b.png)  
+    
+5.  Scroll down and add Entries - which IP address is authorized to write to your cluster? For now, let's follow the instruction and put `0.0.0.0` - which means your cluster can be accessed from everywhere. ![create_cluster5](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/a242cf0f823f3096.png)  
+    
+6.  After `Finish and Close` you will be redirected to the Database. ![create_cluster6](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/2df0d14991ab3d6a.png)  
+    
+7.  Your cluster is now ready to connect to the local Compass. Let's get URI. (URI is short for Uniform Resource Identifier ) ![create_cluster7](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/a60cb6b84c0fd881.png)![create_cluster8](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/36825dda8a3a4115.png)  
+    
+8.  Replace username and password with your real password and copy the URI. For example: `mogo_uri/username:password/as1245.atlas.com..`
+
+![create_cluster9](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/e63c905875489913.png)  
+
+With the above steps, you already have a cloud server waiting. From now we will connect your local to the cloud via Mongo Compass.
+
+1.  Paste your URI here to make a new connection. ![mongo_compass1](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/f72ac70ea383d3c9.png)  
+    
+2.  Look at the left corner to check what server you're connecting to. If it's a cluster, you can now start importing data. ![mongo_compass2](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/7a94ee19c5224d15.png)  
+    
+3.  In the tab Database, click on Create database. ![mongo_compass3](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/17ecf0157241f6c0.png)  
+    
+4.  Select your data type, in this case is `json` and Import. ![mongo_compass4](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/d929c1788752657a.png)  
+    
+5.  This is the expected result. ![mongo_compass5](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/6b05fa8b891b29af.png)  
+    
+
+Now, let's get back to your Atlas!
+
+1.  Switch to the **Collections** tab to see imported data ![checkup_atlast1](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/229edb283aa45b2a.png)
+
+If you see your data, then pad yourself in the back.  
+
+1.  In your `.env`, connect Atlas server to your backend project. ![heroku1](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/529f1407e7d1affc.png)![heroku2](https://labs.coderschool.vn/codelabs/wv-m32-deploy-backend/img/e8af2947b2200ed2.png)  
+
+<br />
+<br />
+<br />

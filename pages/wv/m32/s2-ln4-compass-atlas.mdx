@@ -1,0 +1,195 @@
+<img
+src="https://i.imgur.com/dpd20EG.png"
+style={{ width: "60px", float: "right" }}
+/>
+
+# Get started with Compass and Atlas
+
+<br/>
+
+## Installing Compass
+
+Download MongoDB Compass from <a href="https://www.mongodb.com/try/download/compass" target="_blank">this</a>.
+
+### What is MongoDB Compass?
+
+MongoDB Compass is a powerful <a href="https://en.wikipedia.org/wiki/Graphical_user_interface) (graphical user interface" target="_blank">GUI</a> for querying, aggregating and analyzing your MongoDB data in a visual environment.
+
+### What can we do with Compass?
+
+**- Connect to your deployment**  
+Connect to a MongoDB deployment hosted on MongoDB Atlas or locally on your own machine.
+
+When you open Compass, an initial connection dialog appears:  
+![compass-1](https://i.imgur.com/0sDFY5L.png)  
+You can connect your deployments by either:
+
+-   Providing your connection string.
+-   Specifying Advanced Connection Options. (Learn more about <a href="https://www.mongodb.com/docs/compass/current/connect/#std-label-advanced-connection-options)" target="_blank">Advanced Connections Options</a>
+
+1.  Use connection string
+    -   For local database: `mongodb://localhost:27017`
+    -   For Atlas, to obtain the connection string URI (we talked about this in the Atlas session):
+        -   Navigate to your Atlas Clusters view.
+        -   Click Connect for your desired cluster.
+        -   Click Connect with MongoDB Compass.
+        -   Copy the provided connection string.
+2.  Connect  
+    Click the Connect button to navigate to the Compass Home Page.
+
+**- Import and Export your data**  
+Import data from CSV or JSON files into your MongoDB database.  
+You can use MongoDB Compass to import and export data to and from collections.  
+Compass supports import and export for both JSON and CSV files.
+
+**Export Data from a Collection:**  
+If you specify a filter, Compass only exports documents that match the specified query.
+
+-   Step 1: Connect to the deployment containing the collection you wish to export data from.
+-   Step 2: Navigate to your desired collection
+-   Step 3: Click Collection in the top-level menu and select Export Collection  
+    ![compass-export-1](https://i.imgur.com/HJvnDYp.png)  
+    Compass displays the following dialog:  
+    ![compass-export-2](https://i.imgur.com/Y180VYB.png)  
+    To ignore the query filter and export your entire collection, select **Export Full Collection** and click **Select Fields**.
+-   Step 4: Select document fields to include in your exported file.  
+    Only fields that are checked are included in the exported file.  
+    ![compass-export-3](https://i.imgur.com/1UX6oyu.png)
+-   Step 5: Choose a file type and export location.  
+    Under Select Export File Type, select either JSON or CSV. If you select JSON, your data is exported to the target file as a comma-separated array.
+
+Then, under Output, choose where to export the file to.  
+![compass-export0-4](https://i.imgur.com/98YZhbh.png)
+
+-   Step 6: Click Export
+
+**Import Data from a Collection:**  
+MongoDB Compass can import data into a collection from either a JSON or CSV file.
+
+Before you can import your data into MongoDB Compass you must first ensure that it is formatted correctly.
+
+-   Step 1: Connect to the deployment containing the collection you wish to import data into.
+    
+-   Step 2: Navigate to your desired collection.
+    
+-   Step 3: Click the Add Data dropdown and select Import File.  
+    ![compass-import-1](https://i.imgur.com/3Mga53Q.png)
+    
+-   Step 4: Select the location of the source data file under Select File.
+    
+-   Step 5: Choose the appropriate file type.  
+    Under Select Input File Type, select either JSON or CSV.
+    
+    If you are importing a CSV file, you may specify fields to import and the types of those fields under Specify Fields and Types. The default data type for all fields is string.  
+    ![compass-import-2](https://i.imgur.com/9CR8Cmo.png)  
+    To exclude a field from a CSV file you are importing, uncheck the checkbox next to that field name. To select a type for a field, use the dropdown menu below that field name.
+    
+    For both JSON and CSV file imports, you can toggle **Ignore empty strings** and **Stop on errors**:
+    
+    -   If checked, **Ignore empty strings** drops fields with empty string values from your imported documents. The document is still imported with all other fields.
+    -   If checked, **Stop on errors** prevents any data from being imported in the event of an error. If unchecked, data is inserted until an error is encountered and successful inserts are not rolled back. The import operation will not continue after encountering an error in either case.
+-   Step 6: Click **Import**
+    
+<br/>
+
+## MongoDB Atlas
+
+<br/>
+
+### What is MongoDB Atlas?
+
+MongoDB Atlas is a cloud database that handles all the complexity of deploying, managing, and healing your deployments on the cloud service provider of your choice. That is to say, you are now can share with the world your database by using Atlas.
+
+Previously, we have talked about how to connect and use the local database in your machine. Your application needs to connect to the database. Then, making CRUD manipulates the data. So if you shut down or break your computer, there would be no data to query.
+
+Mongo Atlas is a cloud service, in plain languages, it is a computer network (a lot of computers) that runs 24/7. So by hosting our database on Atlas, any backend API that connects to this database could get live and update data.
+
+One more example, imagine that you and your friends are working on the same project and that you need to update the data frequently. How to sync your database on the go? There might be a way from what we have learned so far. Any time you finish your job on the database, export and send them to your friends. They will import the database and keep working on it. That sound not efficient. So here is when Atlas comes in.
+
+### Get started with MongoDB Atlas
+
+1.  Creating a MongoDB Atlas account
+    
+    -   Register an Atlas account from this <a href="https://www.mongodb.com/cloud/atlas/register" target="_blank">place</a>. You can sign-in with Google account if you have one.
+2.  Create an Organization and project
+    
+    -   **Organization**: allow you to group and define users and teams, and grant them access to the different projects.
+    -   **Project**: allow you to define and organize resources such as database clusters. A common way to use projects is to define each environment as a project.
+        -   Hit **Create New Organization**  
+            ![atlas-create-org-0](https://i.imgur.com/x56vfmQ.png)
+            
+        -   Name your Organization. Make sure that your cloud service is _MongoDB Atlas_, then hit **Next**.  
+            ![atlas-create-org-1](https://i.imgur.com/o72lGmY.png)
+            
+        -   Hit **Create Organization**  
+            ![atlas-create-org-2](https://i.imgur.com/7CC9dp7.png)
+            
+        -   Hit **New Project**  
+            ![atlas-create-project-0](https://i.imgur.com/OiWtTqv.png)
+            
+        -   Name your project  
+            ![atlas-create-project-1](https://i.imgur.com/3sp5ksh.png)
+            
+        -   Hit **Create Project**  
+            ![atlas-create-project-2](https://i.imgur.com/3fj5uRV.png)
+            
+3.  Setting up a Cluster in MongoDB Atlas
+    
+    -   This is where you start. Hit **Build a Database**  
+        ![](https://i.imgur.com/zH3inZx.png)
+        
+    -   Choose _Shared_ package, click **Create**  
+        ![](https://i.imgur.com/8unX426.png)
+        
+    -   Select the region that is geographically closest to your location. On the bottom of the page, you can change the cluster name. Then hit **Create**  
+        ![name_cluster.png](https://i.imgur.com/NcUNXXQ.png)
+        
+    -   The new Cluster is processing. Create a user that can access this database  
+        ![](https://i.imgur.com/DoJ6GMA.png)
+        
+    -   Add the IP address that can access to the database. For now, just hit **Add My Current IP Address**. We'll grant access to others later in this instruction. Then, hit **Finish and Close**  
+        ![](https://i.imgur.com/wBTAXSM.png)
+        
+    -   Now, wait till your cluster is ready, as shown in this picture below  
+        ![](https://i.imgur.com/zvctXqO.png)
+        
+4.  Grant access to your database  
+    Choose tab **Network Access** on the sidebar
+    
+    -   Click **ADD IP ADDRESS**  
+        ![](https://i.imgur.com/Uf8wzcW.png)
+        
+    -   Click **ALLOW ACCESS FROM ANYWHERE**. Then **Confirm**  
+        ![](https://i.imgur.com/b0qDDNe.png)  
+        You can choose the tab Database Access on the sidebar to see the user that we just created for a moment.  
+        Both Database and Network access define from whom and where you can access your database with the right URI. Let's get to the next step to see how we can access our database.
+        
+5.  Accessing a MongoDB Atlas Cluster
+    
+    -   Choose **Connect**  
+        ![](https://i.imgur.com/2tuJpWt.png)
+        
+    -   You'll see this popup  
+        ![](https://i.imgur.com/h42p3Ln.png)
+        
+        -   Choose tab three to connect the cloud Atlas database from your Compass. Then choose I have **MongoDB Compass**. Then copy the connection string and pass it to your Compass. (Remember to change `<password>` to the one that you created before)  
+            ![](https://i.imgur.com/LMZTFkH.png)
+            
+        -   Choose tab two to connect the cloud Atlas database from your backend application.  
+            ![](https://i.imgur.com/FO0aYYV.png)
+            
+6.  Sample data  
+    Load Sample data for practicing
+    
+    -   Choose **Load Sample Dataset**  
+        ![](https://i.imgur.com/rZQRP0D.png)
+        
+    -   Choose **Load Sample Dataset**  
+        ![](https://i.imgur.com/0z5Va8F.png)
+        
+    -   When the dataset has been loaded, the graph labeled "Logical Size" on the right side of the screen should go up and display the dataset size above zero and below _512 MB_. Your graph may look different than the picture below.  
+        ![](https://i.imgur.com/Pt1QVT7.png)
+
+<br />
+<br />
+<br />

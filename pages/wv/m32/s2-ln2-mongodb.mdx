@@ -1,0 +1,110 @@
+<img
+src="https://i.imgur.com/dpd20EG.png"
+style={{ width: "60px", float: "right" }}
+/>
+
+# MongoDB
+
+<br/>
+
+## What is MongoDB
+
+MongoDB is a document-oriented NoSQL database used for high-volume data storage. Instead of using tables and rows as in traditional relational databases, MongoDB makes use of collections and documents. Collections contain sets of documents and functions, which is the equivalent of relational database tables. Documents consist of **key-value** pairs, which are MongoDB's basic unit of data.
+
+MongoDB is a NoSQL document database. This means that data in MongoDB is stored as documents.  
+
+These documents are stored in what we call collections of documents. That's why MongoDB is categorized as a NoSQL document database.
+
+<br/>
+
+## Document
+
+-   Document - a way to organize and store data as a set of field-value pairs.
+-   Field - a unique identifier for a data point.
+-   Value - data related to a given identifier.  
+    Example:
+    
+    ```json
+        {
+            <field> : <value>,
+            "name" : "walter white",
+            "occupation" : "teacher",
+            "major" : "chemistry"
+        } // this is a document
+    ```
+    
+<br/>
+
+## Collection
+
+A Collection is an organized store of documents in MongoDB, usually with common fields between documents. There can be many collections per database and many documents per collection.
+
+![Database](https://i.imgur.com/RS5Vv6g.png)
+
+<br/>
+
+## How are documents represented in memory, and what is the correct syntax for these objects we call documents?
+
+<br/>
+
+### 1. What is JSON?
+
+JavaScript objects are simple associative containers wherein a string key is mapped to a value (a number, string, function, or even another object). This simple language trait allowed JavaScript objects to be represented remarkably simply in text:
+
+```json
+{
+  "_id": 1,
+  "name" : { "first" : "John", "last" : "Backus" },
+  "contribs" : [ "Fortran", "ALGOL", "Backus-Naur Form", "FP" ],
+  "awards" : [
+    {
+      "award" : "W.W. McDowell Award",
+      "year" : 1967,
+      "by" : "IEEE Computer Society"
+    }, {
+      "award" : "Draper Prize",
+      "year" : 1993,
+      "by" : "National Academy of Engineering"
+    }
+  ]
+}
+```
+
+As JavaScript became the **default** language of **client-side web development**, JSON began to take on a life of its own. JSON quickly moved beyond the web page and into software everywhere by being both human- and machine-readable and comparatively simple to implement support for in other languages.
+
+JSON shows up in many different cases:
+
+-   APIs
+-   Configuration files
+-   Log messages
+-   Database storage
+-   JSON quickly overtook XML, which is more difficult for a human to read, significantly more verbose, and less ideally suited to representing object structures used in modern programming languages.
+
+#### 2. The MongoDB JSON Connection
+
+MongoDB was designed from its inception to be the ultimate data platform for modern application development. JSON's ubiquity made it the obvious choice for representing data structures in MongoDB's innovative document data model.
+
+However, there are several issues that make JSON less than ideal for usage inside a database.
+
+-   JSON is a text-based format, and **text parsing** is very **slow**
+-   JSON's readable format is far from **space-efficient**, another database concern
+-   JSON only supports a **limited number of basic data types**
+
+BSON was invented to make MongoDB JSON-first but still high-performance and general-purpose. BSON helps to bridge the gap: a binary representation to store data in JSON format optimized for speed, space, and flexibility. It's not dissimilar from other interchange formats like protocol buffers, or thrift, in terms of approach.
+
+### 4. What is BSON
+
+BSON stands for "Binary JSON," and that's exactly what it was invented to be.
+
+-   BSON's binary structure encodes type and length information, which allows it to be **parsed much more quickly**.
+-   BSON has been extended to **add** some **optional non-JSON-native data types**, like dates and binary data. Without that, MongoDB would have been missing some valuable support.
+
+### 5. Does MongoDB use BSON, or JSON?
+
+MongoDB stores data in BSON format both internally, and over the network, but that doesn't mean you can't think of MongoDB as a JSON database. Anything you can represent in JSON can be natively stored in MongoDB, and **retrieved just as easily in JSON**.
+
+Read more about BSON <a href="https://www.mongodb.com/json-and-bson" target="_blank">here</a>
+
+<br/>
+<br/>
+<br/>

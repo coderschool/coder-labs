@@ -111,191 +111,243 @@ Users can send Friend Requests to other users who have an open relationship with
 
 ### Auth APIs
 
-```
+```js
+/**
 * @route POST /auth/login
 * @description Log in with username and password
 * @body {email, passsword}
 * @access Public
+*/
 ```
 
 ### Friend APIs
 
-```
+```js
+/**
 * @route GET /friends/requests/incoming
 * @description Get the list of received pending requests
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route GET /friends/requests/outgoing
 * @description Get the list of sent pending requests
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route GET /friends/
 * @description Get the list of friends
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route POST /friends/requests
 * @description Send a friend request
 * @body {to : User ID}
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route PUT /friends/requests/:userId
 * @description  Accept/Reject a received pending requests
 * @body {status : 'accepted' or 'declined'}
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route DELETE /friends/requests/:userId
 * @description  cancel a friend request
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route DELETE /friends/:userId
 * @description  remove a friend
 * @access Login required
+*/
 ```
 
 ### User APIs
 
-```
+```js
+/**
 * @route GET /users/page=1?&limit=10
 * @description Get user with pagination
 * @body
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route GET /users/me
 * @description Get current user info
 * @body
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route GET /users/:id
 * @description Get user profile
 * @body
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route POST /users
 * @description Register new user
 * @body {name, email, password}
 * @access Public
+*/
 ```
 
-```
+```js
+/**
 * @route PUT /users/:id
 * @description  Update user profile
 * @body {name, avatar, cover, aboutMe, city, country, company, jobtitle, fbLink, instagramLink, linkedInLink, twitterLink}
 * @access Login required
+*/
 ```
 
 ### Post APIs
 
-```
+```js
+/**
 * @route  GET /posts/:id/comments
 * @description Get comments of a post
 * @body 
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route GET /posts/:id
 * @description Get a single post
 * @body 
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route POST /posts
 * @description Create a new post
 * @body {content, image}
 * @access  Login reuqired
+*/
 ```
 
-```
+```js
+/**
 * @route PUT /posts/user/userId? page=1&limit=10
 * @description Get all posts a user can see with pagination 
 * @body
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route PUT /posts/:id
 * @description Update a post
 * @body {content, image}
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route DELETE /posts/:id
 * @description  Delete a post
 * @body 
 * @access Login required
+*/
 ```
 
 ### Comment APIs
 
-```
+```js
+/**
 * @route GET /comments/:id
 * @description Get details of a comment
 * @body 
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route POST /comments
 * @description Create a new comment
 * @body {content, postId}
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route PUT /comment:id
 * @description Update a comment
 * @body 
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route DELETE comments/:id
 * @description Delete a comment
 * @body 
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route DELETE /comments/:id
 * @description Delete a comment
 * @body 
 * @access Login required
+*/
 ```
 
 ### Reaction APIs
 
-```
+```js
+/**
 * @route 
 * @description 
 * @body 
 * @access Login required
+*/
 ```
 
-```
+```js
+/**
 * @route 
 * @description 
 * @body 
 * @access Login required
+*/
 ```
 
 <br/>

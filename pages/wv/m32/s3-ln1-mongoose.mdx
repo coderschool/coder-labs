@@ -1,0 +1,275 @@
+<img
+src="https://i.imgur.com/dpd20EG.png"
+style={{ width: "60px", float: "right" }}
+/>
+
+<br/>
+
+# Mongoose
+
+<br/>
+
+## What Is Mongoose?
+
+![](https://i.imgur.com/0vc3TQz.png)
+
+Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
+
+<br/>
+
+## What is a Schema?
+
+A schema is a JSON object that defines the **structure and contents** of your data. Schemas represent **types of data** rather than specific values.
+
+MongoDB is a **schema-less NoSQL document database**. It means you can store JSON documents in it, and the **structure of these documents can vary** as it is not enforced like SQL databases. This is one of the advantages of using NoSQL, as it speeds up application development and reduces the complexity of deployments.
+
+Here is an example of how data is stored in Mongo:
+
+```json
+    //document 1
+    {
+        "id" : 1,
+        "firstName" : "Saul",
+        "lastName" : "Goodman",
+        "email" : "bestlawer@gmail.com",
+        "phone" : "+84 326 847 362"
+    }
+    //document 2
+    {
+        "id" : 2,
+        "firstName" : "Michael",
+        "lastName" : "Ehrmantraut",
+        "codeName" : "Mike",
+        "phone" : "+84 377 779 945"
+    }
+    // document 3
+    {
+        "id" : 3,
+        "firstName" : "Gustavo",
+        "lastName" : "Fring",
+        "email" : "chikenman@gmail.com"
+    }
+```
+
+<br/>
+
+## Models
+
+`Models` are higher-order constructors that take a schema and create an instance of a document equivalent to records in a relational database.
+
+<br/>
+
+## Schema types
+
+A SchemaType says what type a given path should have, whether it has any getters/setters, and what values are valid for that path.
+
+Mongoose provides an incredible amount of functionality around creating and working with schemas. Mongoose currently contains eight SchemaTypes that a property is saved as when it is persisted to MongoDB. They are:
+
+-   `String`: “String”
+-   `Number`: number
+-   `Date`: actual date, not the one you dream about.
+-   `Buffer`: allows you to save binary data. A common example of binary data would be an image or an encoded file, such as a PDF document.
+-   `Boolean`: true or false
+-   `Mixed`: turns the property into an “anything goes” field. This field resembles how many developers may use MongoDB because there is no defined structure. Be wary of using this data type as it loses many of the great features that Mongoose provides, such as data validation and detecting entity changes to automatically know to update the property when saving.
+-   `ObjectId`: The ObjectId data type commonly specifies a link to another document in your database. For example, if you had a collection of books and authors, the book document might contain an ObjectId property that refers to the specific author of the document.
+-   `Array`: The Array data type allows you to store JavaScript-like arrays. With an Array data type, you can perform common JavaScript array operations on them, such as push, pop, shift, slice, etc.
+
+Here is an example of how we use `SchemaTypes` in define a Schema
+
+```js
+const schema = new Schema({ name: String });
+```
+
+### The `type` key
+
+`type` is a special property in Mongoose schemas.  
+When Mongoose finds a nested property named type in your schema, Mongoose assumes that it needs to define a `SchemaType` with the given type.
+
+```js
+// 3 String SchemaTypes: 'name', 'nested.firstName', 'nested.lastName'
+const schema = new Schema({
+  name: { type: String },
+  nested: {
+    firstName: { type: String },
+    lastName: { type: String }
+  }
+});
+```
+
+<br/>
+
+## Defining your schema
+
+Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.
+
+Take a look at the example below:
+
+```js
+import mongoose from 'mongoose';
+const { Schema } = mongoose;
+
+const blogSchema = new Schema({
+  title:  {type: String}, 
+  author: String, // String is shorthand for {type: String}
+  body:   String,
+  comments: [{ body: String, date: Date }],
+  date: { type: Date, default: Date.now },
+  hidden: Boolean,
+});
+```
+
+Each key in our code `blogSchema` defines a property in our documents which will be cast to its associated `SchemaType` (8 types).
+
+-   For example, we've defined a property title that will be cast to the String SchemaType and a property date that will be cast to a Date SchemaType.
+
+If a property only requires a type, it can be specified using a **shorthand notation** (`body: String`)
+
+<br/>
+
+## `SchemaTypes` options
+
+As we've said, you can declare a schema type using the type directly or an object with a type property.
+
+```js
+const schema1 = new Schema({
+  test: String // `test` is a path of type String
+});
+
+const schema2 = new Schema({
+  // The `test` object contains the "SchemaType options"
+  test: { type: String } // `test` is a path of type string
+});
+```
+
+In line 7, the object `{type: String}` contain the key `type` - the `SchemaType` option.  
+You can add more options for the path. For example, if you want to lowercase a string before saving:
+
+```js
+const schema2 = new Schema({
+  test: {
+    type: String,
+    lowercase: true // Always convert `test` to lowercase when creating new document
+  }
+});
+```
+
+There are a few supported `SchemaTypes` options. You can add any property you want to your SchemaType options. But we will discuss some options that mostly use in our course. Read more here.
+
+There are certain options which apply for all schema types, and some that apply for specific schema types.
+
+### All Schema Types
+
+-   `required`: `boolean` or function, if `true` adds a required validator for this property
+-   `default`: `Any` or `function`, sets a default value for the path. If the value is a function, the return value of the function is used as the default.
+
+### For String Type
+
+-   `lowercase`: `boolean`, whether to always call `.toLowerCase()` on the value
+-   `uppercase`: `boolean`, whether to always call `.toUpperCase()` on the value
+-   `trim`: `boolean`, whether to always call `.trim()` on the value
+-   `enum`: `Array`, creates a validator that checks if the value is in the given array.
+
+### For Number Type
+
+-   `min`: `Number`, creates a validator that checks if the value is greater than or equal to the given minimum.
+-   `max`: `Number`, creates a validator that checks if the value is less than or equal to the given maximum.
+-   `enum`: `Array`, creates a validator that checks if the value is strictly equal to one of the values in the given array.
+
+### Date
+
+-   `min`: `Date`
+-   `max`: `Date`
+
+<br/>
+
+## Usage:
+
+### String
+
+To declare a path as a string, you may use either the String global constructor.
+
+```
+
+
+const schema1 = new Schema({ name: String }); // name will be cast to string
+
+const Person = mongoose.model('Person', schema1);
+```
+
+### Number
+
+To declare a path as a number, you may use either the Number global constructor.
+
+```
+
+
+const schema2 = new Schema({ age: Number }); // age will be cast to a Number
+
+const Car = mongoose.model('Car', schema2);
+```
+
+### ObjectIds
+
+An `ObjectId` is a special type typically used for unique identifiers. Here's how you declare a schema with a path driver that is an `ObjectId`:
+
+```
+
+const mongoose = require('mongoose');
+const carSchema = new mongoose.Schema({ driver: mongoose.ObjectId });
+```
+
+### Boolean
+
+`Booleans` in Mongoose are plain JavaScript booleans. By default, Mongoose casts the below values to `true`:
+
+-   `true`
+-   `'true'`
+-   `1`
+-   `'1'`
+-   `'yes'`  
+    Mongoose casts the below values to `false`:
+-   `false`
+-   `'false'`
+-   `0`
+-   `'0'`
+-   `'no'`
+
+> Any other value causes a `CastError`.
+
+### Arrays
+
+Mongoose supports arrays of `SchemaTypes` and arrays of subdocuments.
+
+```js
+const ToyBoxSchema = new Schema({
+  toys: [{ name: String }]
+});
+```
+
+<a href="https://mongoosejs.com/" target="_blank">Mongoose</a>
+
+<br/>
+
+## Query methods
+
+Mongoose models provide several static helper functions for CRUD operations. Each of these functions returns a mongoose Query object.  
+Below is the list of common queries we may use for the course.
+
+```
+| Query                     | Description                                                         |
+| ------------------------- | ------------------------------------------------------------------- |
+| Model.find()              | find all and return all documents of the collection               |
+| Model.findOne()           | find the first match collection with the condition                  |
+| Model.findById()          | find collection by mongo id                                         |
+| Model.findOneAndUpdate()  | find collection by matched condition and update the collection info |
+| Model.findByIdAndUpdate() | find collection by mongo id and update the collection info          |
+| Model.deleteOne()         | delete one document in the collection match condition               |
+| Model.findByIdAndDelete() | find collection by mongo id and delete the collection               |
+```
+
+Let's discuss this in another lecture note.  
+A full list of Mongoose queries could be find <a href="https://mongoosejs.com/docs/api.html" target="_blank">here</a>
+
+<br/>
+<br/>
+<br/>

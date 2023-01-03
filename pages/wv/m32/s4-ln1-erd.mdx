@@ -1,0 +1,341 @@
+<img
+src="https://i.imgur.com/dpd20EG.png"
+style={{ width: "60px", float: "right" }}
+/>
+
+<br/>
+
+# MongoDB Model Relationship
+
+Relationships in MongoDB represent how various Documents are logically related to each other. Such relationships can be either **one-to-one**, **one-to-many** relationships. Relationships can be modeled via Embedded and Referenced approaches.
+
+These relations can be implemented in two ways:
+
+1.  Using **embedded Documents**
+2.  Using the **reference of Documents** of another Collection.
+
+We'll discuss a specific relation that we mostly use in the scope of our course. Feel free to figure out the rest after you master this **one-to-many relationship with Document reference** vs. **with embedded Documents**.
+
+<br/>
+
+## Embedded Documents
+
+Firstly, we need to understand what an embedded document is.
+
+**Embedded Documents** or **nested Documents** are those types of Documents that contain a Document inside another Document. Or in other words, when a Collection has a Document, this Document contains another Document, and another Document contains another sub-Document, and so on. Such types of Documents are known as embedded/nested Documents.
+
+### Creating Embedded Documents
+
+In MongoDB, you can easily embed a Document inside another Document.  
+As we know, Documents are represented using curly braces ( **{ }** ) and inside these curly braces we have **field-value** pairs.
+
+```javascript
+{
+    field1: value1, 
+    field2: value2
+}
+```
+
+Now inside these fields, we can embed another Document using curly braces {} and this Document may contain field-value pairs or another sub-Document.
+
+```
+{
+    ....
+    field: {field1: value1, field2: value2}
+    ....
+}
+```
+
+<br/>
+
+## Model One-to-One Relationships with Embedded Documents
+
+![](https://i.imgur.com/AR3rrf5.png)
+
+In this example, we have a database called `Web Virgil`. This database has a Collection named `Students` and this Collection contains a Document. Inside this Document, we have a field named `name` which contains another Document and this Document contain two fields(firstName and lastName) with their values. The Document inside, we call it `embedded Document`
+
+If we don't embed the address Document inside Document in `Students` Collection, what else we can do? Here is another way, which is called **Document reference**.
+
+<br/>
+
+## Model One-to-One Relationships with Reference Documents
+
+![](https://i.imgur.com/GWY0QaC.png)
+
+In this one-to-one relationship between `Students` and `Address` data, the `address` belongs to the `student`. Compare to the previous example, you see that this time we split the `Students` Collection to two separate Collections.
+
+In the data model, the `address` Document contains a reference to the `address` Document.
+
+Implementing a reference Document means you store your data in a separate Collection. In this case, Document in `Address` Collection only belongs to Document in `Students` Collection, since we use `studentId` as a pointer from `Address` to `Students`. This is why we call it **One-to-One relationship**.
+
+The key difference to deciding between embedded and reference is to define whether the collection is read or write heavy.
+
+<a href="https://betterprogramming.pub/embedded-vs-referenced-documents-in-mongodb-how-to-choose-correctly-for-increased-performance-d267769b8671" target="_blank">Embedded vs. Referenced Documents in MongoDB: How To Choose Correctly For Increased Performance</a>
+
+### Embedded vs Reference Document
+
+```
+|                    | Pros                                                                                                                 | Cons                                                                                                                                                                                                        |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Embedded Document  | Your application can retrieve the complete `student` information with one query.                                     | A potential problem is that it can lead to large documents that contain fields that the application does not need. This unnecessary data can cause extra load on your server and slow down read operations. |
+| Reference Document | Improving read performance because it requires the application to read less data to fulfill its most common request. | Application will often need to make multiple trips to the database and rely on JOIN operations to retrieve all of the data that it needs.                                                                   |
+```
+
+<br/>
+
+## Model One-to-Many Relationships with Embedded Documents
+
+We re-use the previous example, but this time there is no longger one-to-one but one-to-many:
+
+![](https://i.imgur.com/LHt8YkV.png)  
+_**One-to-Many Relationship with Embedded Documents**_
+
+![](https://i.imgur.com/cDXD2mJ.png)  
+_**One-to-Many Relationship with Reference Documents**_
+
+Till this point, we've already known what is the pros and cons of Embedded vs. Reference Document. We also know how to create embedded document. Let's talk about how to reference documents in mongoDB
+
+<br/>
+
+## Populate and ref
+
+### Models
+
+Model:
+
+```javascript
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
+
+const personSchema = Schema({
+  name: String,
+  age: Number,
+  books: [{ type: Schema.Types.ObjectId, ref: 'Book' }] // reference to Book Collection
+});
+
+const Person = mongoose.model('Person', personSchema);
+
+const bookSchema = Schema({
+  author: { type: Schema.Types.ObjectId, ref: 'Person' }, // reference to Person Collection
+  title: String,
+  fans: [{ type: Schema.Types.ObjectId, ref: 'Person' }] // reference to Person Collection
+});
+
+const Book = mongoose.model('Book', bookSchema);
+```
+
+We defined two Model Schemas `Person` and `Book`. We're going to create several persons who can either be an author of a book or a normal person that might be a fan of those books.
+
+-   A person can be author of several books.
+-   A book can only written by one person
+-   A book can have a list of fan
+
+### One-to-One Relationship with reference document.
+
+Take a look closer to the `author` field of the `bookSchema`.
+
+![](https://i.imgur.com/ZSfms6i.png)
+
+With this definition of the `Book`, the code snippet below help creating new `Book` document.
+
+```javascript
+    const book  = await Book.create({ 
+        "author": "61cd69289f5b6514920574bf",
+        "title": "The 4-Hour Workweek",
+        "fans": []
+    })
+```
+
+When creating new book, we pass the `id` of a person to the `author` field, which means we've already created a person with the `_id` `61cd69289f5b6514920574bf`  
+Here is the document after we create a new book
+
+```javascript
+    //book document
+    {
+        "_id" : "61cd694d9f5b6514920574c2"
+        "author": "61cd69289f5b6514920574bf"
+        "title": "The 4-Hour Workweek",
+        "fans": []
+    }
+```
+
+> We know that the field `_id` is auto generated by MongoDB. But for now, let's symplify the `_id` for us easy to follow. `_id` will be the short form of `name` for `Person` and `title` for `Book`:
+
+```javascript
+    //book document 1
+    {
+        "_id" : "4hour"
+        "author": "ferriss" // _id of person whose name is Timothy Ferriss
+        "title": "The 4-Hour Workweek",
+        "fans": []
+    }
+```
+
+Assume that we've created four `person` in our database:
+
+```javascript
+//document 1
+{
+    "_id": "rowling",
+    "name": "J. K. Rowling",
+    "age": 56,
+    "books": ["potter"]
+}
+
+//document 2
+{
+    "_id": "ferriss",
+    "name": "Timothy Ferriss",
+    "age": 44,
+    "books": ["4hour", "tools"]
+}
+
+//document 3
+{
+    "_id": "bowen",
+    "name": "Mandy Bowen",
+    "age": 22,
+    "books": []
+}
+//document 4
+{
+    "_id": "cunningham",
+    "name": "Bob Cunningham",
+    "age": 30,
+    "books": []
+}
+```
+
+and `Book` documents:
+
+```json
+//document 1
+{
+    "_id": "4hour"
+    "author": "ferriss",
+    "title": "The 4-Hour Workweek",
+    "fans": ["bowen"]
+}
+
+//document 2
+{    
+    "_id": "potter"
+    "author": "rowling",
+    "title": "Harry Potter",
+    "fans": ["bowen","cunningham"]
+}
+
+//document 3
+{    
+    "_id": "tools"
+    "author": "ferriss",
+    "title": "Tools Of Titans",
+    "fans": ["bowen","cunningham"]
+}
+
+```
+
+### Retrieve data
+
+In `Controller Function`:
+
+```javascript
+const getSingleBook = async()=>{
+    try{
+        const book  = await Book.findOne({ title: 'The 4-Hour Workweek'})
+        console.log(book) 
+        // {
+        //     "_id": "4hour"
+        //     "author": "4hour",
+        //     "title": "The 4-Hour Workweek",
+        //     "fans": []
+        // }
+    } catch(err){
+        next(err)
+    }
+}
+```
+
+And here is when the magic happens. By adding **`populate`** after the query `findOne`, we successfully join the `Person` document `"_id": "ferriss"` to the `Book`document.
+
+In `Controller Function`:
+
+```javascript
+const getSingleBook = async()=>{
+    try{
+        const book  = await Book.findOne({ title: 'The 4-Hour Workweek'}).populate('author')
+        //populate field "author" of the document
+        console.log(book)
+        // {
+        //     "_id": "4hour"
+        //     "author": {
+        //             "_id": "ferriss",
+        //             "name": "Timothy Ferriss",
+        //             "age": 44,
+        //             "books": []
+        //         },
+        //     "title": "The 4-Hour Workweek",
+        //     "fans": ["bowen"]
+        // }
+        
+    } catch(err){
+        next(err)
+    }
+}
+```
+
+### One-to-Many Relationship with reference document.
+
+Now, let consider the field `books` in `Person` Collection.
+
+-   A person can be author of several books.
+
+We created this document:
+
+```javascript
+//Person document 2
+{
+    "_id": "ferriss",
+    "name": "Timothy Ferriss",
+    "age": 44,
+    "books": ["4hour","tools"]
+}
+```
+
+He has written two books that is stored in the `books` field. Imagine that we're getting into his profile page. We want to display his information including his name, age and all the book he has written. So we have to build an api approximatly look like this `http://localhost:8000/api/users/ferriss` with the GET method. Here is how the controller function will handle this request:
+
+```javascript
+const getSinglePerson = async()=>{
+    try{
+        const personId = req.params.id //assume id params defined in the routes
+        const person  = await Person.findById(personId).populate('books')
+        console.log(book)
+        // {
+        //     "_id": "ferriss",
+        //     "name": "Timothy Ferriss",
+        //     "age": 44,
+        //     "books": [
+        //         {
+        //             "_id": "4hour"
+        //             "author": "ferriss",
+        //             "title": "The 4-Hour Workweek",
+        //             "fans": ["bowen"]
+        //         },
+        //        { 
+        //            "_id": "tools",
+        //            "author": "ferriss",
+        //            "title": "Tools Of Titans",
+        //            "fans": ["bowen","cunningham"]
+        //         }
+        //     ]
+        // }
+        
+    } catch(err){
+        next(err)
+    }
+}
+```
+
+<br/>
+<br/>
+<br/>

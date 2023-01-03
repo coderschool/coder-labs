@@ -460,15 +460,54 @@ export const courseWebUnits = [
     title: "Module 3.2",
     courseUnits: [
       {
-        id: "wv/m32/s3",
-        title: "Section 3",
-        courseUnits: [
-          {
-            id: "wv/m32/s3-lab-mongoose",
-            title: "Lab - Mongoose",
-            path: "wv/m32/s3-lab-mongoose",
-          },
-        ],
+        id: "wv/m32/s2-ln1-dbms",
+        title: "Lecture note 1 - DBMS",
+        path: "wv/m32/s2-ln1-dbms",
+      },
+      {
+        id: "wv/m32/s2-ln2-mongodb",
+        title: "Lecture note 2 - MongoDB",
+        path: "wv/m32/s2-ln2-mongodb",
+      },
+      {
+        id: "wv/m32/s2-ln3-installing-mongodb",
+        title: "Lecture note 3 - Installing MongoDB",
+        path: "wv/m32/s2-ln3-installing-mongodb",
+      },
+      {
+        id: "wv/m32/s2-ln4-compass-atlas",
+        title: "Lecture note 4 - Compass and Atlas",
+        path: "wv/m32/s2-ln4-compass-atlas",
+      },
+      {
+        id: "wv/m32/s3-ln1-mongoose",
+        title: "Lecture note - Mongoose",
+        path: "wv/m32/s3-ln1-mongoose",
+      },
+      {
+        id: "wv/m32/s3-lab-mongoose",
+        title: "Lab - Mongoose",
+        path: "wv/m32/s3-lab-mongoose",
+      },
+      {
+        id: "wv/m32/s3-ln2-deployment",
+        title: "Lecture Note - Deployment",
+        path: "wv/m32/s3-ln2-deployment",
+      },
+      {
+        id: "wv/m32/s3-lab-codercars",
+        title: "Lab 2 - CoderCars",
+        path: "wv/m32/s3-lab-codercars",
+      },
+      {
+        id: "wv/m32/s4-ln1-erd",
+        title: "Lecture note - ERD",
+        path: "wv/m32/s4-ln1-erd",
+      },
+      {
+        id: "wv/m32/s5-project-coder-management",
+        title: "Project Challenge - Coder Management",
+        path: "wv/m32/s5-project-coder-management",
       },
     ],
   },

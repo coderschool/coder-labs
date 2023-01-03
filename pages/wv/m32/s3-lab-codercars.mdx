@@ -1,0 +1,208 @@
+<img
+src="https://i.imgur.com/dpd20EG.png"
+style={{ width: "60px", float: "right" }}
+/>
+
+<br/>
+
+# CoderCars
+
+_Cars listing API for practicing express and mongobdb._
+
+<br/>
+
+## Overview
+
+For this exercise, you will build an API with Node, Express, and Mongo.
+
+You will be practicing all the keys concept learned in this topic. Including collecting and processing datasets, building schema, designing endpoints of a CRUD process, etc.
+
+As for the front end with React, we already have a version for you. However, make your own version and turn this into a Full Stack M.E.R.N (Mongo, Express, React, and Node) project.
+
+<br/>
+
+## Description
+
+You are building a backend server with endpoints that allow:
+
+-   CREATE: User can add new cars to the database.
+-   READ: User can see a paginated list of all the cars in the database.
+-   UPDATE: User can edit existing cars.
+-   DELETE: User can delete cars.
+
+Update the API request in the <a href="https://github.com/coderschool/codercars-fe" target="_blank">Front end repo</a> with your work.
+
+Check out this <a href="https://codercars.netlify.app/" target="_blank">demo</a> for references.
+
+<br/>
+
+## Feature requirements
+
+<br/>
+
+### Get list of cars
+
+![](https://i.imgur.com/xvBsd2z.jpg)
+
+-   As users visit the page, the front-end will make a Get request to the backend server to read all information of cars.
+-   User see cars infos includes name, style, size,tranmission type, price, year
+-   User see buttons to interact with each car (Edit/Delete)
+-   User see a portion of the result only and is able to paginate through
+
+### Add new car
+
+![](https://i.imgur.com/ogeWERI.jpg)
+
+-   User can create a new car with infos
+-   User can see the added car immediately and in all future reading requests.
+
+### Edit a car
+
+![](https://i.imgur.com/4karJud.jpg)
+
+-   User can edit a specific car infos
+-   User can see this update imediately and in any future reading request
+
+### Delete a car*
+
+![](https://i.imgur.com/qgF9OfO.png)
+
+-   User can delete a car
+-   User can no longer see the deleted car immediately and in any future reading request.
+-   **Note:** The simplest form of the delete process is to remove something from your database. This is called hard delete. However, we usually prefer soft delete when making this function in real-life programming. In soft delete, we assume delete is simply a document's status. By changing its status and combine with the filter condition when query, we could achieve the same result. One reason for this is that data is precious and removing something for good is dangerous. What if we want to undo it? restore? … reactivate your deactivated Facebook account? For now, let's try building a hard delete controller to your API, then challenge yourself with the rockets later.
+
+### 
+
+-   Turn hard delete into soft delete
+-   Hints
+-   Make a full stack search by car name feature.
+
+<br/>
+
+## Starter
+
+<br/>
+
+### Template
+
+To help you get started quick and effectively, here is the template for your <a href="https://github.com/coderschool/codercars-be" target="_blank">backend project</a>.
+
+### Instructions
+
+-   Clone the template
+-   Checkout to template branch
+-   Rename .`env.example` to `.env` and supply your own `MongoDB URI` or leave it as is to use your `local MongoDB URI`.
+-   Based on the provided schema, parse and import the data from <a href="https://www.kaggle.com/datasets/CooperUnion/cardataset" target="_blank">this dataset</a> into your database.
+-   Fill in the missing logic in the controller. Remember to consider and handle all possible errors.
+-   Test and make sure it works with the provided frontend.
+-   Use Thunder or Postman, or any other client to ease your development process.
+
+<br/>
+
+## Endpoints
+
+Here are the response structure according to each endpoint.
+
+### CREATE
+
+`POST /car`  
+Expected body of the request:
+
+```json
+{
+    "make": "Plymouth",
+    "model": "Colt",
+    "release_date": 2002,
+    "transmission_type": "MANUAL",
+    "size": "Compact",
+    "style": "Coupe",
+    "price": 23000
+}
+```
+
+Expected response:
+
+```json
+{
+    "message": "Create Car Successfully!",
+    "car": {
+        "make": "Plymouth",
+        "model": "Colt",
+        "release_date": 2002,
+        "transmission_type": "MANUAL",
+        "size": "Compact",
+        "style": "Coupe",
+        "price": 23000,
+    }
+}
+```
+
+### READ
+
+`GET /car`
+
+Expected response:
+
+```json
+{
+    "message": "Get Car List Successfully!",
+    "cars": [
+        //car objects
+    ],
+    "page": 1,
+    // total pages
+    "total": 1192
+}
+```
+
+### UPDATE
+
+`PUT /car/:id`
+
+Expected response:
+
+```json
+{
+    "message": "Update Car Successfully!",
+    {
+    //car object
+    }
+}
+```
+
+### DELETE
+
+`DELETE /car/:id`
+
+Expected response:
+
+```json
+{
+    "message": "Delete Car Successfully!",
+    {
+    //car object
+    }
+}
+```
+
+<br/>
+
+## The end.
+
+You will start this project with 120/100 points. Pass grade is 80.
+
+```
+| Grade | Description                                                      |
+| ----- | ---------------------------------------------------------------- |
+| 5     | Missing rocket                                                   |
+| 5     | Response data structure incorrect lead to error in front-end app |
+| 10    | Missing any of other requirements that are not rocket            |
+```
+
+Don't worry if you fail this assignment, as we allowing unlimited attempts.
+
+Good luck have fun coding!
+
+<br/>
+<br/>
+<br/>

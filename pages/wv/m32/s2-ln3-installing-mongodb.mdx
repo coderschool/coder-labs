@@ -1,0 +1,126 @@
+<img
+src="https://i.imgur.com/dpd20EG.png"
+style={{ width: "60px", float: "right" }}
+/>
+
+# Installing MongoDB
+
+You can choose between installing MongoDB using the comand line (instruction below) and downloading the package from <a href="https://www.mongodb.com/try/download/community" target="_blank">here</a>
+
+<br/>
+
+## Installing MongoDB for MacOS
+
+There are two ways to install MongoDB on macOS: Homebrew or using `.tgz` tarball. Find one that fits you. According to MongoDB Docs, it’s better to use Homebrew if you can.
+
+### 1. Let’s start installing using `Homebrew`
+
+<br/>
+
+#### Install Xcode Command-Line Tools
+
+Homebrew requires the Xcode command-line tools from Apple’s Xcode. Run this command to install the Xcode command-line.
+
+```
+xcode-select --install
+```
+
+#### Install Homebrew
+
+macOS does not include the Homebrew brew package by default.  
+Install `brew`:
+
+```
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Read more about <a href="https://brew.sh/#install" target="_blank">Homebrew installation instructions</a>
+
+#### Installing MongoDB 5.0 Community Edition
+
+Follow these steps to install MongoDB Community Edition using Homebrew’s brew package manager.
+
+1.  To download the official Homebrew formula for MongoDB and the Database Tools
+
+```
+brew tap mongodb/brew
+```
+
+2.  To update Homebrew and all existing formulae:
+
+```
+brew update
+```
+
+3.  To install MongoDB,
+
+```
+brew install mongodb-community@5.0
+```
+
+4.  To run MongoDB (i.e. the mongod process) as a macOS service, run:
+
+```
+brew services start mongodb-community@5.0
+```
+
+To stop MongoDB running as a macOS service (this is useful when you have to restart your MongoDB), run:
+
+```
+brew services stop mongodb-community@5.0
+```
+
+To stop
+
+5.  To verify that MongoDB is running, perform one of the following:
+
+```
+brew services list
+```
+
+Read more <a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/" target="_blank">here</a> for other way.
+
+### 2. Installing MongoDB using `.tgz` tarball
+
+> While MongoDB can be installed manually via a downloaded `.tgz` tarball, it is recommended to use the `brew` package manager on your system to install MongoDB if possible. Using a package manager automatically installs all needed dependencies and simplifies future upgrade and maintenance tasks.
+
+Therefore, if the `brew` package doesn’t work in your case for any reason, try <a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x-tarball/" target="_blank">tarball</a>
+
+<br/>
+
+## Installing MongoDB for Window
+
+Follow these steps to install MongoDB Community Edition using the MongoDB Installer wizard.
+
+### 1. Download the installer
+
+<a href="https://www.mongodb.com/try/download/community?tck=docs_server" target="_blank">Download</a> the MongoDB Community `.msi` installer
+
+### 2. Run the MongoDB installer!
+
+Go to the directory where you downloaded the MongoDB installer. Then double-click the `.msi` file.
+
+### 3. Follow the MongoDB Community Edition installation wizard
+
+1.  Choose the **Complete** setup type.
+2.  Service Configuration  
+    ![](https://i.imgur.com/ywGYtBB.png)
+3.  Install MongoDB Compass  
+    Select Install MongoDB Compass (Default).
+4.  When ready, click **Install**.
+
+Read more about the detail description <a href="https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/" target="_blank">here</a>
+
+<br/>
+
+## Additional Reading
+
+-   A good-to-have certificate for a better understanding of the Mongo Ecosystem [M001 Mongo Certificate]
+-   Read more on the debate <a href="https://www.guru99.com/sql-vs-nosql.html" target="_blank">SQL vs noSQL</a>
+-   Fear of missing out? <a href="https://www.froglogic.com/blog/" target="_blank">Add SQL to your arsenal</a>
+-   Download and install MongoDB Community Edition: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)" target="_blank">Windows</a>, <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)" target="_blank">Mac</a>
+-   Grab this free and easy certificate from MongoDB: <a href="https://university.mongodb.com/courses/M001/about" target="_blank">M001 course</a>
+
+<br/>
+<br/>
+<br/>
