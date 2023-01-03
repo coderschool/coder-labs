@@ -1,0 +1,77 @@
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
+
+<br />
+
+# React Router
+
+<br />
+
+## The Job Routing App
+
+We are going to build a small app that practices the react-router library. React router dom is a super powerful library that helps routing around the application. One of the core things here is authentication. So how does website authentication works in the front end?
+
+> “Single Page Apps (SPAs) are often tied to APIs, and these APIs, in the form of endpoints, help provide data that can be manipulated in the logic of these apps. Some of these data the APIs provide are sensitive, so before they can be accessed some form of authentication needs to be in place.”
+
+For example, when you get to a website, you need to log in first to see the private information that only users can see but guess such as user's information, the salary of the job recruitment news, etc.
+
+Also, you'll have a chance to practice useContext, the Material UI and React Hook Form that we learn from the previous lesson. Awesome! Let's get started!
+
+<br />
+
+## User story
+
+-   Users can see the navigation bar that shows user status
+    -   If the user hasn't signed in, see the sign-in button on the right side
+    -   If users have signed in, see the username and a sign out button instead
+-   Users can see the list of jobs on the main page
+-   Users can click on a single job card to pop up a detailed job modal
+    -   If the user haven't signed in, pop up a sign in modal
+-   Users can sign in with a fixed username and password (don't have to sign up) and sign out. Then the application will navigate the user to the expected page.
+-   🚀 The demo is missing a search function? Can you implement it?
+-   🚀 The login modal matchs the url `/login`. <a href="https://github.com/remix-run/react-router/tree/main/examples/modal" target="_blank">See more</a>
+
+<br />
+
+## Resources and demo
+
+<br />
+
+### Resources:
+
+-   <a href="https://github.com/remix-run/react-router/tree/main/examples/auth)(*" target="_blank">Authentication</a> with React Router
+-   <a href="https://github.com/remix-run/react-router/tree/main/examples/modal)(*" target="_blank">Modal</a> with React Router
+-   <a href="https://drive.google.com/file/d/175JD05bo6Cjn3XupqlBf83n2Jta1Ymz1/view?usp=sharing). Create your fake API with [JSON-serve" target="_blank">Job data</a> then practice fetching data.
+-   <a href="https://mui.com/components/modal/" target="_blank">Modal</a> Material UI
+-   <a href="https://react-hook-form.com/" target="_blank">React Hook Form</a>
+-   🚀 <a href="https://github.com/remix-run/react-router/tree/main/examples/search-params)(*" target="_blank">Search params</a> with React Router
+
+(*): These examples are from React Router written by Typescript. Therefore it will be some syntax that you might not be familiar. Feel free to ask your mentor/instructor to clarify it.
+
+### Demo
+
+Have a look on the <a href="https://cs-job-routing.netlify.app/" target="_blank">demo</a> website
+
+<br />
+
+## Marking Guide
+
+Everyone will start at 100 score.
+
+```
+| Grade | Description                                                      |
+| ----- | ---------------------------------------------------------------- |
+| -5    | Missing any user story that is not rocket                        |
+| -10   | Not implement fetching data                                      |
+| +10   | Finishing a rocket                                               |
+```
+
+This assignment's minimum pass score is 80/100
+
+**Good luck & have fun!**
+
+<br />
+<br />
+<br />

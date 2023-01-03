@@ -2,6 +2,7 @@
   src="https://i.imgur.com/dpd20EG.png"
   style={{ width: "60px", float: "right" }}
 />
+
 # Mini Spotify with `useContext`
 
 <br />
@@ -10,7 +11,7 @@
 <div style={{ display: "flex", flexDirection: "column" }}>
   <span style={{ width: "50%", marginBottom: "5px" }}>
     Welcome to the `useContext` master exercise, to better prep you for further
-    challenges – this demo is here to save the day.
+    challenges - this demo is here to save the day.
   </span>
   <img
     src="https://i.imgur.com/WckMmqj.png"
@@ -21,13 +22,15 @@
 
 <br />
 <br />
+
 #### In this project you will learn:
 
 - Common logic in building a mini music player.
-- How to use the React hook – useContext
+- How to use the React hook - useContext
 - How to make your own hook by utilizing React Custom Hook and `useContext`
 
 <br />
+
 #### User story:
 
 - Users are able to see a tracklist or a list of songs.
@@ -42,6 +45,7 @@
 ## 1️⃣ Project Breakdown
 
 <br />
+
 ### 1. Building a Music player
 
 `useContext` is needed because we have two child components that share the same information (or **state**).
@@ -66,17 +70,19 @@ The tracklist and the controller both need to know:
 That's a lot of information needed to be shared between two components, which will be more complex and chaotic in bigger projects. Thanks to React and the useContext hook, we are now able to manage these information easier than ever.
 
 <br />
+
 ### 2. `useContext` and `useCustomHook`
 
-While useContext helps share information, useCustomHook is here for us to reuse functions – everywhere across the app.
+While useContext helps share information, useCustomHook is here for us to reuse functions - everywhere across the app.
 
 The amazing thing about `useContext` and `useCustomHook` is that you can combine them when you need many functions to modify or change one type of information (one piece of **state**).
 
-> **Let's store your information (your state) in a custom hook along with all the functions needed. And every time you need the pair of state and function, just write one simple line of code – useCustomHook().**
+> **Let's store your information (your state) in a custom hook along with all the functions needed. And every time you need the pair of state and function, just write one simple line of code - useCustomHook().**
 
 How do all these theories come to life? Let's kick off the miniSpotify.
 
 <br />
+
 ### 3. Resources
 
 **Demo application:** <a href="https://reliable-sfogliatella-5fb38d.netlify.app/" target="_blank">Cs's MiniSpotify</a>
@@ -219,14 +225,16 @@ export { MusicPlayerContext, MusicPlayerProvider };
 <br />
 <br />
 <br />
+
 ---
 
 ## 2️⃣ Code Walkthrough
 
 <br />
+
 ### MusicPlayerContext.js
 
-- **1st:** There is more than just one piece of information (for example: `isPlaying`, `currentTrackIndex`) we need to share across the app, therefore, let's put all the information in one object – `defaulValues`.
+- **1st:** There is more than just one piece of information (for example: `isPlaying`, `currentTrackIndex`) we need to share across the app, therefore, let's put all the information in one object - `defaulValues`.
 
   ![](https://i.imgur.com/N835ndu.png)
 
@@ -241,7 +249,7 @@ export { MusicPlayerContext, MusicPlayerProvider };
 
   You might notice how `setState()` looks a bit more complex than it used to be.
 
-  This is how we `setState()` in older projects – by simply passing in a new value. It's because we are setting the state of only one piece of information.
+  This is how we `setState()` in older projects - by simply passing in a new value. It's because we are setting the state of only one piece of information.
 
   ```javascript
   const handleLogin = () => {
@@ -260,7 +268,7 @@ export { MusicPlayerContext, MusicPlayerProvider };
   }
   ```
 
-  Instead of a single value, we will pass in a whole object. First, "spread" it out and. Second, overwrite with the exact pair of information you want to update – `{...state,isPlaying: true} `.
+  Instead of a single value, we will pass in a whole object. First, "spread" it out and. Second, overwrite with the exact pair of information you want to update - `{...state,isPlaying: true} `.
 
   The above technique is not new, we have learned it before in Object Destructuring, let's playback _CoderSchool's M1.2 Programming with JavaScript_.
 
@@ -285,9 +293,10 @@ export default App;
 ```
 
 <br />
+
 ### useMusicPlayer.js
 
-🔥 Congratulations on making it this far down the rabbit hole – you are almost there, keep on!
+🔥 Congratulations on making it this far down the rabbit hole - you are almost there, keep on!
 
 Inside `useMusicPlayer()`:
 
@@ -308,6 +317,7 @@ Inside `useMusicPlayer()`:
   ![](https://i.imgur.com/9UGqJq5.png)
 
 <br />
+
 ### TrackList.js
 
 :clap: :raised_hands: Hooray - it's action time! Now we can finally access and update information with just 1 line of code.
@@ -348,11 +358,12 @@ export default TrackList;
 
 <br />
 <br />
+
 ### 🎉 You made it!
 
 You are introduced to all the tools needed for this project; let's connect all the pieces and complete your own MiniSpotify!
 
-Reading code walkthrough might take a lot of brain energy :fire: :sweat_drops: but reading will help organize your logic stream and develop great habits, especially for life-learners like us – the programmers :wink:.
+Reading code walkthrough might take a lot of brain energy :fire: :sweat_drops: but reading will help organize your logic stream and develop great habits, especially for life-learners like us - the programmers :wink:.
 
 You've changed a lot since our first project, have fun and see you!
 

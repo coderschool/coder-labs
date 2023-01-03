@@ -369,6 +369,11 @@ export const courseWebUnits = [
         title: "Section 2",
         courseUnits: [
           {
+            id: "wv/m22/s2-a1q-advanced-react-timer",
+            title: "Assignment 1 - Advanced React Timer",
+            path: "wv/m22/s2-a1q-advanced-react-timer",
+          },
+          {
             id: "wv/m22/s2-a1s-advanced-react-timer",
             title: "Assignment 1 Solution - Advanced React Timer",
             path: "wv/m22/s2-a1s-advanced-react-timer",
@@ -385,9 +390,14 @@ export const courseWebUnits = [
             path: "wv/m22/s3-a1q-material-ui-basic-app",
           },
           {
-            id: "wvm22s3-a3s-music-player-app",
-            title: "Assignment 3 Solution - Mini Spotify with useContext",
-            path: "wvm22s3-a3s-music-player-app",
+            id: "wv/m22/s3-a2q-job-routing",
+            title: "Assignment 2 Question - Job Routing App",
+            path: "wv/m22/s3-a2q-job-routing",
+          },
+          {
+            id: "wv/m22/s3-a3s-music-player-app",
+            title: "Assignment 3 Solution - Music Player App",
+            path: "wv/m22/s3-a3s-music-player-app",
           },
         ],
       },
@@ -397,9 +407,14 @@ export const courseWebUnits = [
         title: "Section 5",
         courseUnits: [
           {
-            id: "wvm22s5-a1s-react-ecosystem-quizz",
-            title: "Assignment 1 Solution - React Ecosystem Quiz",
-            path: "wvm22s5-a1s-react-ecosystem-quizz",
+            id: "wv/m22/s5-a1s-react-ecosystem-quizz",
+            title: "Quiz Solution - React Ecosystem Quiz",
+            path: "wv/m22/s5-a1s-react-ecosystem-quizz",
+          },
+          {
+            id: "wv/m22/s5-project-movie",
+            title: "Project - Movie app",
+            path: "wv/m22/s5-project-movie",
           },
         ],
       },
