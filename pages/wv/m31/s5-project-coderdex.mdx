@@ -1,0 +1,110 @@
+<img
+  src="https://i.imgur.com/dpd20EG.png"
+  style={{ width: "60px", float: "right" }}
+/>
+
+<br />
+
+# CoderDex
+
+<br />
+
+## Pokédex
+
+In the pokemon world, there are hundreds of pokemon species. In this world, a trainer's best friend is the Pokedex - a pocket wiki about all pokemon where they can find, categorize, and search for a pokemon.
+
+We will create a web application Pokedex, that helps trainers worldwide learn more about their favorite pokemon.
+
+![image alt](https://cdn.helpex.vn/upload/2020/09/13/05-00-00-000-a6d21e95-eed2-457c-b048-f74476ccbe29.jpg)
+
+### Back-end: API Requirements
+
+-   Download and transform data as needed from <a href="https://www.kaggle.com/datasets" target="_blank">kaggle</a>
+    
+    -   You can take the csv file from <a href="https://www.kaggle.com/datasets/vishalsubbiah/pokemon-images-and-types" target="_blank">this</a>
+        
+    -   And high quality images from this <a href="https://www.kaggle.com/datasets/kvpratama/pokemon-images-dataset" target="_blank">dataset</a>
+        
+    -   Transform data to the given form:
+        
+    -   `pokemons.json`
+    
+    -   Note: The given CSV file contains the data of 809 pokemon. However, the images are about 721 png images. Your job is to cut off the Pokemon for which we don't have an image source.
+-   API for getting all Pokémons
+    
+    -   Search Pokémons by Type
+
+    -   Search Pokémons by Name
+
+-   API for getting a single Pokémon information together with the previous and next pokemon information.
+    
+    -   `/api/pokemons/2` return the pokemon with id `2`, `1` and `3`
+        
+    -   `/api/pokemons/1` return the pokemon with id `1`, `721` and `2`
+        
+    -   `/api/pokemons/721` return the pokemon with id `721`, `720` and `1`
+        
+    -   Example:
+        
+        the API `/api/pokemons/25` will return:
+-   API for creating new Pokémon (you can use the existing data set or <a href="https://fakerjs.dev/)" target="_blank">faker</a>. Handle error for the cases below:
+    
+    -   “Missing required data.” (`name`, `id`, `types` or `URL`)
+    -   “Pokémon can only have one or two types.” (if the `types`'s length is greater than `2`)
+    -   “Pokémon's type is invalid.” (if the types of Pokémon are not included in the valid given `PokémonTypes` array)
+    -   “The Pokémon already exists.” (if `id` or `name` exists in the database)
+    
+    The valid type array
+-   🚀 API for updating a Pokémon
+    
+-   🚀 API for deleting a Pokémon by Id
+    
+-   🚀 Expand the current database with generated data for:  
+    - `description`  
+    - `height`  
+    - `weight`  
+    - `categpry`  
+    - `abilities`
+    
+-   `pokemons.json`
+
+### Front-end: UI Requirements
+
+-   User sees all the Pokémons
+-   User sees a single detail page for a Pokémon
+-   User sees filter UI and can filter Pokémons with Type
+-   User sees search UI and can search Pokémons by Name
+-   🚀 User sees Infinite scroll (you can use this <a href="https://www.npmjs.com/package/react-infinite-scroll-component) for the feature" target="_blank">library</a>
+
+**For this assignment, you will be provided with a front-end codebase.**
+
+**Clone this <a href="https://github.com/coderschool/coderdex-fe.git" target="_blank">repo</a> for the front-end part. Make sure that the API from your back-end is the perfect match for the UI without changing anything in the front-end.**
+
+<br />
+
+## Marking Guide
+
+### Demo
+
+Have a look at the <a href="https://coderdex.netlify.app/" target="_blank">demo</a> website
+
+### Marking Guide
+
+Everyone will start at 100 scores.
+
+```
+| Grade | Description                                                      |
+| ----- | ---------------------------------------------------------------- |
+| -5    | Missing any user story that is not rocket                        |
+| -10   | The web must be similar to the design                            |
+| +10   | Finishing a rocket                                               |
+```
+
+This assignment's minimum pass score is 80/100
+
+**Good luck & have fun!**
+
+
+<br />
+<br />
+<br />

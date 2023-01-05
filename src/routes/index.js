@@ -468,6 +468,17 @@ export const courseWebUnits = [
           },
         ],
       },
+      {
+        id: "wv/m31/s5",
+        title: "Section 5",
+        courseUnits: [
+          {
+            id: "wv/m31/s5-project-coderdex",
+            title: "Project - CoderDex",
+            path: "wv/m31/s5-project-coderdex",
+          },
+        ],
+      },
     ],
   },
   {
